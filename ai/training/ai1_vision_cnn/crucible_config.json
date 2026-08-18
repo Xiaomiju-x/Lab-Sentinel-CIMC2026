@@ -1,0 +1,27 @@
+{
+  "arch": "CrucibleCNN",
+  "in_ch": 3,
+  "in_hw": 64,
+  "n_cls": 3,
+  "ch": [
+    8,
+    16,
+    24,
+    32
+  ],
+  "class_names": [
+    "empty",
+    "loaded",
+    "done"
+  ],
+  "input_norm": "none ([0,1] from RGB565/255)",
+  "data_source": "real_phone",
+  "cv_acc_mean": 0.9073,
+  "cv_acc_std": 0.0997,
+  "n_images": 52,
+  "per_class": {
+    "empty": 23,
+    "loaded": 15,
+    "done": 14
+  }
+}

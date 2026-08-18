@@ -1,0 +1,218 @@
+{
+  "schema": "cimc.forge200.zenodo-batio3-rapid-sintering-source-contract-audit.v1",
+  "created_at_utc": "2026-08-03T11:46:27.647127+00:00",
+  "source_id": "ZENODO-18233071",
+  "status": "SOURCE_AND_LICENSE_VERIFIED_FIVE_EXACT_CONTRACTS_REJECTED",
+  "contract_binding": {
+    "path": "contracts/zenodo_batio3_rapid_sintering_contract_binding.v1.json",
+    "sha256": "25550c8181a1866202c65cdfcab374993657a776b3b0d178e8b360baee726667"
+  },
+  "source": {
+    "title": "Dataset for paper \"Abnormal grain growth and functional properties of BaTiO3 prepared by rapid sintering methods\"",
+    "publisher": "Zenodo",
+    "record_id": 18233071,
+    "doi": "10.5281/zenodo.18233071",
+    "landing_page": "https://zenodo.org/records/18233071",
+    "license": "CC BY 4.0",
+    "truth_class": "OPEN_EXPERIMENTAL_L2",
+    "related_preprint_doi": "10.5281/zenodo.18302092",
+    "scope_limit": "BaTiO3 laboratory samples prepared by CS, RPLS, SPS, and p-SPS; no phosphor-furnace, semiconductor-production, or team-measured generalization claim."
+  },
+  "verified_artifacts": {
+    "record_metadata": {
+      "path": "data/sources/zenodo_batio3_rapid_sintering_v1/zenodo_record_18233071.json",
+      "bytes": 6766,
+      "sha256": "6990b11b65433936ddb8dd399de78ab54a7e5e453f5cde0c7e32439be707cff2",
+      "verified": true
+    },
+    "archive": {
+      "path": "data/raw/zenodo_batio3_rapid_sintering_v1/Dataset for BaTiO3 rapid sintering.zip",
+      "bytes": 187831683,
+      "sha256": "30e4ba830b1edd8b7fb47bcac01e69575118d78dc20a9b513eeb1067c516fb7b",
+      "verified": true
+    },
+    "preprint_metadata": {
+      "path": "data/sources/zenodo_batio3_rapid_sintering_v1/zenodo_preprint_record_18302092.json",
+      "bytes": 7133,
+      "sha256": "f3a76b41b9c6bcedee0f8dad3ab9b730f29e97518a347c546baf8d9e3a63828d",
+      "verified": true
+    },
+    "preprint_pdf": {
+      "path": "data/sources/zenodo_batio3_rapid_sintering_v1/Zenodo_preprint.pdf",
+      "bytes": 2242381,
+      "sha256": "0aedf333d07eedeb7ba328f4a364c659748b3aa3a0347f6b911365337d7f0109",
+      "verified": true
+    },
+    "readme": {
+      "path": "data/raw/zenodo_batio3_rapid_sintering_v1/extracted/README.txt",
+      "bytes": 3394,
+      "sha256": "e1928fffac4cf1e5b1207607167e8de3da1674d0695b6e5672d8b77e40003c87",
+      "verified": true
+    },
+    "xrd_csv": {
+      "path": "data/raw/zenodo_batio3_rapid_sintering_v1/extracted/1_XRD/1_XRD.csv",
+      "bytes": 359075,
+      "sha256": "5ea308692f11af1ee2bb71520b77018499d04c8ead8f208c996c76944b867203",
+      "verified": true
+    },
+    "relative_density_csv": {
+      "path": "data/raw/zenodo_batio3_rapid_sintering_v1/extracted/2_Relative density/2_relative_density.csv",
+      "bytes": 3728,
+      "sha256": "7f0cbf0deec2f7273f48c30b150163d202c6934c559c07bf57392803ab6e1c74",
+      "verified": true
+    },
+    "grain_measurements_csv": {
+      "path": "data/raw/zenodo_batio3_rapid_sintering_v1/extracted/4_grain size measurements/4_grain size measurements.csv",
+      "bytes": 324220,
+      "sha256": "7b176fff2cd8a0834e82fe8d40497626d846ac4dbca772760f762bb326633da7",
+      "verified": true
+    },
+    "electrical_summary_csv": {
+      "path": "data/raw/zenodo_batio3_rapid_sintering_v1/extracted/6_electrical properties/6_summary_table.csv",
+      "bytes": 774,
+      "sha256": "bcb846fca07ad420659eb905fa59e07fd3596512c30aa932034060dfeaa3f512",
+      "verified": true
+    },
+    "dilatometry_csv": {
+      "path": "data/raw/zenodo_batio3_rapid_sintering_v1/extracted/7_dilatometric curves/7_dilatometric curves.csv",
+      "bytes": 6531094,
+      "sha256": "7ce0d116528a6e9993b7bdf365f96d1bb6f2caf2837e9fa47eeb35631025bc46",
+      "verified": true
+    },
+    "dilatometry_description": {
+      "path": "data/raw/zenodo_batio3_rapid_sintering_v1/extracted/7_dilatometric curves/data_description.txt",
+      "bytes": 538,
+      "sha256": "7b29fc4f697f16d40fd01c20fadaef4d6cc39f643e37d6fae9f4134649029c1a",
+      "verified": true
+    }
+  },
+  "archive_inventory": {
+    "file_entries": 153,
+    "uncompressed_bytes": 271795101,
+    "crc_verified": true,
+    "extracted_files": 153,
+    "extracted_bytes": 271795101
+  },
+  "observed": {
+    "xrd_patterns": 19,
+    "xrd_points_per_pattern": 4001,
+    "relative_density_named_samples_including_green_body": 20,
+    "relative_density_sample_names": [
+      "green_body",
+      "p-SPS1325",
+      "p-SPS1350",
+      "p-SPS1375",
+      "p-SPS1400",
+      "SPS1225",
+      "SPS1250",
+      "SPS1275",
+      "SPS1300",
+      "SPS1325",
+      "RPLS1225",
+      "RPLS1250",
+      "RPLS1275",
+      "RPLS1300",
+      "RPLS1325",
+      "CS1225",
+      "CS1250",
+      "CS1275",
+      "CS1300",
+      "CS1325"
+    ],
+    "sintered_sample_families": 19,
+    "grain_population_columns": 30,
+    "grain_measurement_values": 47168,
+    "sem_tiff_files": 122,
+    "domain_image_files": 15,
+    "dilatometry_temperature_min_c": 17.8,
+    "dilatometry_temperature_max_c": 250.4,
+    "dilatometry_temperature_values": 224976
+  },
+  "article_facts_visually_verified": {
+    "pdf_pages_one_based": [
+      5,
+      6,
+      8,
+      10
+    ],
+    "starting_powder_particle_size_nm": 280,
+    "pressureless_route_green_density_percent_td": "61.8 +/- 0.1",
+    "theoretical_density_g_cm3": 6.02,
+    "sintering_methods": [
+      "CS",
+      "RPLS",
+      "SPS",
+      "p-SPS"
+    ],
+    "sintering_temperature_range_c": [
+      1225,
+      1400
+    ],
+    "schedule_note": "CS uses 10 C/min and 120 min dwell; rapid routes use 100 C/min and 5 min dwell; SPS uses 50 MPa."
+  },
+  "candidate_dispositions": [
+    {
+      "candidate_id": "CAND-P-049",
+      "input_contract": "powder_properties_composition_and_temperature_time_curve",
+      "target_label": "relative_density_trajectory_percent",
+      "status": "EXACT_REJECTED",
+      "reason_code": "FINAL_DENSITY_ONLY_RELATIVE_DENSITY_TRAJECTORY_ABSENT",
+      "facts": [
+        "The source supplies green-body density and final Archimedes density for 19 sintered sample families.",
+        "It does not supply in-situ relative-density trajectories through the 1225-1400 C sintering schedules."
+      ]
+    },
+    {
+      "candidate_id": "CAND-P-050",
+      "input_contract": "green_density_particle_size_and_schedule",
+      "target_label": "linear_shrinkage_trajectory_percent",
+      "status": "EXACT_REJECTED",
+      "reason_code": "POST_SINTERED_THERMAL_EXPANSION_IS_NOT_SINTERING_SHRINKAGE",
+      "facts": [
+        "The dataset description identifies the dilatometry as 1 C/min heating followed by cooling, and the raw temperature channels span only 17.8-250.4 C.",
+        "The actual sintering schedules are 1225-1400 C; therefore these curves characterize post-sintered dimensional response, not green-body sintering shrinkage."
+      ]
+    },
+    {
+      "candidate_id": "CAND-P-051",
+      "input_contract": "initial_grain_size_dopant_atmosphere_and_thermal_dose",
+      "target_label": "final_grain_size_um_and_growth_exponent",
+      "status": "EXACT_REJECTED",
+      "reason_code": "INITIAL_GRAIN_AND_SOURCE_BOUND_GROWTH_EXPONENT_ABSENT",
+      "facts": [
+        "The source supplies a 280 nm starting-powder particle size and final fine/coarse grain measurements, but it does not bind an initial grain-size measurement to every sample.",
+        "No source-bound per-run growth-exponent target is supplied; fitting one from the same temperature series would change the frozen target provenance and invalidate independent evaluation."
+      ]
+    },
+    {
+      "candidate_id": "CAND-P-066",
+      "input_contract": "source_target_batch_recipe_sensor_and_property_vectors",
+      "target_label": "property_drift_vector_and_transfer_risk",
+      "status": "EXACT_REJECTED",
+      "reason_code": "SOURCE_TARGET_BATCH_SENSOR_AND_TRANSFER_RISK_BINDINGS_ABSENT",
+      "facts": [
+        "Method and temperature labels are sample designations, not recorded source-target production-batch transfers.",
+        "The source contains no batch-pair identifiers, synchronized sensor vectors, or independently labeled transfer-risk outcomes."
+      ]
+    },
+    {
+      "candidate_id": "CAND-P-085",
+      "input_contract": "XRD_pattern_instrument_metadata_candidate_phases_and_quality_flags",
+      "target_label": "calibrated_phase_fraction_vector_and_prediction_interval",
+      "status": "EXACT_REJECTED",
+      "reason_code": "CALIBRATED_PHASE_FRACTION_VECTOR_AND_INTERVAL_LABELS_ABSENT",
+      "facts": [
+        "The source supplies 19 raw XRD patterns and instrument-method metadata.",
+        "It does not supply a calibrated phase-fraction vector, per-pattern quality flags, or prediction-interval labels for the frozen uncertainty contract."
+      ]
+    }
+  ],
+  "training_actions": 0,
+  "host_promotions": 0,
+  "leakage_safe_splits_materialized": 0,
+  "authority": 0,
+  "board_accepted": false,
+  "countable_model": false,
+  "next_action": "Retain this source as licensed evidence and seek datasets with the exact missing trajectory, exponent, transfer-risk, or uncertainty labels; do not reinterpret post-sintered thermal expansion as sintering shrinkage.",
+  "content_root_sha256": "1af75ebc915cbacb8f63b953067729f1b62401d663f465198b241679d62f6110"
+}

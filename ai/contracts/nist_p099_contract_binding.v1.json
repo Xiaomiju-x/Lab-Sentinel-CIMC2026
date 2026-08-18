@@ -1,0 +1,154 @@
+{
+  "schema": "cimc.forge200.nist-p099-contract-binding.v1",
+  "candidate_id": "CAND-P-099",
+  "objective_id": "OBJ-ICM-129-SEM-IMAGE-QUALITY",
+  "status": "FROZEN_PREFLIGHT_RAW_IMAGE_PAYLOAD_PENDING",
+  "source": {
+    "title": "Detection Limits for SEM Image Segmentation",
+    "publisher": "National Institute of Standards and Technology",
+    "doi": "10.18434/mds2-3838",
+    "landing_page": "https://data.nist.gov/od/id/mds2-3838",
+    "license": "NIST public data / https://www.nist.gov/open/license",
+    "truth_class": "OPEN_SIMULATED_SEM",
+    "scope_limit": "Valid only for the published simulated SEM noise/contrast grid; no production-fab or real-charging generalization claim."
+  },
+  "upstream_code": {
+    "url": "https://github.com/usnistgov/detection_limits.git",
+    "commit": "17974f5085ff1d05d1e6d8b4791d5b124cb1b100",
+    "local_path": "data/sources/nist_sem_detection_limits_v1/upstream_code"
+  },
+  "download_contract": [
+    {
+      "name": "README.txt",
+      "url": "https://data.nist.gov/od/ds/mds2-3838/README.txt",
+      "sha256": "d696d68841090b87b6e565c5f6415321ef9e45b0803360640e31cd30530d7b6f",
+      "required_for_training": false
+    },
+    {
+      "name": "metrics_sets.zip",
+      "url": "https://data.nist.gov/od/ds/mds2-3838/metrics_sets.zip",
+      "sha256": "a2b89522c6d8d3fae6afefa97dd99932b564d6455beb96ae0c69083622cffa36",
+      "required_for_training": false,
+      "reason": "The exact merged tables are already content-bound in the official upstream Git repository."
+    },
+    {
+      "name": "intensity_sets.zip",
+      "url": "https://data.nist.gov/od/ds/mds2-3838/intensity_sets.zip",
+      "sha256": "5cd9f4caff80e9afab83515032347a17e9974554ea148f01280090504807e078",
+      "required_for_training": true
+    },
+    {
+      "name": "mask_sets.zip",
+      "url": "https://data.nist.gov/od/ds/mds2-3838/mask_sets.zip",
+      "sha256": "5925dc95478e2cfc3c9ec54bfef888c7596db35fdf41bb929d6b96b8562ab562",
+      "required_for_training": true
+    }
+  ],
+  "official_merged_tables": [
+    {
+      "observer": "AI3",
+      "path": "data/sources/nist_sem_detection_limits_v1/upstream_code/web/Images/merged_ai3_data_quality.csv",
+      "sha256": "172b30f34a8795e321466af4e2c2628ee5381c3114015cde505eb5f26b07ddfb",
+      "records": 567
+    },
+    {
+      "observer": "AI5",
+      "path": "data/sources/nist_sem_detection_limits_v1/upstream_code/web/Images/merged_ai5_data_quality.csv",
+      "sha256": "29e32cbfcaf43536779d16236d017400af97eedb2facbed62a3e32f1695a2778",
+      "records": 567
+    },
+    {
+      "observer": "AI7",
+      "path": "data/sources/nist_sem_detection_limits_v1/upstream_code/web/Images/merged_ai7_data_quality.csv",
+      "sha256": "e85e1d6af3820128685690291eb0df934883fee01c8d704024bf0910c9dc0480",
+      "records": 567
+    }
+  ],
+  "input_binding": {
+    "frozen_contract": "SEM_image_acquisition_settings_noise_blur_charging_features",
+    "allowed_fields": [
+      "Noise_level",
+      "Contrast_level",
+      "Mean_intensity",
+      "Std_intensity",
+      "Variance_intensity",
+      "Michelson_contrast",
+      "RMS_contrast",
+      "Edge_density",
+      "fft_high_frequency_ratio",
+      "laplacian_variance",
+      "charging_low_frequency_energy_ratio"
+    ],
+    "forbidden_mask_or_target_derived_fields": [
+      "DICE-COEFFICIENT",
+      "TRUE POSITIVE",
+      "TRUE NEGATIVE",
+      "FALSE POSITIVE",
+      "FALSE NEGATIVE",
+      "SNR1",
+      "SNR2",
+      "SNR3",
+      "SNR4",
+      "SNR5",
+      "SNR6",
+      "SNR7",
+      "SNR8",
+      "SNR9",
+      "SNR10",
+      "Foreground_mean",
+      "Background_mean",
+      "Foreground_var",
+      "Background_var",
+      "SSIM",
+      "PSNR",
+      "MI",
+      "NMI",
+      "CE"
+    ],
+    "raw_image_feature_rules": {
+      "fft_high_frequency_ratio": "After subtracting image mean, sum 2-D FFT power at normalized radial frequency >=0.25 and divide by all non-DC power.",
+      "laplacian_variance": "Variance of the four-neighbour discrete Laplacian divided by image intensity variance plus 1e-12.",
+      "charging_low_frequency_energy_ratio": "After subtracting image mean, sum 2-D FFT power at 0<normalized radial frequency<=0.05 and divide by all non-DC power. This is a charging-halo proxy, not a physical charging label."
+    }
+  },
+  "target_binding": {
+    "frozen_contract": "quality_score_and_usable_unusable_flag",
+    "quality_score": "Arithmetic mean of the three official AI3/AI5/AI7 DICE-COEFFICIENT values for the same IMAGE-NAME.",
+    "usable_flag": "quality_score >= 0.90 and minimum(AI3,AI5,AI7 DICE-COEFFICIENT) >= 0.85",
+    "label_provenance": "Official NIST segmentation-observer accuracy joined by exact IMAGE-NAME; no teacher/API label."
+  },
+  "split_binding": {
+    "group_key": "Noise_level",
+    "assignment": "Sort the 27 unique noise groups by SHA-256('forge200-p099-nist-v1|noise=' + canonical integer); first 19=train, next 4=validation, final 4=test.",
+    "expected_group_counts": {
+      "train": 19,
+      "validation": 4,
+      "test": 4
+    },
+    "expected_record_counts": {
+      "train": 399,
+      "validation": 84,
+      "test": 84
+    },
+    "test_policy": "The test partition is evaluated once only after feature extraction, validation-only model selection, three-seed training and W8 export are complete."
+  },
+  "baseline_binding": {
+    "name": "Fourier_sharpness_threshold",
+    "score": "fft_high_frequency_ratio",
+    "threshold_selection": "Choose threshold and direction on validation only by maximum balanced accuracy; test is not visible during selection.",
+    "comparison_metrics": [
+      "Spearman_rho_quality_score",
+      "usable_AUROC",
+      "false_reject_rate"
+    ]
+  },
+  "promotion_boundary": {
+    "parameter_cap": 32000,
+    "w8_payload_cap_bytes": 43008,
+    "authority": 0,
+    "board_accepted": false,
+    "countable_model": false,
+    "exact_host_promotion_before_required_payload_hashes_match": false,
+    "real_sem_or_production_fab_claim_allowed": false
+  }
+}

@@ -1,0 +1,14 @@
+Lab-Sentinel
+Copyright 2026 Lab-Sentinel contributors
+
+Lab-Sentinel is an independent student research and competition project.
+“CIMC”, “西门子杯”, Siemens, GD32, GigaDevice and other names or logos are
+the property of their respective owners. Their appearance identifies the
+competition, platform or compatible component and does not imply endorsement
+of this open-source release.
+
+The public repository intentionally excludes credentials, personal build
+state, vendor installers and source code whose redistribution permission could
+not be established. Those exclusions are documented rather than silently
+replaced with unverifiable implementations.
+

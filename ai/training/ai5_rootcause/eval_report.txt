@@ -1,0 +1,55 @@
+AI-5 Root-Cause Diagnoser - Evaluation Report
+========================================================
+params=1673  arch=27-32-16-9 (BN folded at export)
+
+[train] overall accuracy: 99.96%  (n=19800)
+
+Class                   Prec     Rec      F1      N
+----------------------------------------------------
+  NORMAL               1.000   1.000   1.000   2200
+  RAMP_TOO_FAST        1.000   1.000   1.000   2200
+  UNDER_TEMPERATURE    1.000   0.997   0.998   2200
+  OXIDIZE_CR6          1.000   1.000   1.000   2200
+  DECOMP_GAS_SURGE     1.000   1.000   1.000   2200
+  VOLATILIZATION_LOSS   1.000   1.000   1.000   2200
+  MOISTURE_HYDROXYL    1.000   1.000   1.000   2200
+  GRIND_INHOMOGENEITY   1.000   1.000   1.000   2200
+  SOAK_TEMP_DRIFT      0.997   1.000   0.998   2200
+
+[train] confusion (rows=true, cols=pred):
+                        0    1    2    3    4    5    6    7    8
+  0 NORMAL          2200    0    0    0    0    0    0    0    0
+  1 RAMP_TOO_FAST      0 2200    0    0    0    0    0    0    0
+  2 UNDER_TEMPERATU    0    0 2194    0    0    0    0    0    6
+  3 OXIDIZE_CR6        0    0    0 2200    0    0    0    0    0
+  4 DECOMP_GAS_SURG    0    0    0    0 2200    0    0    0    0
+  5 VOLATILIZATION_    0    0    0    0    0 2200    0    0    0
+  6 MOISTURE_HYDROX    0    0    0    0    0    0 2200    0    0
+  7 GRIND_INHOMOGEN    0    0    0    0    0    0    0 2200    0
+  8 SOAK_TEMP_DRIFT    0    0    1    0    0    0    0    0 2199
+
+[test] overall accuracy: 99.93%  (n=5400)
+
+Class                   Prec     Rec      F1      N
+----------------------------------------------------
+  NORMAL               1.000   1.000   1.000    600
+  RAMP_TOO_FAST        1.000   1.000   1.000    600
+  UNDER_TEMPERATURE    1.000   0.993   0.997    600
+  OXIDIZE_CR6          1.000   1.000   1.000    600
+  DECOMP_GAS_SURGE     1.000   1.000   1.000    600
+  VOLATILIZATION_LOSS   1.000   1.000   1.000    600
+  MOISTURE_HYDROXYL    1.000   1.000   1.000    600
+  GRIND_INHOMOGENEITY   1.000   1.000   1.000    600
+  SOAK_TEMP_DRIFT      0.993   1.000   0.997    600
+
+[test] confusion (rows=true, cols=pred):
+                        0    1    2    3    4    5    6    7    8
+  0 NORMAL           600    0    0    0    0    0    0    0    0
+  1 RAMP_TOO_FAST      0  600    0    0    0    0    0    0    0
+  2 UNDER_TEMPERATU    0    0  596    0    0    0    0    0    4
+  3 OXIDIZE_CR6        0    0    0  600    0    0    0    0    0
+  4 DECOMP_GAS_SURG    0    0    0    0  600    0    0    0    0
+  5 VOLATILIZATION_    0    0    0    0    0  600    0    0    0
+  6 MOISTURE_HYDROX    0    0    0    0    0    0  600    0    0
+  7 GRIND_INHOMOGEN    0    0    0    0    0    0    0  600    0
+  8 SOAK_TEMP_DRIFT    0    0    0    0    0    0    0    0  600

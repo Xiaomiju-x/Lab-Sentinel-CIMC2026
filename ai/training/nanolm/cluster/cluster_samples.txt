@@ -1,0 +1,181 @@
+==== e1 故障诊断  best_val 0.6252 ppl 1.87 ====
+[stage=sinter risk=bad gas=ok host=y2o3]
+  teacher: 高温烧结阶段升温过慢，能耗偏高，建议检查加热元件并调整升温程序。
+  expert : 高温烧结阶段升温过慢，能耗偏高，建议检查加热元件并调整升温程序。
+[stage=ramp risk=warn gas=ok host=yag]
+  teacher: 升温速率过慢且能耗偏高，建议检查加热功率或升温程序设置。
+  expert : 升温速率过慢且能耗偏高，建议检查加热功率或升温程序设置。
+[stage=sinter risk=crit gas=ok host=ggg]
+  teacher: 热电偶短路，立即更换并校准，否则控温失效风险极高。
+  expert : 热电偶短路，立即停机更换，防止温控失效。
+[stage=sinter risk=warn gas=ok host=gagg]
+  teacher: 研磨振动异常，建议检查机械连接并停机排查。
+  expert : 研磨振动异常，检查搬运路径，防止炉体共振。
+[stage=sinter risk=warn gas=ok host=sygo]
+  teacher: 研磨振动异常，检查搬运路径，暂停烧结。
+  expert : 研磨振动异常，检查搬运路径，防止炉体共振。
+[stage=idle risk=good gas=ok host=y2o3]
+  teacher: 炉温过低，需启动升温至烧结温度。
+  expert : 炉温过低，请启动升温程序至烧结温度。
+[stage=ramp risk=crit gas=ok host=y2o3]
+  teacher: 热电偶短路，立即停炉校准，防止温度失控。
+  expert : 热电偶短路，立即停机更换，防止温控失效。
+[stage=sinter risk=bad gas=ok host=ggg]
+  teacher: 炉温漂移大且烧结曲线异常，建议立即检查温控系统并校准。
+  expert : 温漂偏大且烧结曲线异常，建议立即检查温控系统并校准。
+
+==== e2 工艺配方建议  best_val 1.0149 ppl 2.76 ====
+[stage=calcine risk=warn gas=ok host=yag]
+  teacher: 降低升温速率并延长保温时间以补偿加热元件老化。
+  expert : 降低升温速率至2°C/min并延长保温时间以缓解加热元件老化。
+[stage=preheat risk=warn gas=ok host=yag]
+  teacher: 预热阶段升温速率提高至8°C/分钟，降低能耗。
+  expert : 提高升温速率至5°C/min，缩短预热时间。
+[stage=idle risk=good gas=ok host=sygo]
+  teacher: 待机结束立即以5°C/分升温至1000°C并保温2小时。
+  expert : 待机结束立即以5°C/分升温至1450°C保温2小时。
+[stage=preheat risk=warn gas=moist host=sygo]
+  teacher: 降低升温速率至约10°C/min。
+  expert : 预热段增加除湿度，降低升温速率。
+[stage=done risk=good gas=ok host=ggg]
+  teacher: 调整GGG:Cr的退火速率，优化保温时长。
+  expert : 降低升温速率至2°C/min并延长保温时间。
+[stage=ramp risk=good gas=ok host=sygo]
+  teacher: 保持当前升温速率，目标温度设为1250°C。
+  expert : 升温速率提高至5°C/min，缩短保温时间。
+[stage=idle risk=good gas=ok host=gagg]
+  teacher: 调整气氛为微还原性以提升Cr发光效率
+  expert : 待机结束立即以5°C/分升温至1450°C保温2小时。
+[stage=sinter risk=crit gas=cr6 host=y2o3]
+  teacher: 降低升温速率并引入还原气氛抑制Cr6+生成。
+  expert : 降低升温速率并引入还原气氛抑制Cr6+生成。
+
+==== e3 能耗碳排  best_val 0.8053 ppl 2.24 ====
+[stage=ramp risk=crit gas=ok host=ggg]
+  teacher: 热电偶短路致能效低，建议立即更换热电偶。
+  expert : 热电偶短路致控温不准，能效低；建议立即更换热电偶。
+[stage=preheat risk=good gas=ok host=gagg]
+  teacher: 预热平稳能耗正常，建议维持当前占空比并优化保温时间。
+  expert : 预热阶段能效良好，建议维持当前升温速率以降低能耗。
+[stage=idle risk=good gas=ok host=ggg]
+  teacher: 待机阶段能耗正常，建议保持当前低功耗状态。
+  expert : 待机能耗低，建议保持当前状态无需调整。
+[stage=done risk=good gas=ok host=y2o3]
+  teacher: 当前能效良好，建议保持现有工艺参数。
+  expert : 炉况正常，能效良好；建议维持当前工艺参数。
+[stage=preheat risk=bad gas=hf host=gagg]
+  teacher: 异常炉况致能效低，建议排查HF气体并优化气氛控制。
+  expert : 异常气氛致能效低，建议优化排气氛控制减少热损失。
+[stage=ramp risk=crit gas=ok host=yag]
+  teacher: 热电偶断路致能效降，速换新件并校准。
+  expert : 热电偶断路致控温失效，能效低，需立即更换热电偶。
+[stage=cool risk=warn gas=ok host=yag]
+  teacher: 能效偏低，建议优先更换老化加热元件并优化降温段占空比。
+  expert : 降温冷却阶段能耗偏高，建议更换老化加热元件。
+[stage=ramp risk=crit gas=ok host=yag]
+  teacher: 热电偶短路致能效低，建议立即更换热电偶。
+  expert : 热电偶短路致控温不准，能效低；建议立即更换热电偶。
+
+==== e4 质量批次判读  best_val 0.5214 ppl 1.68 ====
+[stage=done risk=good gas=ok host=gagg]
+  teacher: 良品，烧结过程与结果均正常。
+  expert : 良品，烧结过程与结果均正常。
+[stage=sinter risk=bad gas=ok host=sygo]
+  teacher: 废品，升温过慢导致新相合成不充分。
+  expert : 废品，升温过慢致晶格缺陷且能耗偏高。
+[stage=idle risk=good gas=ok host=ggg]
+  teacher: 良品，烧结过程稳定无异常。
+  expert : 良品，烧结过程无异常且配方正常。
+[stage=idle risk=good gas=ok host=gagg]
+  teacher: 良品，烧结过程无异常且参数稳定。
+  expert : 良品，烧结过程无异常且配方正常。
+[stage=done risk=good gas=ok host=gagg]
+  teacher: 良品，烧结过程无异常且结果符合预期。
+  expert : 良品，烧结过程与结果均正常。
+[stage=preheat risk=bad gas=hf host=y2o3]
+  teacher: 废品，预热阶段气氛含HF导致原料污染。
+  expert : 废品，烧结阶段异常且检测到含氟分解气。
+[stage=done risk=good gas=ok host=gagg]
+  teacher: 良品，烧结过程与结果均正常。
+  expert : 良品，烧结过程与结果均正常。
+[stage=cool risk=good gas=ok host=sygo]
+  teacher: 良品，烧结过程参数正常且无异常风险。
+  expert : 良品，烧结过程各项指标正常。
+
+==== e5 操作简报  best_val 0.8422 ppl 2.32 ====
+[stage=sinter risk=crit gas=ok host=yag]
+  teacher: 注意温漂偏大，立即核查控温程序并准备手动干预。
+  expert : 注意温漂偏大，立即检查控温系统，防止温。
+[stage=cool risk=warn gas=ok host=sygo]
+  teacher: 降温冷却阶段，注意能耗偏高，检查加热元件老化。
+  expert : 降温冷却中，注意能耗偏高，加热元件老化需监控。
+[stage=sinter risk=warn gas=ok host=ggg]
+  teacher: 注意研磨搬运振动异常，检查机械部件，防止干扰烧结。
+  expert : 注意研磨搬运振动异常，请检查设备并稳定操作。
+[stage=calcine risk=warn gas=co2 host=sygo]
+  teacher: 煅烧保温中，注意碳酸盐分解，检查CO2排放。
+  expert : 保温阶段注意CO2排放，检查碳酸盐分解进度。
+[stage=preheat risk=warn gas=ok host=yag]
+  teacher: 升温过慢能耗偏高，请适当调高功率并关注温度变化。
+  expert : 升温过慢能耗偏高，请检查加热功率并调整升温速率。
+[stage=sinter risk=bad gas=ok host=y2o3]
+  teacher: 高温烧结能耗偏高，注意加热元件寿命告警，检查升温速率。
+  expert : 升温过慢能耗偏高，加热元件寿命告警，请检查并调整升温速率。
+[stage=ramp risk=crit gas=ok host=y2o3]
+  teacher: 立即检查热电偶，注意手动控温，防止温度失控。
+  expert : 热电偶断路！立即停机检查，注意安全！
+[stage=done risk=good gas=ok host=ggg]
+  teacher: 出炉完成，可准备下一炉装料，注意检查炉门密封。
+  expert : 出炉完成，准备下一炉装料，注意检查炉门密封。
+
+==== e6 配方化学  best_val 0.7549 ppl 2.13 ====
+[stage=preheat risk=good gas=ok host=yag]
+  teacher: 增加三价铬浓度至近红外发射峰增强。
+  expert : 三价铬占据铝格位，无需电荷补偿，预期近红外发射。
+[stage=preheat risk=warn gas=moist host=ggg]
+  teacher: 控制三价铬占据八面体格位，避免氧化，预期近红外发射。
+  expert : 三价铬占据八面体格位，镓位取代需电荷补偿，预期宽谱近红外发射。
+[stage=done risk=good gas=ok host=gagg]
+  teacher: 三价铬占据铝格位，无需电荷补偿，预期近红外发射。
+  expert : 三价铬占据铝镓双格位，无需电荷补偿，预期宽带近红外发射。
+[stage=calcine risk=bad gas=ok host=y2o3]
+  teacher: 增加二价镍共掺杂，促进三价铬进入八面体格位，增强近红外宽带发射。
+  expert : 三价铬占据钇格位，引入二价镁电荷补偿，增强近红外宽带发射。
+[stage=calcine risk=bad gas=ok host=ggg]
+  teacher: 降低三价铬掺杂量，避免过度取代，减少晶格畸变。
+  expert : 三价铬占据八面体格位，镓镓石榴石基质无需电荷补偿，预期宽带近红外发射。
+[stage=cool risk=warn gas=ok host=y2o3]
+  teacher: 使用三价铬占据钇格位，无需电荷补偿，预期产生宽带近红外发射。
+  expert : 降低三价铬浓度，引入二价镍共激活，增强近红外宽带发射。
+[stage=done risk=good gas=ok host=ggg]
+  teacher: 建议三价铬占据八面体格位，镓位取代并引入镁离子电荷补偿，预期宽谱近红外发射。
+  expert : 三价铬占据八面体格位，无需电荷补偿，预期宽带近红外发射。
+[stage=idle risk=good gas=ok host=gagg]
+  teacher: 三价铬占据铝格位，引入镓锂共取代补偿电荷，发射移至近红外一区。
+  expert : 三价铬占据铝镓格位，无需电荷补偿，预期近红外发射。
+
+==== e7 设备维护  best_val 0.4003 ppl 1.49 ====
+[stage=sinter risk=good gas=ok host=sygo]
+  teacher: 加热元件与热电偶正常，传动无振动，无需检修。
+  expert : 加热元件与热电偶正常，无需检修。
+[stage=sinter risk=crit gas=ok host=yag]
+  teacher: 热电偶断路需立即更换并校验，停炉检修。
+  expert : 热电偶断路需立即更换并校验，停炉检修。
+[stage=calcine risk=bad gas=ok host=sygo]
+  teacher: 烧结曲线异常需停炉检修加热元件与热电偶
+  expert : 烧结曲线异常需停炉检修加热元件与热电偶。
+[stage=done risk=good gas=ok host=y2o3]
+  teacher: 设备正常无需检修。
+  expert : 设备正常无需检修，保持当前状态即可。
+[stage=calcine risk=good gas=ok host=ggg]
+  teacher: 设备正常无需检修，保持监测即可。
+  expert : 设备正常无需检修，保持当前运行状态。
+[stage=done risk=good gas=ok host=ggg]
+  teacher: 设备正常无需检修。
+  expert : 设备正常无需检修，保持当前状态即可。
+[stage=cool risk=warn gas=ok host=y2o3]
+  teacher: 加热元件老化需更换，能耗偏高建议停炉检修。
+  expert : 加热元件老化预警需停炉更换，能耗偏高建议同步检查。
+[stage=preheat risk=warn gas=ok host=gagg]
+  teacher: 能耗偏高需检查加热元件接触与保温
+  expert : 能耗偏高且升温过慢，建议检查加热元件接触与功率输出。

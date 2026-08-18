@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cimc://schemas/evidence-card-v2",
+  "title": "CIMC EvidenceCard v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "session_id", "run_id", "seq", "monotonic_ms", "rtc_utc", "stage", "source_id", "truth_class", "quality", "age_ms", "independence_family", "authority", "summary_sha256"],
+  "properties": {
+    "schema": {"const": "cimc.evidence-card.v2"},
+    "session_id": {"type": "string", "minLength": 1, "maxLength": 40},
+    "run_id": {"type": "string", "minLength": 1, "maxLength": 40},
+    "seq": {"type": "integer", "minimum": 0},
+    "monotonic_ms": {"type": "integer", "minimum": 0},
+    "rtc_utc": {"type": "string", "format": "date-time"},
+    "stage": {"enum": ["PRE_FLIGHT", "RAMP", "SOAK", "COOL", "POST_RUN", "METROLOGY", "REPLAY", "FIXTURE"]},
+    "source_id": {"type": "string", "minLength": 1, "maxLength": 64},
+    "model_id": {"type": ["string", "null"], "pattern": "^ICM-[0-9]{3}$"},
+    "model_release_root": {"type": ["string", "null"], "pattern": "^[0-9a-fA-F]{64}$"},
+    "truth_class": {"enum": ["TEAM_MEASURED", "OPEN_EXPERIMENT", "LITERATURE_CURATED_EXPERIMENT", "ANON_PRODUCTION", "OPEN_COMPUTED_DFT", "PHYSICS_SIM", "STRUCTURE_DERIVED", "CONTROLLED_FIXTURE", "SYNTHETIC_AUGMENTATION", "TEACHER_CANDIDATE", "METADATA_ONLY"]},
+    "quality": {"type": "number", "minimum": 0, "maximum": 1},
+    "age_ms": {"type": "integer", "minimum": 0},
+    "independence_family": {"type": "string", "minLength": 1, "maxLength": 64},
+    "parent_evidence_ids": {"type": "array", "maxItems": 8, "uniqueItems": true, "items": {"type": "string", "maxLength": 64}},
+    "interval": {"type": ["object", "null"], "required": ["lower", "upper", "coverage"], "additionalProperties": false, "properties": {"lower": {"type": "number"}, "upper": {"type": "number"}, "coverage": {"type": "number", "exclusiveMinimum": 0, "exclusiveMaximum": 1}}},
+    "as_of_seq": {"type": ["integer", "null"], "minimum": 0},
+    "as_of_monotonic_ms": {"type": ["integer", "null"], "minimum": 0},
+    "authority": {"const": 0},
+    "summary_sha256": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"}
+  }
+}

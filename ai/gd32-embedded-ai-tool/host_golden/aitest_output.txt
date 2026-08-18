@@ -1,0 +1,16 @@
+AI-1 CNN     logit_err=2.384e-06  emb_err=4.768e-07  pass=1
+AI-2 AE      recon_err=1.907e-06  mse_err=7.153e-07  pass=1
+AI-3 Xformer logit_err=6.676e-06  pass=1
+AI-4 Fusion  logit_err=1.907e-06  pass=1
+AI-1b NCM    pred=0 (expect 0)  pass=1
+GAS safety   rule-engine self-test pass=1
+AI-5 RootCau logit_err=1.192e-06  pass=1
+AI-6 Optical pass=1   AI-7 Thermal pass=1   AI-8 Energy pass=1
+AI-9 Retrieve pass=1  AI-10 VibPdM pass=1
+AI-11 Purity pass=1  AI-12 PLclass pass=1  AI-13 PL-QC pass=1
+AI-14 Forecast pass=1  AI-15 host-ID pass=1  AI-16 lambda pass=1  AI-17 PL-fewshot pass=1
+AI-19 RUL/ETA pass=1  AI-20 TC-integrity pass=1   (20 models)
+B-depth: CAM pass=1  INT8 pass=1  AdaptiveConformal pass=1
+GD32-AI-Tool: AI-4 TFLite deployed on-chip  err=2.384e-07  pass=1
+-------------------------------------------
+ALL_PASS=1  (tol=1e-02)

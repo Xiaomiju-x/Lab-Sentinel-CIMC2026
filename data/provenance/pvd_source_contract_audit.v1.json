@@ -1,0 +1,38 @@
+{
+  "schema": "cimc.forge200.pvd-source-contract-audit.v1",
+  "status": "FAIL_CLOSED_NO_EXACT_REGISTERED_TARGET",
+  "source": {
+    "dataset": "Advanced Process Control and Statistical Process Control Data for Thickness Prediction of AlCu and WTi Metal Layer in Semiconductor Manufacturing",
+    "doi": "10.5281/zenodo.16881338",
+    "license": "CC BY 4.0",
+    "download_receipt": "evidence/open_dataset_download_state.v1.json",
+    "x_rows": {
+      "AlCu": 4848,
+      "WTi": 1740
+    },
+    "y_fields": 17,
+    "source_description": "Y contains physical thickness measurements at 17 points, but the published files and metadata do not state a physical unit or a reversible normalization scale."
+  },
+  "dispositions": [
+    {
+      "candidate_id": "CAND-P-093",
+      "status": "FAIL_CLOSED_TARGET_LABEL_ABSENT",
+      "reason": "the source has no PVD fault-type label"
+    },
+    {
+      "candidate_id": "CAND-P-094",
+      "status": "FAIL_CLOSED_TARGET_AND_CONTEXT_ABSENT",
+      "reason": "the source has no maintenance events, future drift vector, or explicit temporal run history"
+    },
+    {
+      "candidate_id": "CAND-P-118",
+      "status": "FAIL_CLOSED_PHYSICAL_UNIT_NOT_SOURCE_BOUND",
+      "reason": "the registered target is thickness_nm, while the source supplies anonymized numeric thickness measurements without a stated unit or reversible physical scale; arbitrary conversion to nm is forbidden"
+    }
+  ],
+  "training_authorized_candidates": [],
+  "teacher_outputs": 0,
+  "authority": 0,
+  "board_actions": 0,
+  "countable_models": 0
+}

@@ -1,0 +1,22 @@
+{
+  "public_derivative_notice": "Local drive letters and private source paths were replaced; content hashes identify the archived original files.",
+  "accepted": true,
+  "actual_content_root_sha256": "0fece66b2d87d15bb7da93a9bafaa7d8f726c74c917ef900949b6a2b223d82e4",
+  "authority_nonzero": 0,
+  "board_actions": 0,
+  "board_trace_allowed": false,
+  "board_trace_present": [],
+  "bytes": 48448511,
+  "created_at_utc": "2026-08-04T05:45:53.993564+00:00",
+  "expected_bytes": 48448511,
+  "expected_files": 375,
+  "extra": [],
+  "files": 375,
+  "mismatched": [],
+  "missing": [],
+  "schema": "cimc.forge200.physical-sd-copy.v9",
+  "sd_root": "${REMOVABLE_SD_ROOT}",
+  "source": "${FORGE200_ROOT}/releases/forge200-sd-staging-v9r2-20260804",
+  "source_content_root_sha256": "0fece66b2d87d15bb7da93a9bafaa7d8f726c74c917ef900949b6a2b223d82e4",
+  "status": "PHYSICAL_SD_COPY_PASS"
+}

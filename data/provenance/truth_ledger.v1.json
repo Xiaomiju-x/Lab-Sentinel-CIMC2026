@@ -1,0 +1,25 @@
+{
+  "classes": [
+    "TEAM_MEASURED",
+    "OPEN_EXPERIMENT",
+    "LITERATURE_CURATED_EXPERIMENT",
+    "ANON_PRODUCTION",
+    "OPEN_COMPUTED_DFT",
+    "PHYSICS_SIM",
+    "STRUCTURE_DERIVED",
+    "CONTROLLED_FIXTURE",
+    "SYNTHETIC_AUGMENTATION",
+    "TEACHER_CANDIDATE",
+    "METADATA_ONLY"
+  ],
+  "forbidden_promotions": [
+    "TEACHER_CANDIDATE_TO_GROUND_TRUTH",
+    "OPEN_COMPUTED_DFT_TO_EXPERIMENT",
+    "CONTROLLED_FIXTURE_TO_TEAM_MEASURED",
+    "SYNTHETIC_AUGMENTATION_TO_ANON_PRODUCTION",
+    "METADATA_ONLY_TO_TRAINING_LABEL"
+  ],
+  "report_metrics_separately": true,
+  "schema": "cimc.forge200.truth-ledger.v1",
+  "status": "FROZEN"
+}

@@ -1,0 +1,129 @@
+{
+  "public_derivative_notice": "The absolute source path was replaced; content_root_sha256 identifies the archived original receipt.",
+  "accepted": true,
+  "authority_nonzero": 0,
+  "board_accepted": false,
+  "board_actions": 0,
+  "board_pending": [
+    "PHYSICAL_SD_REMOVAL_FAIL_CLOSED",
+    "PHYSICAL_WAL_POWER_CUT_RECOVERY",
+    "MAX31856_SHARED_SPI_CONCURRENCY",
+    "GD32_DWT_LATENCY",
+    "1000_PHYSICAL_AB_LOADS",
+    "24H_PHYSICAL_SOAK"
+  ],
+  "board_static": {
+    "forbidden_control_calls": [],
+    "path": "firmware/keil_proj/HardWare/Lab_Sentinel/forge200_board_port.c",
+    "required_fragments": {
+      "(swap_loads % 100U) != 99U": true,
+      "(swap_loads % 250U) == 0U": true,
+      "POWER_CUT_ARMED": true,
+      "cancelled_load_probe": true,
+      "event=": true,
+      "forge200_rag_board_run": true,
+      "index == previous_swap_index": true,
+      "mid_cancel=%lu": true,
+      "same_model_reload=%lu": true,
+      "soak_rag_queries": true
+    },
+    "sha256": "67af115d23324d4720b34e9c5784f8ab6096b72f33526e328995358f64c946f7"
+  },
+  "content_root_sha256": "3c6036fdb62dd843840fd74df5236c1076c484703e592479fae697d4ea3db499",
+  "created_at_utc": "2026-08-03T19:39:18.599535+00:00",
+  "host_fault_cases": {
+    "gates": {
+      "authority_zero": true,
+      "rag_120_safe": true,
+      "rag_four_mutations": true,
+      "sd_package_faults_7": true,
+      "veriprocess_69": true
+    },
+    "modelbank_package": 7,
+    "rag_assets": 4,
+    "veriprocess": 69
+  },
+  "schema": "cimc.forge200.unified-fault-matrix.v9",
+  "status": "PASS_HOST_FAULT_MATRIX_BOARD_PHYSICAL_ACCEPTANCE_PENDING",
+  "swap_schedule": {
+    "actual_same_model_reloads": [
+      {
+        "candidate_id": "CAND-P-082",
+        "load": 100
+      },
+      {
+        "candidate_id": "CAND-G-028",
+        "load": 200
+      },
+      {
+        "candidate_id": "CAND-P-130",
+        "load": 300
+      },
+      {
+        "candidate_id": "CAND-P-026",
+        "load": 400
+      },
+      {
+        "candidate_id": "CAND-S-020",
+        "load": 500
+      },
+      {
+        "candidate_id": "CAND-P-062",
+        "load": 600
+      },
+      {
+        "candidate_id": "CAND-G-013",
+        "load": 700
+      },
+      {
+        "candidate_id": "CAND-P-112",
+        "load": 800
+      },
+      {
+        "candidate_id": "CAND-P-011",
+        "load": 900
+      },
+      {
+        "candidate_id": "CAND-P-145",
+        "load": 1000
+      }
+    ],
+    "gates": {
+      "actual_same_model_reload_10": true,
+      "all_170_exercised": true,
+      "loads_1000": true,
+      "mid_load_cancel_4": true,
+      "minimum_four_per_model": true
+    },
+    "loads": 1000,
+    "maximum_per_model": 7,
+    "mid_load_cancellations": [
+      {
+        "candidate_id": "CAND-P-053",
+        "load": 250,
+        "package_bytes": 4352,
+        "size_class": "SMALL"
+      },
+      {
+        "candidate_id": "CAND-S-020",
+        "load": 500,
+        "package_bytes": 26368,
+        "size_class": "MEDIUM"
+      },
+      {
+        "candidate_id": "CAND-P-033",
+        "load": 750,
+        "package_bytes": 4416,
+        "size_class": "SMALL"
+      },
+      {
+        "candidate_id": "CAND-P-145",
+        "load": 1000,
+        "package_bytes": 35552,
+        "size_class": "MEDIUM"
+      }
+    ],
+    "minimum_per_model": 5,
+    "models": 170
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "cimc.chronospec-r4.events.v1",
+  "status": "FROZEN_FOR_GPU_TRAINING_BOARD_PENDING",
+  "authority": 0,
+  "events": [
+    {"id": 1024, "name": "MODEL_LOAD_BEGIN", "deadline_ms": 1, "consumer": "MODEL_BANK"},
+    {"id": 1025, "name": "MODEL_SCHEMA_VERIFIED", "deadline_ms": 50, "consumer": "MODEL_BANK"},
+    {"id": 1026, "name": "MODEL_SHA256_VERIFIED", "deadline_ms": 8000, "consumer": "MODEL_BANK"},
+    {"id": 1027, "name": "MODEL_GENERATION_VERIFIED", "deadline_ms": 10, "consumer": "MODEL_BANK"},
+    {"id": 1028, "name": "MODEL_GOLDEN_VERIFIED", "deadline_ms": 2000, "consumer": "MODEL_BANK"},
+    {"id": 1029, "name": "MODEL_COMMIT", "deadline_ms": 10, "consumer": "MODEL_BANK"},
+    {"id": 1030, "name": "MODEL_ROLLBACK_REFUSE", "deadline_ms": 10, "consumer": "MODEL_BANK"},
+    {"id": 1040, "name": "RAG_SOURCE_FRESHNESS_CHECK", "deadline_ms": 100, "consumer": "ICMAT_COUNCIL"},
+    {"id": 1041, "name": "RAG_QUERY_TIMEOUT", "deadline_ms": 30000, "consumer": "ICMAT_COUNCIL"},
+    {"id": 1050, "name": "PTC_COMMAND_ISSUED", "deadline_ms": 1, "consumer": "TWIN_GUARD"},
+    {"id": 1051, "name": "PTC_CURRENT_OBSERVED", "deadline_ms": 2000, "consumer": "TWIN_GUARD"},
+    {"id": 1052, "name": "THERMAL_RESPONSE_OBSERVED", "deadline_ms": 25000, "consumer": "TWIN_GUARD"},
+    {"id": 1060, "name": "SINTERGRAPH_PREDICTION_FROZEN", "deadline_ms": 1, "consumer": "VERIPROCESS"},
+    {"id": 1061, "name": "SINTERGRAPH_FULFILLMENT_AVAILABLE", "deadline_ms": 0, "consumer": "VERIPROCESS"},
+    {"id": 1070, "name": "PROOFPASS_WAL_PREPARE", "deadline_ms": 100, "consumer": "TRACE_LEDGER"},
+    {"id": 1071, "name": "PROOFPASS_SYNC_COMMIT", "deadline_ms": 2000, "consumer": "TRACE_LEDGER"},
+    {"id": 1072, "name": "PROOFPASS_RECOVERY", "deadline_ms": 5000, "consumer": "TRACE_LEDGER"}
+  ],
+  "invariants": [
+    "MODEL_COMMIT requires SCHEMA then SHA256 then GENERATION then GOLDEN",
+    "SINTERGRAPH_PREDICTION_FROZEN precedes same-run XRD PL SEM evidence",
+    "PROOFPASS committed records are append-only",
+    "deadline failure never grants actuator authority"
+  ]
+}

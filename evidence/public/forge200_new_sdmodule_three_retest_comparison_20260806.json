@@ -1,0 +1,69 @@
+{
+    "public_derivative_notice": "Absolute UART-log paths were replaced by private-archive locators; byte counts and SHA-256 values are unchanged.",
+    "schema":  "forge200.new_sdmodule_retest_comparison.v1",
+    "created_at":  "2026-08-06T15:07:14.6377260+08:00",
+    "module":  "new_same_model_micro_sd_spi_module",
+    "card":  "correct_32GB_CIMC_DATA",
+    "firmware":  "v9r15",
+    "attempts":  [
+                     {
+                         "attempt":  1,
+                         "log":  "private-archive://evidence/forge200_new_sdmodule_retest1_20260806_144946_clean_external_reset_uart.log",
+                         "bytes":  5055,
+                         "sha256":  "30518ECCA6F28961836C9F7E5853B232A0405C10045C51868F32DB5E99BF00EC",
+                         "boot_markers":  1,
+                         "max31856_pass":  true,
+                         "sd_ready":  true,
+                         "stop_reason":  "BOTH_CATALOGS_INVALID",
+                         "got":  384,
+                         "chunk":  8192,
+                         "remaining":  27200,
+                         "sd_delay":  700,
+                         "sd_retries":  80,
+                         "failed_lba":  133708,
+                         "sd_read_rc":  3
+                     },
+                     {
+                         "attempt":  2,
+                         "log":  "private-archive://evidence/forge200_new_sdmodule_retest2_20260806_145612_uart.log",
+                         "bytes":  5054,
+                         "sha256":  "89D4AE05014835DCA96E2DE19A9D9247C7A20C439BEF56EA604238ED5C9FA871",
+                         "boot_markers":  1,
+                         "max31856_pass":  true,
+                         "sd_ready":  true,
+                         "stop_reason":  "BOTH_CATALOGS_INVALID",
+                         "got":  384,
+                         "chunk":  8192,
+                         "remaining":  19008,
+                         "sd_delay":  700,
+                         "sd_retries":  80,
+                         "failed_lba":  133715,
+                         "sd_read_rc":  3
+                     },
+                     {
+                         "attempt":  3,
+                         "log":  "private-archive://evidence/forge200_new_sdmodule_retest3_20260806_150208_uart.log",
+                         "bytes":  5056,
+                         "sha256":  "441B54A70E7C47246221CE40897992A38B905D2D470959E65820DA03B847B027",
+                         "boot_markers":  1,
+                         "max31856_pass":  true,
+                         "sd_ready":  true,
+                         "stop_reason":  "BOTH_CATALOGS_INVALID",
+                         "got":  384,
+                         "chunk":  8192,
+                         "remaining":  27200,
+                         "sd_delay":  700,
+                         "sd_retries":  124,
+                         "failed_lba":  133702,
+                         "sd_read_rc":  3
+                     }
+                 ],
+    "summary":  {
+                    "attempts":  3,
+                    "sd_ready_pass":  3,
+                    "max31856_pass":  3,
+                    "catalog_pass":  0,
+                    "crc_fail":  3,
+                    "conclusion":  "NEW_IDENTICAL_MODULE_3_OF_3_SUSTAINED_READ_CRC_FAIL_COMMON_PATH_REMAINS"
+                }
+}

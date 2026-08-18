@@ -1,0 +1,109 @@
+{
+  "schema": "cimc.forge200.mendeley-sintering-w4-contract-binding.v1",
+  "source_id": "MENDELEY-W4N4JDCGCV-V1",
+  "status": "FROZEN_SOURCE_AUDIT_EXACT_CONTRACTS_NOT_CLOSED",
+  "source": {
+    "title": "Kinetic analysis",
+    "publisher": "Mendeley Data",
+    "contributor": "Amir Hadian",
+    "doi": "10.17632/w4n4jdcgcv.1",
+    "landing_page": "https://data.mendeley.com/datasets/w4n4jdcgcv/1",
+    "license": "CC BY 4.0",
+    "truth_class": "OPEN_EXPERIMENTAL_L2",
+    "scope_limit": "Thermo-mechanical analysis of one NbC-M2 HSS material family; no phosphor-furnace, semiconductor-production, or team-measured generalization claim."
+  },
+  "artifacts": {
+    "landing_page": {
+      "path": "data/sources/mendeley_sintering_w4_v1/landing_page.html",
+      "bytes": 109017,
+      "sha256": "b44b32cc5d601d796f7304a8f00cefef0ea007cd7b7a449246a3c89963035583"
+    },
+    "file_manifest": {
+      "path": "data/sources/mendeley_sintering_w4_v1/files.json",
+      "bytes": 9900,
+      "sha256": "446f3a193cf04b8662babb472aa72abfc5a9a499b9fb9b9adcb0751c1165babc"
+    },
+    "download_receipt": {
+      "path": "data/sources/mendeley_sintering_w4_v1/download_receipt.v1.json",
+      "bytes": 4093,
+      "sha256": "0e5847d989816171df9264adeeabb87e6687d11bd9f07f14aaba71501730d9aa"
+    }
+  },
+  "expected_inventory": {
+    "downloaded_workbooks": 10,
+    "downloaded_bytes": 1054794,
+    "constant_heating_rate_runs": 5,
+    "constant_heating_rates_k_per_min": [2, 10, 15, 20, 25],
+    "isothermal_runs": 4,
+    "isothermal_temperatures_c": [1285, 1360, 1390, 1420],
+    "material_families": 1,
+    "relative_density_trajectory_labels": 0,
+    "green_density_record_labels": 0,
+    "final_grain_size_record_labels": 0,
+    "activation_energy_record_labels": 0,
+    "xrd_patterns": 0
+  },
+  "candidate_dispositions": [
+    {
+      "candidate_id": "CAND-P-049",
+      "status": "EXACT_REJECTED",
+      "reason_code": "RELATIVE_DENSITY_TRAJECTORY_ABSENT",
+      "facts": [
+        "The workbooks supply temperature, time, and linear dimensional-change traces, not relative-density trajectories.",
+        "No per-run green density or final Archimedes density is supplied for a reversible shrinkage-to-density conversion."
+      ]
+    },
+    {
+      "candidate_id": "CAND-P-050",
+      "status": "EXACT_REJECTED",
+      "reason_code": "GREEN_DENSITY_AND_PARTICLE_SIZE_INPUTS_NOT_RECORD_BOUND",
+      "facts": [
+        "The source supplies exact linear shrinkage trajectories for one material family.",
+        "The frozen input contract also requires green density and particle size, neither of which is bound to the downloadable run records."
+      ]
+    },
+    {
+      "candidate_id": "CAND-P-051",
+      "status": "EXACT_REJECTED",
+      "reason_code": "GRAIN_SIZE_AND_GROWTH_EXPONENT_LABELS_ABSENT",
+      "facts": [
+        "The source contains thermo-mechanical curves but no initial or final grain-size measurements.",
+        "It provides no independently measured per-run growth-exponent target."
+      ]
+    },
+    {
+      "candidate_id": "CAND-P-066",
+      "status": "EXACT_REJECTED",
+      "reason_code": "BATCH_TRANSFER_AND_PROPERTY_DRIFT_LABELS_ABSENT",
+      "facts": [
+        "Heating-rate and isothermal schedules are experiments on one named material, not source-target production-batch transfers.",
+        "No paired batch property-drift vector or transfer-risk outcome is supplied."
+      ]
+    },
+    {
+      "candidate_id": "CAND-P-082",
+      "status": "EXACT_REJECTED",
+      "reason_code": "ACTIVATION_ENERGY_TARGET_CARDINALITY_AND_HOST_SPLIT_INSUFFICIENT",
+      "facts": [
+        "The five constant-heating-rate curves can support a Kissinger analysis for one material family, but the frozen target requires independently labeled activation energy with a mechanism interval.",
+        "Curve points and rates from the same specimen family cannot be split as independent host-level activation-energy labels; fitting the target from the same curves would make the registered Kissinger baseline the label generator."
+      ]
+    },
+    {
+      "candidate_id": "CAND-P-085",
+      "status": "EXACT_REJECTED",
+      "reason_code": "XRD_INPUT_AND_PHASE_FRACTION_LABELS_ABSENT",
+      "facts": [
+        "The source contains no XRD pattern, instrument metadata, candidate-phase list, calibrated phase fractions, or uncertainty intervals."
+      ]
+    }
+  ],
+  "promotion_boundary": {
+    "training_actions": 0,
+    "host_promotions": 0,
+    "authority": 0,
+    "board_accepted": false,
+    "countable_model": false,
+    "sd_or_board_actions": 0
+  }
+}

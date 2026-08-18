@@ -1,0 +1,68 @@
+{
+  "schema": "cimc.forge200.mendeley-sic-plunger-contract-binding.v1",
+  "source_id": "MENDELEY-NKNVZ6GY6K-V1",
+  "source": {
+    "title": "Effect of plunger exposed length on densification uniformity and microstructural evolution of liquid-phase-sintered SiC ceramics during spark plasma sintering",
+    "publisher": "Mendeley Data",
+    "doi": "10.17632/nknvz6gy6k.1",
+    "url": "https://data.mendeley.com/datasets/nknvz6gy6k/1",
+    "license": "CC BY 4.0"
+  },
+  "download_receipt": {
+    "path": "data/sources/mendeley_sic_plunger_v1/download_receipt.v1.json",
+    "bytes": 3185,
+    "sha256": "197a058234f7ea78fe9aa5cb6c8a78e4824470a11cd3b66d3ab64bd755eeb528"
+  },
+  "read_only_inspection": {
+    "format": "Origin project",
+    "independent_sample_families_observed": ["S-H15", "S-H12", "S-H9"],
+    "independent_sample_family_count": 3,
+    "resistance_graph_semantics": "SPS process electrical resistance versus time",
+    "structured_source_workbooks_extracted": false,
+    "curve_points_are_independent_experiments": false
+  },
+  "candidate_dispositions": [
+    {
+      "candidate_id": "CAND-P-049",
+      "status": "EXACT_REJECTED",
+      "reason": "No auditable relative-density trajectory labels bound to powder, composition, and temperature-time inputs; three related sample curves cannot form a family-safe split."
+    },
+    {
+      "candidate_id": "CAND-P-050",
+      "status": "EXACT_REJECTED",
+      "reason": "No auditable linear-shrinkage trajectory labels with green density and particle size; process curve points are not independent runs."
+    },
+    {
+      "candidate_id": "CAND-P-051",
+      "status": "EXACT_REJECTED",
+      "reason": "The grain-size project is for one named sample and cannot supply family-disjoint train, validation, and test populations."
+    },
+    {
+      "candidate_id": "CAND-P-066",
+      "status": "EXACT_REJECTED",
+      "reason": "No source-target batch pairs or measured property-drift and transfer-risk labels are present."
+    },
+    {
+      "candidate_id": "CAND-P-082",
+      "status": "EXACT_REJECTED",
+      "reason": "No independent multirate reaction families with experimental activation-energy and mechanism-interval targets are present."
+    },
+    {
+      "candidate_id": "CAND-P-085",
+      "status": "EXACT_REJECTED",
+      "reason": "The XRD project does not provide enough independent families with instrument metadata, calibrated phase fractions, and uncertainty targets."
+    },
+    {
+      "candidate_id": "CAND-P-146",
+      "status": "EXACT_REJECTED_INPUT_TARGET_MISMATCH",
+      "reason": "The observed resistance is SPS process electrical resistance, not thin-film four-point-probe resistivity paired with deposition recipe and chamber traces."
+    }
+  ],
+  "promotion_boundary": {
+    "training_actions": 0,
+    "host_promotions": 0,
+    "authority": 0,
+    "board_accepted": false,
+    "countable_model": false
+  }
+}

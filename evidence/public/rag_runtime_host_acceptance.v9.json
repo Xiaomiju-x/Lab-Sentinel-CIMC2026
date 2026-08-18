@@ -1,0 +1,256 @@
+{
+  "authority": 0,
+  "board_accepted": false,
+  "board_pending": [
+    "GD32_DWT_STAGE_LATENCY",
+    "MICROSD_512KIB_S_OR_HIGHER",
+    "MAX31856_SHARED_SPI_NONINTERFERENCE",
+    "POWER_LOSS_RECOVERY",
+    "24H_CONCURRENT_STABILITY"
+  ],
+  "content_root_sha256": "b41a3ec5067cc482e7482594cf1a149c50ea693ab3baf47c1795594bbabde1c9",
+  "created_at_utc": "2026-08-03T19:31:08.446260+00:00",
+  "domain_runs": [
+    {
+      "domain": "PHOSPHOR",
+      "domain_id": 0,
+      "lm_candidate_id": "CAND-G-001",
+      "max_cold_read_bytes": 2470924,
+      "max_stage_ticks": [
+        9,
+        1,
+        375,
+        386,
+        1,
+        0,
+        0,
+        1
+      ],
+      "negative_refused": 10,
+      "positive_published": 1,
+      "published": 1,
+      "refused": 19,
+      "safe": 20,
+      "source_bound": 1,
+      "wall_seconds": 14.579418999999689
+    },
+    {
+      "domain": "FURNACE",
+      "domain_id": 1,
+      "lm_candidate_id": "CAND-G-012",
+      "max_cold_read_bytes": 1591052,
+      "max_stage_ticks": [
+        9,
+        1,
+        204,
+        197,
+        1,
+        0,
+        0,
+        1
+      ],
+      "negative_refused": 10,
+      "positive_published": 0,
+      "published": 0,
+      "refused": 20,
+      "safe": 20,
+      "source_bound": 0,
+      "wall_seconds": 8.002267500000016
+    },
+    {
+      "domain": "SEMIMAT",
+      "domain_id": 2,
+      "lm_candidate_id": "CAND-G-003",
+      "max_cold_read_bytes": 2470924,
+      "max_stage_ticks": [
+        9,
+        1,
+        368,
+        369,
+        1,
+        0,
+        0,
+        1
+      ],
+      "negative_refused": 10,
+      "positive_published": 0,
+      "published": 0,
+      "refused": 20,
+      "safe": 20,
+      "source_bound": 0,
+      "wall_seconds": 14.223048500000004
+    },
+    {
+      "domain": "METROLOGY",
+      "domain_id": 3,
+      "lm_candidate_id": "CAND-G-004",
+      "max_cold_read_bytes": 2470924,
+      "max_stage_ticks": [
+        9,
+        1,
+        375,
+        368,
+        1,
+        1,
+        0,
+        1
+      ],
+      "negative_refused": 10,
+      "positive_published": 0,
+      "published": 0,
+      "refused": 20,
+      "safe": 20,
+      "source_bound": 0,
+      "wall_seconds": 14.073171699999875
+    },
+    {
+      "domain": "PACKAGING",
+      "domain_id": 4,
+      "lm_candidate_id": "CAND-G-005",
+      "max_cold_read_bytes": 2441900,
+      "max_stage_ticks": [
+        8,
+        1,
+        364,
+        352,
+        1,
+        0,
+        0,
+        1
+      ],
+      "negative_refused": 10,
+      "positive_published": 0,
+      "published": 0,
+      "refused": 20,
+      "safe": 20,
+      "source_bound": 0,
+      "wall_seconds": 13.801535599999625
+    },
+    {
+      "domain": "FABQUALITY",
+      "domain_id": 5,
+      "lm_candidate_id": "CAND-G-006",
+      "max_cold_read_bytes": 2470924,
+      "max_stage_ticks": [
+        8,
+        1,
+        350,
+        363,
+        1,
+        1,
+        0,
+        1
+      ],
+      "negative_refused": 10,
+      "positive_published": 4,
+      "published": 4,
+      "refused": 16,
+      "safe": 20,
+      "source_bound": 4,
+      "wall_seconds": 13.764665599999717
+    }
+  ],
+  "gates": {
+    "at_least_one_source_bound_answer": true,
+    "authority_zero": true,
+    "balanced_60_60": true,
+    "cold_read_le_4mib": true,
+    "four_hash_mutations_rejected": true,
+    "generation_tokens_max_24": true,
+    "host_compile_werror": true,
+    "index_le_1mib": true,
+    "lm_and_workspace_zeroized": true,
+    "lm_le_2mib": true,
+    "negative_refusal_60": true,
+    "published_are_source_bound": true,
+    "query_count_120": true,
+    "safe_outcomes_120": true,
+    "state_machine_8_of_8": true,
+    "support_bundle_13_executed": true,
+    "support_bundle_le_1mib": true
+  },
+  "host_executable": {
+    "path": ".tmp/rag_v9_acceptance/forge200_rag_host_runner_v9.exe",
+    "sha256": "ed16d11efbf8e5b55435b217e225b3736a73894216a49ae6c2a6a24648cd17fd",
+    "strict_flags": [
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror"
+    ]
+  },
+  "mutations": [
+    {
+      "mutated_sha256": "a909889cd06bc4bc20b43e1968ef09dd45991f4dabecc5d5b0a134362b5dac0b",
+      "mutation_offset": 400763,
+      "name": "support_body_corrupt",
+      "rejected": true,
+      "returncode": 10,
+      "target": "D0.F2S"
+    },
+    {
+      "mutated_sha256": "6191d830129e3e92babedc8f8a7c6b22bd233bfe2980937be8ca15669bcf0492",
+      "mutation_offset": 267631,
+      "name": "workload_body_corrupt",
+      "rejected": true,
+      "returncode": 10,
+      "target": "D0.RIX"
+    },
+    {
+      "mutated_sha256": "1d0189ace8d95de4c28813260ee6db52cbf3ed69b0fe82ab96b5ac23745e286d",
+      "mutation_offset": 1802031,
+      "name": "lm_payload_corrupt",
+      "rejected": true,
+      "returncode": 10,
+      "target": "CAND-G-001.ICM"
+    },
+    {
+      "mutated_sha256": "64c2ddba4875c4ababf63381ec0402a6e8df917fffa652b9b0b2bda148d35417",
+      "mutation_offset": 431,
+      "name": "lm_golden_corrupt",
+      "rejected": true,
+      "returncode": 10,
+      "target": "CAND-G-001.GLD"
+    }
+  ],
+  "release": {
+    "content_root_sha256": "e8a9e983451551bd22f82f4e59b10cbd1c4fb92a45b0763d700284779b77d956",
+    "manifest_sha256": "322189e3ff9c1a56a9294ae2aa954a9ed33fa0f99de5bee69e21b4a29e86d9b7",
+    "path": "releases/forge200-rag-runtime-v9r6-20260804"
+  },
+  "resource_limits": {
+    "max_cold_read_bytes": 2470924,
+    "max_executing_models": 1,
+    "max_index_evidence_bytes": 267648,
+    "max_lm_package_bytes": 1802048,
+    "max_resident_packages": 2,
+    "max_support_bundle_bytes": 400780
+  },
+  "schema": "cimc.forge200.rag-runtime-host-acceptance.v9",
+  "status": "PASS_HOST_RAG_BOARD_TIMING_AND_SHARED_SPI_PENDING",
+  "timing_boundary": {
+    "cold_projection_at_512kib_s_seconds": 15.712913513183594,
+    "gd32_dwt_measured": false,
+    "host_wall_seconds_total": 78.44410789999893,
+    "micro_sd_measured_this_run": false,
+    "projection_only": true,
+    "shared_spi_measured_this_run": false,
+    "warm_projection_seconds": 7.5
+  },
+  "workload": {
+    "generation_exact": 108,
+    "negative": 60,
+    "negative_refused": 60,
+    "positive": 60,
+    "positive_refused": 55,
+    "published": 5,
+    "refused": 115,
+    "safe": 120,
+    "source_bound": 5,
+    "state_complete": 120,
+    "support_models_13": 120,
+    "total": 120,
+    "zeroized": 120
+  }
+}

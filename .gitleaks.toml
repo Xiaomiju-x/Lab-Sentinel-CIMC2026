@@ -1,0 +1,38 @@
+title = "Lab-Sentinel public release"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "private-workspace-path"
+description = "Private Windows workspace path"
+regex = '''(?i)[A-Z]:[\\/](?:Users|WorkData|xrd_backup)[\\/]'''
+tags = ["privacy", "path"]
+
+[[rules]]
+id = "deepseek-api-key"
+description = "DeepSeek-style API key"
+regex = '''\bsk-[A-Za-z0-9_-]{20,}\b'''
+tags = ["key"]
+
+[[rules]]
+id = "embedded-password"
+description = "Likely embedded password assignment"
+regex = '''(?i)(?:password|passwd|api[_-]?key|token)\s*[=:]\s*["'][^"'\n]{8,}["']'''
+tags = ["credential"]
+
+[[allowlists]]
+description = "Exact non-secret HAU enum/declaration lines in vendored sources"
+regexTarget = "line"
+regexes = [
+  '''^\s+keytype: HAU_KEY_SHORTER_64, HAU_KEY_LONGGER_64\s*$''',
+  '''^\s+initpara->keytype\s+=\s+HAU_KEY_SHORTER_64;\s*$''',
+  '''^\s+init_para\.keytype = HAU_KEY_(?:LONGGER|SHORTER)_64;\s*$''',
+  '''^err_t snmpv3_get_user\(const char\* username, snmpv3_auth_algo_t \*auth_algo, u8_t \*auth_key, snmpv3_priv_algo_t \*priv_algo, u8_t \*priv_key\);\s*$''',
+]
+
+[[allowlists]]
+description = "Exact lwIP SNMPv3 parameter fragment falsely classified as a credential"
+targetRules = ["generic-api-key"]
+regexTarget = "match"
+regexes = ['''^auth_key,\s+snmpv3_priv_algo_t\s*$''']

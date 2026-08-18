@@ -1,0 +1,127 @@
+{
+  "authority": 0,
+  "board_accepted": false,
+  "board_actions": 0,
+  "candidate_dispositions": [
+    {
+      "candidate_id": "CAND-P-061",
+      "reason": "No sample-level normalized NIR intensity series with complete composition, process, phase, and measurement-normalization fields; figure curves and cross-paper summary rows are not interchangeable records.",
+      "status": "EXACT_REJECTED"
+    },
+    {
+      "candidate_id": "CAND-P-062",
+      "reason": "Table S2 gives isolated retention/Ea summaries, not the required multi-temperature PL intensity curves and fitted kinetic parameters for independently split source families.",
+      "status": "EXACT_REJECTED"
+    },
+    {
+      "candidate_id": "CAND-P-079",
+      "reason": "Concentration-dependent intensity and decay information is figure-only; critical concentration and quenching-rate records with full process fields are not tabulated.",
+      "status": "EXACT_REJECTED"
+    },
+    {
+      "candidate_id": "CAND-P-080",
+      "reason": "The supplement reports one derived 78% IQY point (61% absorption, 48% external efficiency) without reusable calibrated excitation/emission photon-count records or a target interval.",
+      "status": "EXACT_REJECTED_FOR_THIS_SOURCE"
+    },
+    {
+      "candidate_id": "CAND-P-081",
+      "reason": "Table S3 contains 28.5461-107.3200 microsecond prompt luminescence lifetimes, not afterglow t10 and integrated-persistence labels with trap/process features.",
+      "status": "EXACT_REJECTED"
+    }
+  ],
+  "countable_model": false,
+  "created_at_utc": "2026-08-03T16:16:18.216303+00:00",
+  "cross_paper_summary_rows_used_as_training_records": false,
+  "figure_digitization_used_as_ground_truth": false,
+  "host_promotions": 0,
+  "observed_source_facts": {
+    "afterglow_t10_records": 0,
+    "numeric_concentration_quench_series_records": 0,
+    "numeric_multi_temperature_curve_records": 0,
+    "raw_calibrated_photon_count_records": 0,
+    "reported_absorption_efficiency_percent": 61,
+    "reported_external_quantum_efficiency_percent": 48,
+    "reported_internal_quantum_efficiency_percent": 78,
+    "table_s2_this_work_rows": 2,
+    "table_s3_emission_wavelength_rows": 7,
+    "table_s3_lifetime_range_us": [
+      28.5461,
+      107.32
+    ]
+  },
+  "schema": "cimc.forge200.pmc13157481-nir-source-contract-audit.v1",
+  "source": {
+    "doi": "10.1038/s41377-026-02284-8",
+    "jats_xml": {
+      "bytes": 185496,
+      "figure_captions": 8,
+      "path": "data/raw/ccby_multidomain_v2/PMC13157481.xml",
+      "sha256": "bb2017e2b8f9e467449530b3810be36500acf32c4569c11695c47b7a2e19b5af",
+      "table_wraps": 1,
+      "text_chars": 90662
+    },
+    "license": "cc by",
+    "metadata": {
+      "bytes": 9848,
+      "path": "data/metadata/ccby_multidomain_v2/PMC13157481.json",
+      "sha256": "d79008c5c7596507ef0c8ae49511535c670f9694bfa55b2db7fdb77090549336"
+    },
+    "pmcid": "PMC13157481",
+    "split_family": "PMC13157481",
+    "supplement_docx": {
+      "bytes": 7088736,
+      "path": "data/raw/pmc_phosphor_supp_v1/extracted/PMC13157481/41377_2026_2284_MOESM1_ESM.docx",
+      "sha256": "c48d32d648e0275277dd3637d48189b02f4b50f4194db4b08db5d9be2b370d98"
+    }
+  },
+  "status": "SOURCE_LICENSE_AND_HASH_PASS_FIVE_EXACT_CONTRACTS_REJECTED",
+  "structural_review": {
+    "docx_table_count": 3,
+    "docx_table_headers": [
+      [
+        "Phosphor",
+        "Space Group",
+        "Parameters (Å)",
+        "Volume (Å3)",
+        "R"
+      ],
+      [
+        "Phosphor",
+        "λex (nm)",
+        "λem (nm)",
+        "FWHM (nm)",
+        "IT/I298K",
+        "Ea (eV)",
+        "Ref."
+      ],
+      [
+        "λem (nm)",
+        "A1",
+        "τ1 (μs)",
+        "A2",
+        "τ2 (μs)",
+        "τ (μs)",
+        "R2"
+      ]
+    ],
+    "docx_table_shapes": [
+      [
+        7,
+        5
+      ],
+      [
+        15,
+        7
+      ],
+      [
+        8,
+        7
+      ]
+    ],
+    "embedded_media_count": 129,
+    "libreoffice_visual_render_available": false,
+    "visual_render_limitation": "LibreOffice and Microsoft Word were not installed; review used immutable OOXML table/text extraction and did not claim page-layout verification."
+  },
+  "task_contract_bindings_created": 0,
+  "training_actions": 0
+}

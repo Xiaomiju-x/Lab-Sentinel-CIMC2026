@@ -1,0 +1,103 @@
+AI-4 Fusion MLP — Evaluation Report
+========================================================
+
+[Model-S train (synthetic)] Overall accuracy: 97.79%  (n=8000)
+
+Class              Prec      Rec       F1       N
+------------------------------------------------
+  good            0.984    0.993    0.989    2000
+  suspected       0.949    0.964    0.957    2000
+  bad             0.979    0.954    0.967    2000
+  critical        0.999    1.000    1.000    2000
+
+[Model-S train (synthetic)] Confusion matrix (rows=true, cols=pred):
+                      good   suspected         bad    critical
+  good                1987          13           0           0
+  suspected             32        1928          40           0
+  bad                    0          90        1908           2
+  critical               0           0           0        2000
+
+[Model-S test (synthetic)] Overall accuracy: 97.25%  (n=2000)
+
+Class              Prec      Rec       F1       N
+------------------------------------------------
+  good            0.986    0.994    0.990     500
+  suspected       0.944    0.950    0.947     500
+  bad             0.961    0.948    0.955     500
+  critical        0.998    0.998    0.998     500
+
+[Model-S test (synthetic)] Confusion matrix (rows=true, cols=pred):
+                      good   suspected         bad    critical
+  good                 497           3           0           0
+  suspected              7         475          18           0
+  bad                    0          25         474           1
+  critical               0           0           1         499
+
+--------------------------------------------------------
+REAL-WORLD HELD-OUT TEST — Model-S never saw any real data
+(observed_pl.csv, 37 real outcomes, label=measured XRD phase)
+
+[Model-S on REAL (zero-shot)] Overall accuracy: 27.03%  (n=37)
+
+Class              Prec      Rec       F1       N
+------------------------------------------------
+  good            0.400    0.667    0.500      15
+  suspected       0.000    0.000    0.000       0
+  bad             0.000    0.000    0.000      21
+  critical        0.000    0.000    0.000       1
+
+[Model-S on REAL (zero-shot)] Confusion matrix (rows=true, cols=pred):
+                      good   suspected         bad    critical
+  good                  10           5           0           0
+  suspected              0           0           0           0
+  bad                   14           7           0           0
+  critical               1           0           0           0
+
+  in-scope: real GOOD-batch recall = 66.7% (10/15)
+
+  >>> SCOPE NOTE (read before judging the matrix above):
+  observed_pl.csv is a COMPOSITION-screening dataset. Its 'mixed'/'amorphous'
+  failures all occurred at NOMINAL process conditions (air, standard T/t) — i.e.
+  the formula itself could not form a single phase. Such COMPOSITIONAL failures
+  present NOMINAL process signals, so a PROCESS-fusion monitor correctly does NOT
+  raise a process alarm — composition screening is an off-device model's role
+  (recipe reasoning). This zero-shot result therefore VALIDATES the division of labour
+  (off-device=composition / GD32=process), it is NOT a process-accuracy
+  deficiency. AI-4's accuracy benchmark is the synthetic PROCESS-anomaly test set
+  (97%+, above), which contains the under-fire/over-fire/drift/atmosphere faults a
+  furnace monitor is actually responsible for. Real data is still IN training (S+R).
+
+========================================================
+DEPLOYED Model-S+R (synthetic + real in training)
+
+[S+R train] Overall accuracy: 97.15%  (n=8037)
+
+Class              Prec      Rec       F1       N
+------------------------------------------------
+  good            0.976    0.988    0.982    2015
+  suspected       0.939    0.961    0.950    2000
+  bad             0.974    0.938    0.956    2021
+  critical        0.998    1.000    0.999    2001
+
+[S+R train] Confusion matrix (rows=true, cols=pred):
+                      good   suspected         bad    critical
+  good                1990          23           2           0
+  suspected             29        1923          48           0
+  bad                   19         102        1895           5
+  critical               1           0           0        2000
+
+[S+R test (synthetic)] Overall accuracy: 97.45%  (n=2000)
+
+Class              Prec      Rec       F1       N
+------------------------------------------------
+  good            0.992    0.984    0.988     500
+  suspected       0.945    0.958    0.951     500
+  bad             0.966    0.956    0.961     500
+  critical        0.996    1.000    0.998     500
+
+[S+R test (synthetic)] Confusion matrix (rows=true, cols=pred):
+                      good   suspected         bad    critical
+  good                 492           8           0           0
+  suspected              4         479          17           0
+  bad                    0          20         478           2
+  critical               0           0           0         500

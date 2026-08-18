@@ -1,0 +1,4 @@
+[1] ai4_tflite_selftest -> pass=1  max|err|=2.384e-07
+[2] deployed AI-4 TFLite out = [ 9.0385 0.0331 -2.0207 -8.9710 ]  golden = [ 9.0385 0.0331 -2.0207 -8.9710 ]  max|err|=2.384e-07
+[3] graph dims: NIN=16 NH0=32 NH1=16 NOUT=4
+TFLITE_DEPLOY ALL_PASS

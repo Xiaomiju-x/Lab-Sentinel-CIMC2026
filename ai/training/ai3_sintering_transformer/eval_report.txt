@@ -1,0 +1,38 @@
+AI-3 Sintering Curve TinyTransformer — Evaluation Report
+==============================================================
+
+[train] Overall accuracy: 70.46%  (n=24679)
+
+Class               Prec      Rec       F1       N
+--------------------------------------------------
+  normal           0.710    0.676    0.693    8260
+  fast_ramp        0.335    0.836    0.479    2706
+  undertemp        0.739    0.408    0.526    3540
+  temp_drift       1.000    1.000    1.000    3540
+  slow_ramp        0.998    0.687    0.813    6633
+
+[train] Confusion matrix (rows=true, cols=pred):
+                   normal fast_ramp undertemp temp_drif slow_ramp
+  normal             5586      2235       429         0        10
+  fast_ramp           415      2263        28         0         0
+  undertemp          1275       818      1446         0         1
+  temp_drift            0         0         0      3540         0
+  slow_ramp           593      1432        54         0      4554
+
+[test] Overall accuracy: 74.07%  (n=6653)
+
+Class               Prec      Rec       F1       N
+--------------------------------------------------
+  normal           0.569    0.928    0.706    1180
+  fast_ramp        0.452    0.768    0.569     902
+  undertemp        0.897    0.386    0.539    1180
+  temp_drift       1.000    1.000    1.000    1180
+  slow_ramp        0.998    0.681    0.809    2211
+
+[test] Confusion matrix (rows=true, cols=pred):
+                   normal fast_ramp undertemp temp_drif slow_ramp
+  normal             1095        63        19         0         3
+  fast_ramp           195       693        14         0         0
+  undertemp           456       269       455         0         0
+  temp_drift            0         0         0      1180         0
+  slow_ramp           178       509        19         0      1505

@@ -1,0 +1,116 @@
+{
+  "schema": "cimc.forge200.local-host-acceptance.v7",
+  "created_at_utc": "2026-08-03T17:04:23.677209+00:00",
+  "status": "HOST_FULL_170_TARGET_PASS_EXACT_SIM_BOUNDARIES_SEPARATED_UNIFIED_BOARD_PENDING",
+  "tests": {
+    "status": "PASS",
+    "count": 46,
+    "returncode": 0
+  },
+  "receipts": [
+    {
+      "path": "evidence/host_closure.v7.json",
+      "sha256": "80bd2f3b7ee5dd966ba04dc20ee47c3934336b76c1ed59e214ab8354563fd32d",
+      "status": "HOST_FULL_170_TARGET_MET_IF_UNIFIED_BOARD_PASSES_EXACT_AND_SIM_BOUNDARIES_SEPARATED"
+    },
+    {
+      "path": "evidence/host_artifact_verification.v7.json",
+      "sha256": "5c95e734371b64ab6544f82c4e104bb61207e79636414606e14ca371f999e6aa",
+      "status": "PASS_HOST_ONLY_BOARD_PENDING"
+    },
+    {
+      "path": "evidence/modelbank_build.v7.json",
+      "sha256": "460ff58718eebe7b2c62c333e57d7b1415487536e54d56b6e40492e43b08d8e1",
+      "status": "HOST_MODELBANK_FULL_170_BUILT_UNIFIED_BOARD_PENDING"
+    },
+    {
+      "path": "evidence/modelbank_host_dry_run.v7.json",
+      "sha256": "eb5cb959216d45da7f9f58635990175d62a8ed18304a577ad9c41d5e12c46b88",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/interface_freeze_verification.v7.json",
+      "sha256": "74b6af923f8d033d5b537db31cf4d32e807e3bc6a07580aa0e8ca41ff929572d",
+      "status": "PASS_HOST_CONFORMANCE_AND_MUTATION_BOARD_PENDING"
+    },
+    {
+      "path": "evidence/firmware_adapter_host_compile.v7.json",
+      "sha256": "4af3777f7779d167580362668b06bfbd622719bfd4630f6f9d15510f0ed6b3f8",
+      "status": "PASS_ARMCLANG_CORTEX_M7_BOARD_PENDING_NOT_IN_PRODUCTION_TARGET"
+    },
+    {
+      "path": "evidence/unified_staging.v7.json",
+      "sha256": "fd87460545bac3325be46a3bb53fba02d1cae6124b923a7f97b79a89a1885381",
+      "status": "HOST_FULL_200_ASSET_STAGING_PASS_UNIFIED_BOARD_PENDING"
+    },
+    {
+      "path": "evidence/release_gap_audit.v7.json",
+      "sha256": "c5c1abc10c9a8c1b8452eb6202cdd673763439e50cbcf6a92043cb22ac311998",
+      "status": "HOST_FULL_170_TARGET_MET_EXACT_SOURCE_FLOOR_STILL_SHORT_42_UNIFIED_BOARD_PENDING"
+    },
+    {
+      "path": "evidence/sim_extension_pack_39_closure.v1.json",
+      "sha256": "c0ffca3773c13b87335f315ca9e89724ec19bb43d0477aae1cb5868322721ca4",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/sim_extension_board41_closure.v1.json",
+      "sha256": "4628b541fd098352f5ff92ce8bdb41a7139db4baa404ffd72b61ddbd723b985e",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/nanolm_sim_extension5_closure.v1.json",
+      "sha256": "d436c5d334564769f86c047bd21f7574ba5b3d730811991e81d7cea1c539cb1f",
+      "status": "PASS"
+    }
+  ],
+  "host": {
+    "new_models": 170,
+    "by_category": {
+      "P": 112,
+      "G": 30,
+      "S": 28
+    },
+    "exact_source_bound_models": 78,
+    "sim_only_extensions": 92,
+    "package_sha256_collisions": 0,
+    "payload_sha256_collisions": 0,
+    "onnx_full_check_pass": 170,
+    "golden_archives_pass": 170,
+    "modelbank_files": 803,
+    "modelbank_payload_bytes": 36622015,
+    "modelbank_1000_swap_dry_run": true,
+    "fault_injection_modes": 6,
+    "interface_cases": 23,
+    "armclang_cortex_m7_objects": 2,
+    "armclang_warnings": 0,
+    "armclang_errors": 0
+  },
+  "release": {
+    "initial_assets": 30,
+    "initial_logical_models": 28,
+    "combined_assets_if_all_new_models_pass_board": 200,
+    "new_target_met_on_host": true,
+    "logical_generative_models_if_all_new_models_pass_board": 38,
+    "exact_source_bound_minimum_floor_shortfall": 42,
+    "sim_only_not_exact_source_substitute": true
+  },
+  "board": {
+    "new_models_board_accepted": 0,
+    "new_models_countable_publicly": 0,
+    "gd32_power_or_burn_performed": false,
+    "unified_board_acceptance_pending": true,
+    "ready_for_single_unified_gd32_window": true
+  },
+  "safety": {
+    "authority_nonzero": 0,
+    "production_files_modified": 0,
+    "deterministic_control_chain_replaced": false,
+    "sd_separately_burned": false,
+    "old_cloud_instances_reconnected": false,
+    "project_writes_outside_d_drive": false
+  },
+  "next_required_action": "USER_POWERS_GD32_AND_OPENS_ONE_UNIFIED_KEIL_BOARD_ACCEPTANCE_WINDOW",
+  "claim_boundary": "Host completion is not GD32 acceptance. Only individually board-passed assets become countable; exact and SIM_ONLY tiers remain separate.",
+  "content_root_sha256": "71acf9a361fb7135a328802e6f5d5812a290fc018372dd91a027bd66bf3534ea"
+}
