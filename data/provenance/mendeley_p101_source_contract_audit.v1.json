@@ -1,0 +1,89 @@
+{
+  "schema": "cimc.forge200.mendeley-p101-source-contract-audit.v1",
+  "created_at_utc": "2026-08-03T10:41:07.505989+00:00",
+  "candidate_id": "CAND-P-101",
+  "status": "SOURCE_AND_LICENSE_VERIFIED_EXACT_CONTRACT_REJECTED",
+  "contract_binding": {
+    "path": "contracts/mendeley_p101_contract_binding.v1.json",
+    "sha256": "376059b8ff9cd472cc427892dbfc69974a0fdd7711e12900f9df7585e93a2469"
+  },
+  "source": {
+    "title": "Differential Scanning Calorimetry (DSC) data for Curing Kinetics Study of thermoset based structural adhesive Henkel Teroson EP5089",
+    "publisher": "Mendeley Data",
+    "contributor": "Akshat Agha",
+    "doi": "10.17632/tt87pfzkkg.1",
+    "landing_page": "https://data.mendeley.com/datasets/tt87pfzkkg/1",
+    "license": "CC BY 4.0",
+    "truth_class": "OPEN_EXPERIMENTAL_L2",
+    "scope_limit": "One commercial one-component epoxy adhesive only; no cross-resin, cross-catalyst, semiconductor-packaging, or production-line generalization claim."
+  },
+  "verified_artifacts": {
+    "download_zip": {
+      "path": "data/raw/mendeley_dsc_ep5089_v1/tt87pfzkkg_v1.zip",
+      "bytes": 7722108,
+      "sha256": "47d09201138111861b59755aea4cd7a528dc3fef76fcd3f857056a94156fc16a",
+      "verified": true
+    },
+    "workbook": {
+      "path": "data/raw/mendeley_dsc_ep5089_v1/extracted/tt87pfzkkg-1/Henkel EP5089-DSC Data.xlsx",
+      "bytes": 7803441,
+      "sha256": "bf748321a6a4513f331648911c6e37808cfd6323d67516a8b48dbd04db9aef2d",
+      "verified": true
+    },
+    "workbook_inventory": {
+      "path": "data/ledgers/mendeley_p101_workbook_inventory.v1.json",
+      "bytes": 283626,
+      "sha256": "c80d348333849f574dbea17f79a4261e767976571615af93753c5d03c5a7e85c",
+      "verified": true
+    }
+  },
+  "observed": {
+    "independent_run_count": 8,
+    "heating_rate_families_K_per_min": [
+      0.5,
+      1.0,
+      2.0,
+      5.0
+    ],
+    "replicates_per_family": 2,
+    "unique_resin_formulations": 1,
+    "unique_catalyst_formulations": 0,
+    "published_kinetic_parameter_vectors": 1,
+    "curve_rows_total": 27004,
+    "unique_run_serials": 8,
+    "run_serials": [
+      12756,
+      12755,
+      12757,
+      12758,
+      12759,
+      12760,
+      12761,
+      12762
+    ],
+    "sample_mass_mg_range": [
+      5.6,
+      9.9
+    ],
+    "curve_points_treated_as_independent_experiments": false
+  },
+  "exact_rejection": {
+    "reason_code": "EXACT_INPUT_VARIATION_AND_KINETIC_PARAMETER_LABEL_CARDINALITY_INSUFFICIENT",
+    "facts": [
+      "All eight runs use the same EP5089 formulation; record-level resin-composition and catalyst variation is absent.",
+      "The source exposes one global calibrated kinetic-parameter vector, not independent parameter labels for train, validation, and test groups.",
+      "Curve points within a run are correlated observations and cannot be counted or split as independent experiments.",
+      "Using the published Kamal-Sourour parameter vector as both target and frozen baseline would make independent parameter-MAE superiority untestable."
+    ],
+    "training_allowed_for_exact_p101": false,
+    "host_promotion_allowed": false
+  },
+  "training_actions": 0,
+  "test_evaluation_actions": 0,
+  "host_promoted": false,
+  "authority": 0,
+  "board_accepted": false,
+  "countable_model": false,
+  "next_action": "Retain this source for external-validation research only; exact P101 requires multiple independently labeled resin/catalyst formulations and kinetic-parameter vectors fixed before grouped split.",
+  "content_root_sha256": "99a86876b39b4bdaf701041341c014359df798edda0754dc2b08fbff5006f31a"
+}

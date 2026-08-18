@@ -1,0 +1,77 @@
+name: public-release-quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: public-release-quality-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Secret scan
+        shell: bash
+        env:
+          GITLEAKS_VERSION: "8.30.1"
+          GITLEAKS_LINUX_X64_SHA256: "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb"
+        run: |
+          set -euo pipefail
+          archive="gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz"
+          url="https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/${archive}"
+          curl --fail --location --proto '=https' --tlsv1.2 \
+            --retry 3 --retry-all-errors \
+            --output "${RUNNER_TEMP}/${archive}" "${url}"
+          echo "${GITLEAKS_LINUX_X64_SHA256}  ${RUNNER_TEMP}/${archive}" | sha256sum --check --strict
+          mkdir -p "${RUNNER_TEMP}/gitleaks"
+          tar -xzf "${RUNNER_TEMP}/${archive}" -C "${RUNNER_TEMP}/gitleaks" gitleaks
+          test "$("${RUNNER_TEMP}/gitleaks/gitleaks" version)" = "${GITLEAKS_VERSION}"
+          "${RUNNER_TEMP}/gitleaks/gitleaks" git . \
+            --config .gitleaks.toml \
+            --max-archive-depth 2 \
+            --no-banner \
+            --redact \
+            --exit-code 1
+      - name: Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.11"
+      - name: Verify public release
+        run: python tools/verify_release.py --strict
+      - name: Check local documentation links
+        run: python tools/check_local_links.py
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Native C bounds harness (ASan + UBSan)
+        shell: bash
+        run: |
+          set -euo pipefail
+          cc -std=c11 -Wall -Wextra -Werror \
+            -fsanitize=address,undefined -fno-sanitize-recover=all \
+            -I ai/firmware_integration/modelbank_v8 \
+            tests/c/test_forge200_runtime_bounds.c \
+            ai/firmware_integration/modelbank_v8/forge200_runtime_v8.c \
+            -lm -o "${RUNNER_TEMP}/forge200-runtime-bounds"
+          ASAN_OPTIONS=detect_leaks=1 UBSAN_OPTIONS=halt_on_error=1 \
+            "${RUNNER_TEMP}/forge200-runtime-bounds"
+      - name: Compile Python sources
+        run: python -m compileall -q tools tests ai
+      - name: Generated metadata is deterministic
+        run: |
+          python tools/build_asset_checksums.py
+          python tools/build_sbom.py
+          python tools/build_public_manifest.py
+          git diff --exit-code -- assets/SHA256SUMS.txt SBOM.spdx.json PUBLIC_RELEASE_MANIFEST.json

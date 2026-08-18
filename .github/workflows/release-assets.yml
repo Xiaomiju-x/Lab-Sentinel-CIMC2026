@@ -1,0 +1,129 @@
+name: release-asset-integrity
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to verify
+        required: true
+        default: v1.0.1
+      release_id:
+        description: Optional draft Release ID for pre-publication verification
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-asset-integrity-${{ github.event.release.tag_name || inputs.tag || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  checksums:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout release tag
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ github.event.release.tag_name || inputs.tag }}
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Download release assets
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_ID: ${{ github.event.release.id || inputs.release_id }}
+          RELEASE_TAG: ${{ github.event.release.tag_name || inputs.tag }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          mkdir dist
+          if [[ -z "${RELEASE_ID}" ]]; then
+            RELEASE_ID="$(
+              gh api "/repos/${REPOSITORY}/releases?per_page=100" |
+                jq -r --arg tag "${RELEASE_TAG}" '.[] | select(.tag_name == $tag) | .id' |
+                head -n 1
+            )"
+          fi
+          if [[ -z "${RELEASE_ID}" ]]; then
+            echo "::error::Release not found; pass the draft release_id for pre-publication verification"
+            exit 1
+          fi
+
+          assets_json="${RUNNER_TEMP}/release-assets.json"
+          gh api "/repos/${REPOSITORY}/releases/${RELEASE_ID}/assets?per_page=100" > "${assets_json}"
+          jq -e 'length > 0 and all(.[]; .state == "uploaded")' "${assets_json}" > /dev/null
+
+          while IFS=$'\t' read -r asset_id name expected_size expected_digest; do
+            [[ "${name}" != */* && "${name}" != *\\* && "${name}" != "." && "${name}" != ".." ]]
+            gh api \
+              --header 'Accept: application/octet-stream' \
+              "/repos/${REPOSITORY}/releases/assets/${asset_id}" > "dist/${name}"
+            actual_size="$(stat --format='%s' "dist/${name}")"
+            actual_digest="sha256:$(sha256sum "dist/${name}" | cut -d ' ' -f 1)"
+            test "${actual_size}" = "${expected_size}"
+            test "${actual_digest}" = "${expected_digest}"
+          done < <(jq -r '.[] | [.id, .name, .size, .digest] | @tsv' "${assets_json}")
+      - name: Verify SHA-256 manifest
+        shell: bash
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name || inputs.tag }}
+        run: |
+          set -euo pipefail
+          test -f dist/SHA256SUMS.txt
+          anchor="release-manifests/${RELEASE_TAG}/SHA256SUMS.txt.sha256"
+          test -f "${anchor}"
+          cd dist
+          sha256sum --check --strict "../${anchor}"
+          python3 - <<'PY'
+          import pathlib
+          import re
+
+          root = pathlib.Path(".")
+          manifest = root / "SHA256SUMS.txt"
+          pattern = re.compile(r"^([0-9a-f]{64})  ([^/\\\x00-\x1f]+)$")
+          names = []
+          for lineno, line in enumerate(manifest.read_text(encoding="utf-8").splitlines(), 1):
+              match = pattern.fullmatch(line)
+              if not match:
+                  raise SystemExit(f"invalid SHA256SUMS line {lineno}")
+              name = match.group(2)
+              if name in {".", "..", "SHA256SUMS.txt"}:
+                  raise SystemExit(f"forbidden manifest name: {name}")
+              names.append(name)
+          if len(names) != len(set(names)):
+              raise SystemExit("duplicate filename in SHA256SUMS.txt")
+          actual = {p.name for p in root.iterdir() if p.is_file() and p.name != "SHA256SUMS.txt"}
+          expected = set(names)
+          policy = {
+              "01-process-profile-and-ai-state.mp4",
+              "01-process-profile-and-ai-state-cover.webp",
+              "02-hardware-sensors-and-safety.mp4",
+              "02-hardware-sensors-and-safety-cover.webp",
+              "03-camera-and-vision-pipeline.mp4",
+              "03-camera-and-vision-pipeline-cover.webp",
+              "04-edge-lm-and-mcu-inference.mp4",
+              "04-edge-lm-and-mcu-inference-cover.webp",
+              "05-control-telemetry-and-closeout.mp4",
+              "05-control-telemetry-and-closeout-cover.webp",
+              "MEDIA_MANIFEST.md",
+              "lab-sentinel-cimc2026-technical-evidence-v1.0.1.zip",
+              "lab-sentinel-cimc2026-technical-evidence-v1.0.1.zip.sha256",
+          }
+          if len(names) != 13 or expected != policy:
+              raise SystemExit(
+                  f"release policy mismatch: count={len(names)} "
+                  f"missing={sorted(policy - expected)} extra={sorted(expected - policy)}"
+              )
+          if actual != expected:
+              raise SystemExit(
+                  f"release asset set mismatch: missing={sorted(expected - actual)} "
+                  f"extra={sorted(actual - expected)}"
+              )
+          PY
+          sha256sum --check --strict SHA256SUMS.txt
+          sha256sum --check --strict lab-sentinel-cimc2026-technical-evidence-v1.0.1.zip.sha256

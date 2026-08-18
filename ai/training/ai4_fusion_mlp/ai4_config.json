@@ -1,0 +1,28 @@
+{
+  "n_feat": 16,
+  "n_classes": 4,
+  "class_names": [
+    "good",
+    "suspected",
+    "bad",
+    "critical"
+  ],
+  "feat_layout": {
+    "0:4": "AI-1 softmax probs [empty, loaded, sintering, done]",
+    "4": "AI-2 anomaly_ratio = score / q_hat",
+    "5": "AI-2 temp feature residual (0-1)",
+    "6": "AI-2 vib  feature residual (0-1)",
+    "7": "AI-2 gas  feature residual (0-1)",
+    "8:13": "AI-3 softmax probs [normal, fast_ramp, undertemp, temp_drift, slow_ramp]",
+    "13": "DOA anomaly flag (0/1)",
+    "14": "DOA intensity (0-1)",
+    "15": "sintering progress (0-1)"
+  },
+  "best_val_acc": 0.9734439849853516,
+  "test_acc": 0.9745,
+  "accuracy_benchmark": "synthetic process-anomaly test set (under/over-fire, drift, atmosphere)",
+  "real_zeroshot_on_composition_set": 0.2702702702702703,
+  "real_zeroshot_note": "observed_pl.csv is a COMPOSITION dataset (failures at nominal process conditions); low process-monitor agreement here VALIDATES the 3-tier division of labour, it is NOT a process-accuracy figure. See eval_report.txt SCOPE NOTE.",
+  "deployed_model": "Model-S+R (synthetic + observed_pl.csv real outcomes in training)",
+  "real_data_source": "exp_ground_truth/observed_pl.csv (37 labelled real outcomes)"
+}

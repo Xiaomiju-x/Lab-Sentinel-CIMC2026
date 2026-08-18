@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="560" viewBox="0 0 1440 560" role="img" aria-labelledby="title desc">
+  <title id="title">Lab-Sentinel evidence ledgers</title>
+  <desc id="desc">Three separate ledgers distinguish board runtime, exact host assets, and simulation-only host assets.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#041b2d"/><stop offset="1" stop-color="#10113d"/></linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1fbfc4"/><stop offset="1" stop-color="#116f90"/></linearGradient>
+    <linearGradient id="e" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7b7dff"/><stop offset="1" stop-color="#4a35a5"/></linearGradient>
+    <linearGradient id="s" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f1a64c"/><stop offset="1" stop-color="#a85a29"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000" flood-opacity=".36"/></filter>
+  </defs>
+  <rect width="1440" height="560" rx="28" fill="url(#bg)"/>
+  <g font-family="Inter,Segoe UI,Microsoft YaHei,sans-serif">
+    <text x="70" y="78" font-size="38" font-weight="800" fill="#fff">Three evidence ledgers · 三本事实账</text>
+    <text x="70" y="116" font-size="19" fill="#8eb2c1">A count is only meaningful when its execution and evidence boundary is explicit.</text>
+    <g transform="translate(70 160)" filter="url(#shadow)">
+      <rect width="400" height="272" rx="28" fill="url(#b)"/>
+      <text x="34" y="52" font-size="20" font-weight="700" fill="#b8fffb">BOARD · VERIFIED RUNTIME</text>
+      <text x="34" y="131" font-size="78" font-weight="900" fill="#fff">30</text>
+      <text x="166" y="112" font-size="27" font-weight="700" fill="#fff">runtime assets</text>
+      <text x="166" y="146" font-size="22" fill="#d8fffd">28 logical models</text>
+      <path d="M34 174H366" stroke="#fff" stroke-opacity=".25"/>
+      <text x="34" y="211" font-size="18" fill="#eaffff">GD32H759 true-board execution</text>
+      <text x="34" y="241" font-size="18" fill="#eaffff">DWT timing · golden self-test · offline</text>
+    </g>
+    <g transform="translate(520 160)" filter="url(#shadow)">
+      <rect width="400" height="272" rx="28" fill="url(#e)"/>
+      <text x="34" y="52" font-size="20" font-weight="700" fill="#e2dcff">HOST–EXACT</text>
+      <text x="34" y="131" font-size="78" font-weight="900" fill="#fff">78</text>
+      <text x="154" y="112" font-size="27" font-weight="700" fill="#fff">research assets</text>
+      <text x="154" y="146" font-size="22" fill="#eeeaff">P25 · G25 · S28</text>
+      <path d="M34 174H366" stroke="#fff" stroke-opacity=".25"/>
+      <text x="34" y="211" font-size="18" fill="#f6f3ff">Exact source / label / split binding</text>
+      <text x="34" y="241" font-size="18" fill="#f6f3ff">HOST evidence — not board deployment</text>
+    </g>
+    <g transform="translate(970 160)" filter="url(#shadow)">
+      <rect width="400" height="272" rx="28" fill="url(#s)"/>
+      <text x="34" y="52" font-size="20" font-weight="700" fill="#fff0cd">HOST–SIM_ONLY</text>
+      <text x="34" y="131" font-size="78" font-weight="900" fill="#fff">92</text>
+      <text x="154" y="112" font-size="27" font-weight="700" fill="#fff">research assets</text>
+      <text x="154" y="146" font-size="22" fill="#fff1d6">P87 · G5 · S0</text>
+      <path d="M34 174H366" stroke="#fff" stroke-opacity=".25"/>
+      <text x="34" y="211" font-size="18" fill="#fff8ea">Interface / simulation expansion</text>
+      <text x="34" y="241" font-size="18" fill="#fff8ea">Not experimental or fab performance</text>
+    </g>
+    <rect x="70" y="464" width="1300" height="48" rx="15" fill="#06111e" stroke="#5f8292" stroke-opacity=".52"/>
+    <text x="720" y="495" text-anchor="middle" font-size="18" fill="#b9d3dc">170 HOST assets: authority = 0 · microSD file-level preposition only · new board execution = 0</text>
+  </g>
+</svg>
+

@@ -1,0 +1,18 @@
+domain,component,quantity,interface_or_signal,role,truth_boundary
+controller,GD32H759IMK6,1,Cortex-M7 600MHz,edge control and inference,no NPU
+memory,external SDRAM,1,parallel SDRAM,LCD/frame/model working memory,not on-chip SRAM
+vision,OV5640,1,DCI plus DMA,320x240 RGB565 acquisition,not 5MP inference
+thermal,MLX90640,1,I2C via TCA CH4,32x24 thermal field,low-temperature engineering observation
+temperature,MAX31856 plus shielded K-type probe,1,SPI CS PG3,contact temperature and fault bits,authority zero
+environment,SHT30,1,I2C via TCA CH5,temperature and humidity context,not furnace PV
+vibration,ADXL345,1,I2C via TCA CH6,three-axis vibration,diagnostic only
+electrical,INA226,2,I2C via TCA CH3 and CH7,fan and PTC electrical response,channel readiness must be verified
+storage,microSD 32GB,1,shared SPI CS PC5,model/evidence media and trace storage,file copy is not model execution
+time,DS3231,1,I2C via TCA CH2,battery-backed time,not a trusted timestamp authority
+touch,GT911,1,I2C,capacitive touch,local HMI only
+voice,CI1302,1,UART3 115200,fixed offline command and TTS,not free dialogue
+actuator,low-voltage PTC,1,relay plus MOSFET,repeatable bench thermal process,not 1500C furnace
+actuator,fan,2,relay/MOSFET and feedback,cooling/ventilation demo,not safety-certified ventilation
+actuator,eccentric DC motor and H-bridge,1,GPIO/software control,vibration stimulus,not a robot axis
+alarm,external alarm unit,1,isolated relay,audible/visible warning,polarity must be verified on hardware revision
+

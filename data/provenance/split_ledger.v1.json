@@ -1,0 +1,82 @@
+{
+  "created_at_utc": "2026-08-01T12:44:29.142395+00:00",
+  "errors": [],
+  "fit_train_only": [
+    "imputer",
+    "scaler",
+    "feature_selector",
+    "pca",
+    "calibrator",
+    "augmentation_parameters"
+  ],
+  "same_run_post_sinter_leakage_forbidden": true,
+  "schema": "cimc.forge200.split-ledger.v1",
+  "sources": [
+    {
+      "assignment_path": "data/splits/jarvis_dft_v11.assignments.tsv",
+      "assignment_sha256": "765b84b2a9378eb89d721f822884fc026f8c86ec7adae624c497efcdf846a3dd",
+      "counts": {
+        "test": 14149,
+        "train": 65957,
+        "validation": 13796
+      },
+      "cross_split_group_overlap": 0,
+      "duplicate_ids": 0,
+      "group_key": "strict_chemical_system",
+      "groups": 32707,
+      "records": 93902,
+      "source_id": "jarvis_dft_v11",
+      "truth_class": "OPEN_COMPUTED_DFT"
+    },
+    {
+      "assignment_path": "data/splits/ipop_v3.assignments.tsv",
+      "assignment_sha256": "10d5e559d4da2faf7effe87f42c63a962dcb972f33b1bc0399b140e25c7d3d32",
+      "counts": {
+        "test": 648,
+        "train": 2718,
+        "validation": 587
+      },
+      "cross_split_group_overlap": 0,
+      "duplicate_ledger_path": "data/splits/ipop_v3.exact_duplicates.tsv",
+      "duplicate_ledger_sha256": "8ee2872cb92ba33fdf9445c0ee8b8ccb3ff1c8219640ea66007cd62023a174ba",
+      "exact_duplicate_rows_quarantined": 436,
+      "group_key": "doi_family+host_family+dopant_family",
+      "groups": 2436,
+      "records": 3953,
+      "source_id": "ipop_v3",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "assignment_path": "data/splits/uci_secom.assignments.tsv",
+      "assignment_sha256": "82bc182f47f3eb02bc6d0639c146184d02017a24ae0824dbace4e790af2c8656",
+      "chronological_order": true,
+      "counts": {
+        "test": 236,
+        "train": 1096,
+        "validation": 235
+      },
+      "cross_split_row_overlap": 0,
+      "group_id_limit": "anonymous dataset has no public lot/tool/wafer ID; chronological test-point split is the strongest available",
+      "group_key": "chronological_test_point_block",
+      "label_counts": {
+        "test": {
+          "-1": 227,
+          "1": 9
+        },
+        "train": {
+          "-1": 1018,
+          "1": 78
+        },
+        "validation": {
+          "-1": 218,
+          "1": 17
+        }
+      },
+      "records": 1567,
+      "source_id": "uci_secom",
+      "truth_class": "ANON_PRODUCTION"
+    }
+  ],
+  "split_before_augmentation": true,
+  "status": "PASS"
+}

@@ -1,0 +1,28 @@
+name: Bug report
+description: Report a reproducible defect without disclosing secrets
+title: "[bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "For security/safety vulnerabilities, use Private Vulnerability Reporting instead."
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Layer
+      options: [Firmware, Hardware, BOARD model, HOST pipeline, Documentation, Release tooling]
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps and observed evidence
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+

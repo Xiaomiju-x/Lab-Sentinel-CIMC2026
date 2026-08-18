@@ -1,0 +1,413 @@
+{
+  "schema": "ai5_rootcause.taxonomy.v1",
+  "scope": "process-stage faults observable from GD32 sensors + upstream AI outputs (AI-1/2/3/4). Composition faults are out of scope -> off-device model.",
+  "corpus": {
+    "chunks_total": 25228,
+    "sinter_hosts": 13,
+    "gas_materials": [
+      "NH4F",
+      "NH4F",
+      "(NH4)2HPO4",
+      "NH4H2PO4",
+      "Cr(NO3)3.9H2O",
+      "Cu(NO3)2.3H2O",
+      "Li2CO3",
+      "CaCO3",
+      "Na2CO3",
+      "K2CO3",
+      "SrCO3",
+      "BaCO3",
+      "MoO3",
+      "Cr2O3"
+    ]
+  },
+  "retrieval": {
+    "method": "inline BM25 (k1=1.5,b=0.75)",
+    "score_floor": 4.0,
+    "topk": 400
+  },
+  "n_candidate": 9,
+  "n_kept": 9,
+  "classes": [
+    {
+      "name": "NORMAL",
+      "human": "Normal — on-protocol, no actionable fault",
+      "query": "sintering on profile normal crystalline single phase well",
+      "must": [],
+      "must_not": [],
+      "signature": "AI-4 risk=NORMAL, AI-2 ratio<1, AI-3=normal",
+      "mechanism": "All modalities within the host's normal sintering profile.",
+      "action": "Continue; no operator action required.",
+      "grounded_by": "baseline",
+      "corpus_chunks": 0,
+      "corpus_papers": 0,
+      "corpus_papers_broad": 234,
+      "corpus_tier": "NONE",
+      "ground_basis": "baseline",
+      "exemplars": [],
+      "keep": true
+    },
+    {
+      "name": "RAMP_TOO_FAST",
+      "human": "Heating ramp too fast — thermal stress / unreacted intermediate",
+      "query": "heating rate ramp fast thermal shock crack cracking intermediate phase incomplete reaction solid state calcination",
+      "must": [
+        "ramp rate",
+        "ramp-rate",
+        "heating rate",
+        "heating-rate",
+        "c/min",
+        "c min",
+        "cooling rate",
+        "ramping"
+      ],
+      "must_not": [
+        "radiative rate",
+        "decay rate",
+        "growth rate",
+        "color filter",
+        "anti-counterfeit",
+        "sensing"
+      ],
+      "signature": "AI-3=fast_ramp, AI-2 temp-residual high, ramp_C_per_min above sintering_profiles baseline",
+      "mechanism": "Excessive ramp rate causes thermal gradients / cracking and skips intermediate solid-state reaction steps, trapping secondary phases.",
+      "action": "Reduce ramp rate to the host profile value; add an intermediate dwell through the reaction window.",
+      "grounded_by": "sinter:ramp_C_per_min",
+      "corpus_chunks": 0,
+      "corpus_papers": 0,
+      "corpus_papers_broad": 281,
+      "corpus_tier": "NONE",
+      "ground_basis": "hard-rule",
+      "exemplars": [],
+      "keep": true
+    },
+    {
+      "name": "UNDER_TEMPERATURE",
+      "human": "Under-temperature / short hold — incomplete reaction, amorphous/secondary phase",
+      "query": "sintering temperature soaking time insufficient low temperature incomplete crystallization amorphous secondary phase unreacted calcination duration",
+      "must": [
+        "sintering temperature",
+        "calcination temperature",
+        "soaking",
+        "annealing temperature",
+        "incomplete",
+        "amorphous",
+        "unreacted",
+        "secondary phase",
+        "impurity phase",
+        "low-temperature",
+        "low temperature phase"
+      ],
+      "must_not": [],
+      "signature": "AI-3=undertemp, AI-1 still 'charged' not 'done', peak T below sintering_profiles sinter.temp_C",
+      "mechanism": "Peak temperature or soak time below the host requirement leaves the reaction incomplete -> residual precursor / amorphous / secondary phase, weak luminescence.",
+      "action": "Raise peak temperature or extend the soak to the host profile; verify with XRD before accepting.",
+      "grounded_by": "sinter:sinter.temp_C",
+      "corpus_chunks": 43,
+      "corpus_papers": 30,
+      "corpus_papers_broad": 230,
+      "corpus_tier": "STRONG",
+      "ground_basis": "corpus",
+      "exemplars": [
+        {
+          "title": "Investigation-on-the-effect-of-vacuum-annealing-time-on-struct_2022_Optics--",
+          "score": 23.39
+        },
+        {
+          "title": "Broadening of the near-infrared emission band of the Mg 2 Al 4 Si 5 O 18 Cr 3+ p",
+          "score": 22.23
+        },
+        {
+          "title": "Investigation-on-the-effect-of-vacuum-annealing-time-on-struct_2022_Optics--",
+          "score": 20.67
+        },
+        {
+          "title": "Ce3+_Lu3Al5O12–Al2O3 optical nanoceramic scintillators elaborated via a low-temp",
+          "score": 18.39
+        }
+      ],
+      "keep": true
+    },
+    {
+      "name": "OXIDIZE_CR6",
+      "human": "Cr3+ -> Cr6+ oxidation — dead NIR emission + toxic aerosol",
+      "query": "Cr3+ Cr6+ chromium valence oxidation state reducing atmosphere oxidizing air emission quenching hexavalent chromium near infrared activator",
+      "must": [
+        "cr6",
+        "cr 6",
+        "hexavalent",
+        "valence",
+        "reducing atmosphere",
+        "oxidizing atmosphere",
+        "cr4",
+        "valence state",
+        "cr3"
+      ],
+      "must_not": [],
+      "signature": "gas=Cr6+ sev>=2 at >900C in oxidizing atmosphere; AI-2 gas residual high",
+      "mechanism": "In an oxidizing atmosphere at high T, NIR-active Cr3+ oxidizes to optically dead (and toxic) Cr6+, killing the emission and releasing Cr6+ aerosol.",
+      "action": "Switch to a reducing/inert atmosphere (e.g. 5%H2/N2) or lower the peak temperature; ventilate.",
+      "grounded_by": "gas_safety:Cr2O3",
+      "corpus_chunks": 272,
+      "corpus_papers": 160,
+      "corpus_papers_broad": 227,
+      "corpus_tier": "STRONG",
+      "ground_basis": "corpus",
+      "exemplars": [
+        {
+          "title": "Investigation on the valence state stability and optical properties of Mg2GeO4 C",
+          "score": 26.82
+        },
+        {
+          "title": "Research progress and application prospect of transition metal Cr ions in near i",
+          "score": 25.86
+        },
+        {
+          "title": "Investigation on the valence state stability and optical properties of Mg2GeO4 C",
+          "score": 25.63
+        },
+        {
+          "title": "Optical and EPR studies of Fe-doped CaAl12O19 near-infrared emitting phosphor",
+          "score": 24.39
+        }
+      ],
+      "keep": true
+    },
+    {
+      "name": "DECOMP_GAS_SURGE",
+      "human": "Precursor decomposition gas surge — porosity / off-stoichiometry / hazard",
+      "query": "carbonate decomposition CO2 nitrate NOx ammonium NH3 evolution gas release calcination weight loss porosity precursor decomposes outgassing",
+      "must": [
+        "carbonate",
+        "nitrate",
+        "ammonium",
+        "co2",
+        "nox",
+        "nh3",
+        "decompos",
+        "evolution of",
+        "outgas",
+        "weight loss",
+        "dehydrat"
+      ],
+      "must_not": [],
+      "signature": "gas=CO2/NOx/NH3/HF at species onset temp; AI-2 gas residual high during early ramp",
+      "mechanism": "Carbonate/nitrate/ammonium precursors release CO2/NOx/NH3/HF on heating; a too-fast ramp through the onset traps gas (porosity) and can shift stoichiometry, plus a safety hazard.",
+      "action": "Slow the ramp through the decomposition window and ensure venting before continuing to peak.",
+      "grounded_by": "gas_safety:carbonate_nitrate",
+      "corpus_chunks": 80,
+      "corpus_papers": 55,
+      "corpus_papers_broad": 250,
+      "corpus_tier": "STRONG",
+      "ground_basis": "corpus",
+      "exemplars": [
+        {
+          "title": "li2014 (1)",
+          "score": 20.97
+        },
+        {
+          "title": "li2014 (1)",
+          "score": 19.62
+        },
+        {
+          "title": "Synthesis and characterization of Ni2+ Zn2SiO4 nano phospshor by sol-gel method",
+          "score": 16.88
+        },
+        {
+          "title": "Synthesis and characterization of Ni2+ Zn2SiO4 nano phospshor by sol-gel method",
+          "score": 14.15
+        }
+      ],
+      "keep": true
+    },
+    {
+      "name": "VOLATILIZATION_LOSS",
+      "human": "Volatilization loss at high T — off-stoichiometry / secondary phase",
+      "query": "volatilization evaporation MoO3 sublimation Ga2O3 gallium loss alkali volatile high temperature stoichiometry deviation excess compensate sealed crucible",
+      "must": [
+        "volatil",
+        "evaporat",
+        "sublim",
+        "stoichiometr",
+        "excess",
+        "loss of",
+        "non-stoichiom",
+        "deviation"
+      ],
+      "must_not": [],
+      "signature": "gas=vapor/sublime + high T; AI-1 'sintering'/'done'",
+      "mechanism": "Volatile oxides (MoO3 sublimes, Ga/alkali loss) escape at high T, leaving the product off-stoichiometric -> secondary phases / reduced emission.",
+      "action": "Add excess of the volatile component or use a covered/sealed crucible; cap the peak temperature.",
+      "grounded_by": "gas_safety:MoO3",
+      "corpus_chunks": 96,
+      "corpus_papers": 62,
+      "corpus_papers_broad": 218,
+      "corpus_tier": "STRONG",
+      "ground_basis": "corpus",
+      "exemplars": [
+        {
+          "title": "acs.inorgchem.1c03220",
+          "score": 19.1
+        },
+        {
+          "title": "Evaluation of the efficiency of Cr3+ → Cr4+ conversion in non-stoichiometric YAG",
+          "score": 18.86
+        },
+        {
+          "title": "Evaluation of the efficiency of Cr3+ → Cr4+ conversion in non-stoichiometric YAG",
+          "score": 17.3
+        },
+        {
+          "title": "acs.inorgchem.1c03220",
+          "score": 16.69
+        }
+      ],
+      "keep": true
+    },
+    {
+      "name": "MOISTURE_HYDROXYL",
+      "human": "Moisture / hydroxyl contamination — non-radiative quenching",
+      "query": "moisture water adsorbed hydroxyl OH group quenching non radiative humidity hygroscopic dehydration drying precursor water content luminescence quenching",
+      "must": [
+        "water",
+        "moisture",
+        "hydroxyl",
+        "oh group",
+        "hygroscopic",
+        "humidity",
+        "dehydrat",
+        "water resistance"
+      ],
+      "must_not": [],
+      "signature": "humidity high, AI-2 humidity-residual high before/at charge",
+      "mechanism": "Adsorbed water / OH groups introduce high-energy phonon non-radiative pathways that quench NIR emission.",
+      "action": "Dry / pre-calcine precursors; load under low humidity.",
+      "grounded_by": null,
+      "corpus_chunks": 150,
+      "corpus_papers": 87,
+      "corpus_papers_broad": 226,
+      "corpus_tier": "STRONG",
+      "ground_basis": "corpus",
+      "exemplars": [
+        {
+          "title": "acs.inorgchem.1c03488",
+          "score": 23.49
+        },
+        {
+          "title": "acsami.2c17888",
+          "score": 19.96
+        },
+        {
+          "title": "hariyani2021",
+          "score": 19.75
+        },
+        {
+          "title": "Crystal Structure, Vibrational Spectra on Trivalent-Cation-Doped Rutile and Appl",
+          "score": 18.75
+        }
+      ],
+      "keep": true
+    },
+    {
+      "name": "GRIND_INHOMOGENEITY",
+      "human": "Grinding / mixing inhomogeneity — secondary phase, uneven emission",
+      "query": "ball milling grinding mixing homogeneity homogeneous agglomeration particle size uniform precursor mixture intimate mixing inhomogeneous",
+      "must": [
+        "ball mill",
+        "milling",
+        "grinding",
+        "homogen",
+        "agglomerat",
+        "particle size",
+        "intimate mix",
+        "thoroughly mix"
+      ],
+      "must_not": [],
+      "signature": "stage=grind, vib RMS abnormal (AI-3 vibration channel)",
+      "mechanism": "Poor mixing leaves local stoichiometry gradients -> secondary phases and spatially uneven emission.",
+      "action": "Re-grind / extend mixing cycles to the host grinding_cycles.",
+      "grounded_by": "sinter:grinding_cycles",
+      "corpus_chunks": 94,
+      "corpus_papers": 56,
+      "corpus_papers_broad": 244,
+      "corpus_tier": "STRONG",
+      "ground_basis": "corpus",
+      "exemplars": [
+        {
+          "title": "s40145-022-0617-z",
+          "score": 25.78
+        },
+        {
+          "title": "s40145-022-0617-z",
+          "score": 20.46
+        },
+        {
+          "title": "ma2010",
+          "score": 18.96
+        },
+        {
+          "title": "ma2010",
+          "score": 17.77
+        }
+      ],
+      "keep": true
+    },
+    {
+      "name": "SOAK_TEMP_DRIFT",
+      "human": "Soak temperature drift / instability — inconsistent crystallinity",
+      "query": "temperature fluctuation stability furnace control drift uniformity thermal gradient grain growth holding isothermal soaking instability",
+      "must": [
+        "temperature fluctuat",
+        "temperature instab",
+        "temperature uniformity",
+        "furnace temperature",
+        "furnace control",
+        "isothermal hold",
+        "soaking temperature",
+        "holding temperature",
+        "temperature stability of the furnace"
+      ],
+      "must_not": [
+        "thermometry",
+        "photo-thermal",
+        "thermal quenching",
+        "color drift",
+        "stokes",
+        "electron drift",
+        "sensing",
+        "bandgap"
+      ],
+      "signature": "AI-3=temp_drift, SPC out-of-control during soak",
+      "mechanism": "Furnace instability during the isothermal hold causes grain-growth variance and inconsistent crystallinity batch to batch.",
+      "action": "Check furnace PID / heating element; recalibrate before next batch.",
+      "grounded_by": "spc",
+      "corpus_chunks": 2,
+      "corpus_papers": 1,
+      "corpus_papers_broad": 258,
+      "corpus_tier": "WEAK",
+      "ground_basis": "hard-rule",
+      "exemplars": [
+        {
+          "title": "singh2016",
+          "score": 10.7
+        },
+        {
+          "title": "singh2016",
+          "score": 10.32
+        }
+      ],
+      "keep": true
+    }
+  ],
+  "kept_labels": [
+    "NORMAL",
+    "RAMP_TOO_FAST",
+    "UNDER_TEMPERATURE",
+    "OXIDIZE_CR6",
+    "DECOMP_GAS_SURGE",
+    "VOLATILIZATION_LOSS",
+    "MOISTURE_HYDROXYL",
+    "GRIND_INHOMOGENEITY",
+    "SOAK_TEMP_DRIFT"
+  ]
+}

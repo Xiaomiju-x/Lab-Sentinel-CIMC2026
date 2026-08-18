@@ -1,0 +1,74 @@
+{
+  "authority_nonzero": 0,
+  "board_actions": 0,
+  "content_root_sha256": "07b4f63a0286bb4c0476bbe06088002b9ced3d013abebfcb9e6c134147728aea",
+  "created_at_utc": "2026-08-03T05:15:29.295926+00:00",
+  "record": {
+    "authority": 0,
+    "baseline": "adaptive_threshold_plus_watershed",
+    "board_accepted": false,
+    "bytes": 746038,
+    "candidate_id": "CAND-P-096",
+    "countable_model": false,
+    "counts": {
+      "test": 601,
+      "train": 3128,
+      "validation": 862
+    },
+    "created_at_utc": "2026-08-03T05:15:29.271271+00:00",
+    "cross_split_group_overlap": 0,
+    "doi": "10.5281/zenodo.16895427",
+    "file_pair_manifest_root_sha256": "23f5ac997fc4abbe36239ac975d8d7d911ef82711791ca6613ed595ae119489c",
+    "input_contract": "SEM_image_scale_and_pixelwise_defect_annotation",
+    "input_contract_state": "SATISFIED_PIXEL_ANNOTATION_WITH_EXPLICIT_UNAVAILABLE_PHYSICAL_SCALE_CHANNEL",
+    "largest_near_duplicate_group": 2826,
+    "license": "CC BY 4.0",
+    "mask_threshold": "source_grayscale_gte_128",
+    "near_duplicate_grouping": "64_BIT_DHASH_UNION_HAMMING_LE_4_WITH_4X16BIT_CANDIDATE_BANDS",
+    "near_duplicate_groups": 869,
+    "parameter_cap": "params_le_88k_INT8_weights_le_104KiB",
+    "path": "data/staged_carinthia_exact_v1/CAND-P-096.npz",
+    "physical_scale_availability": "ABSENT_IN_UPSTREAM_SOURCE_EXPLICIT_ZERO_NO_SCALE_FABRICATED",
+    "positive_mask_records": {
+      "test": 590,
+      "train": 3124,
+      "validation": 651
+    },
+    "primary_metric": "mIoU_boundary_F1_and_small_defect_recall",
+    "records": 4591,
+    "schema": "cimc.forge200.carinthia-p096-staged.v1",
+    "sha256": "26be8c543c01c68b59c3808ee23f3a07251b19f029ef815084b6b1883adaeeb7",
+    "source_archive_sha256": "e7cc8507657611f89db33345d50fc7951e8784045684888dc997ac5298b7a3a2",
+    "source_dataset": "Carinthia-S",
+    "source_download_receipt_sha256": "6018dcf791fdf3a2ed2562346c266c8f08aae703a6b7d0ea53ce7d478f1d492f",
+    "source_image_shape": [
+      480,
+      480
+    ],
+    "source_label_counts": {
+      "1": 55,
+      "2": 8,
+      "3": 4008,
+      "4": 289,
+      "5": 4,
+      "6": 227
+    },
+    "source_modes": {
+      "image=L|mask=L": 4587,
+      "image=L|mask=RGB": 2,
+      "image=L|mask=RGBA": 2
+    },
+    "source_url": "https://zenodo.org/records/16895427",
+    "split_assignment": "DETERMINISTIC_LARGEST_CLUSTER_FIRST_BALANCED_70_15_15",
+    "split_sha256": "169108754782f2954cd6d43c906b40716857bb071db2e650fd884fa279fb47cb",
+    "split_unit": "PERCEPTUAL_NEAR_DUPLICATE_CLUSTER",
+    "status": "PASS",
+    "target_label": "defect_pixel_mask",
+    "task_contract_sha256": "81c33659d8f79f940ffc1b45dc03c9fabe16b2e8f9d0bbcbe13f912866851965",
+    "teacher_outputs": 0,
+    "truth_class": "OPEN_EXPERT_VALIDATED_PIXEL_MASK"
+  },
+  "schema": "cimc.forge200.carinthia-p096-staging.v1",
+  "source_audit_sha256": "e32f7d0a462685f1547a048a3ff6f3eda800bdc6d534f2011982ecc98e492fe0",
+  "status": "PASS"
+}

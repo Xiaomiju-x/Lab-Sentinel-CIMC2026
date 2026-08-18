@@ -1,0 +1,62 @@
+{
+  "public_derivative_notice": "The private UART-log path was replaced; its byte count and SHA-256 are unchanged and content_root_sha256 identifies the archived original receipt.",
+  "accepted": false,
+  "claim_boundary": "Board acceptance does not erase evidence tiers: 78 new assets are EXACT source/label/split-bound and 92 remain explicitly SIM_ONLY. All new assets have authority=0 and do not control actuators.",
+  "content_root_sha256": "bd3209b626c28c19fb4bc19ca13904ec862adc58be2c93a5f43c3dc74eaff733",
+  "created_at_utc": "2026-08-06T06:19:56.521644+00:00",
+  "errors": [
+    "BATCH170_GATE",
+    "CATALOG_AB_GATE",
+    "FAULT_BAD_AUTHORITY_GATE",
+    "FAULT_BAD_MAGIC_GATE",
+    "FAULT_ENGINE_GATE",
+    "FAULT_GOLDEN_GATE",
+    "FAULT_PAYLOAD_GATE",
+    "FAULT_ROLLBACK_GATE",
+    "FINAL_PASS_GATE",
+    "FORGE200_STOP_PRESENT",
+    "MODEL_CATEGORY_GATE",
+    "MODEL_TIER_GATE",
+    "MODEL_UNIQUE_170_GATE",
+    "RAG120_GATE",
+    "RAG_STAGE_GATE",
+    "SD_BENCH_GATE",
+    "SOAK_24_HOUR_GATE",
+    "SOAK_BEGIN_GATE",
+    "SOAK_FAULT_EVERY_2H_GATE",
+    "SWAP1000_GATE"
+  ],
+  "forge200": {
+    "authority_nonzero": 0,
+    "by_category": {},
+    "by_tier": {},
+    "mid_load_cancel": -1,
+    "model_load_ms_max": -1,
+    "models": 0,
+    "rag_queries": -1,
+    "rag_safe": -1,
+    "rag_source_bound": -1,
+    "same_model_reload": -1,
+    "soak_fault_hours_seen": [],
+    "soak_hours_seen": [],
+    "swap_loads": -1,
+    "veriprocess_ledger_records": 18
+  },
+  "initial_board_baseline": {
+    "assets": 30,
+    "logical_models": 28,
+    "registry_pass": true
+  },
+  "logical_generative_if_accepted": 8,
+  "public_count_if_accepted": 30,
+  "public_exact_source_bound_new": 0,
+  "public_sim_only_new": 0,
+  "schema": "cimc.forge200.gd32-board-acceptance.v9",
+  "status": "GD32_UNIFIED_BOARD_REJECTED",
+  "uart_log": {
+    "bytes": 5109,
+    "f2_records": 6,
+    "path": "private-archive://evidence/forge200_correct32gb_sharedbus_hardware_retest_20260806_141457_uart.log",
+    "sha256": "04876afbd86931ee9d3b0068d16322f4e77876948e86e3aee3bc33811a2237b0"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "policy": {
+    "license_change_action": "QUARANTINE_AND_REHASH",
+    "publicly_visible_is_not_a_license": true,
+    "standards_fulltext_allowed": false,
+    "teacher_output_is_not_ground_truth": true,
+    "unknown_license_action": "QUARANTINE"
+  },
+  "records": [
+    {
+      "decision": "TRAIN_RAG_GO",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "metadata_snapshot_sha256": "e927efc6afafb77881804dd5f5bd6b86634dea52c653b968e8c88ea18f47783e",
+      "rag_allowed": true,
+      "source_id": "jarvis_dft_v11",
+      "training_allowed": true
+    },
+    {
+      "decision": "TRAIN_RAG_GO",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "metadata_snapshot_sha256": "40ba8f631f479b8c3dd85ce6d5c0e5bb3e82a0f13878f3744832e06b00add1fc",
+      "rag_allowed": true,
+      "source_id": "ipop_v3",
+      "training_allowed": true
+    },
+    {
+      "decision": "TRAIN_RAG_GO",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "metadata_snapshot_sha256": "8a29b064140c95bcb67eb46446fd00f155b7db9ed10e56c4d6d0761fb85fff8c",
+      "rag_allowed": true,
+      "source_id": "uci_secom",
+      "training_allowed": true
+    },
+    {
+      "decision": "NO_LABELED_TRAINING_RECORDS",
+      "license": "TEAM_OWNED_PRIVATE",
+      "license_url": "internal://team-ownership-ledger",
+      "metadata_snapshot_sha256": null,
+      "rag_allowed": true,
+      "source_id": "cimc_team_hardware_evidence_20260730",
+      "training_allowed": false
+    },
+    {
+      "decision": "PIPELINE_ONLY",
+      "license": "TEAM_OWNED_PRIVATE",
+      "license_url": "internal://fixture-contract",
+      "metadata_snapshot_sha256": null,
+      "rag_allowed": false,
+      "source_id": "forge200_controlled_fixture_v1",
+      "training_allowed": false
+    },
+    {
+      "decision": "NO_TEACHER_GENERATION_PERFORMED",
+      "license": "SOURCE_BOUND_PER_RECORD_REQUIRED",
+      "license_url": "internal://teacher-governance",
+      "metadata_snapshot_sha256": null,
+      "rag_allowed": false,
+      "source_id": "teacher_candidate_pool",
+      "training_allowed": false
+    },
+    {
+      "decision": "METADATA_ONLY",
+      "license": "PROPRIETARY_METADATA_ONLY",
+      "license_url": "publisher-specific-public-scope-pages",
+      "metadata_snapshot_sha256": null,
+      "rag_allowed": false,
+      "source_id": "standards_metadata_registry",
+      "training_allowed": false
+    },
+    {
+      "decision": "TRAIN_RAG_SOURCE_BOUND_GO",
+      "license": "CC-BY_PER_DOCUMENT_METADATA_AND_JATS_VERIFIED",
+      "license_url": "PER_DOCUMENT_JATS_LICENSE_ELEMENT",
+      "metadata_snapshot_sha256": "24eb87acba686c3615cdb27ec789d0e6d10c01e5882fc5907ac94bc072c890d0",
+      "rag_allowed": true,
+      "source_id": "europe_pmc_ccby_multidomain_v1",
+      "training_allowed": true
+    }
+  ],
+  "schema": "cimc.forge200.license-ledger.v1",
+  "status": "PASS"
+}

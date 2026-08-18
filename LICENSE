@@ -1,0 +1,16 @@
+Copyright 2026 Lab-Sentinel contributors
+
+The original software in this repository is licensed under the Apache License,
+Version 2.0. The complete license text is in LICENSES/Apache-2.0.txt.
+
+This is a multi-license repository:
+
+- Original software: Apache-2.0
+- Original hardware design files: CERN-OHL-S-2.0
+- Original documentation and explicitly marked media: CC-BY-4.0
+- Third-party software, datasets, model assets, fonts, photographs, trademarks,
+  and competition materials remain under their respective terms.
+
+See LICENSES/, NOTICE, THIRD_PARTY_NOTICES.md, DATA_LICENSES.md,
+MODEL_LICENSES.md, MEDIA_LICENSE.md, and TRADEMARKS.md before reuse.
+

@@ -1,0 +1,114 @@
+{
+  "schema": "cimc.forge200.mendeley-p095-contract-binding.v1",
+  "candidate_id": "CAND-P-095",
+  "objective_id": "OBJ-ICM-125-SEM-DEFECT-CLASS",
+  "status": "FROZEN_SOURCE_AUDIT_EXACT_CONTRACT_NOT_CLOSED",
+  "source": {
+    "title": "Dataset for surface defect detection and prediction in laser processed cutting tools using machine learning",
+    "publisher": "Mendeley Data",
+    "contributors": [
+      "Kafayat Hazzan",
+      "Manuela Pacella"
+    ],
+    "doi": "10.17632/gtcb8j5gcb.1",
+    "landing_page": "https://data.mendeley.com/datasets/gtcb8j5gcb/1",
+    "license": "CC BY 4.0",
+    "truth_class": "OPEN_EXPERIMENTAL_L2",
+    "scope_limit": "Laser-processed cutting-tool SEM defects only; no phosphor, semiconductor-fab, or production-line generalization claim."
+  },
+  "artifacts": {
+    "landing_page": {
+      "path": "data/sources/mendeley_sem_p095_page.html",
+      "bytes": 116565,
+      "sha256": "5a8f2befebe0f2d37b5108b81abe5e5317868f4e28c2e01ee2602c5cf196c43c"
+    },
+    "public_api_file_manifest": {
+      "path": "data/sources/mendeley_sem_p095_files.json",
+      "bytes": 2311,
+      "sha256": "1e87e2ca657b5bdf3a31cca0e109c14bb1d81187e3aa12efee0ad73e2f82fa92"
+    },
+    "detection_workbook": {
+      "path": "data/raw/mendeley_sem_gtcb8j5gcb_v1/Detection network_R-CNN training and result.xlsx",
+      "bytes": 51036,
+      "sha256": "48a496428f313e50eef1ffea69b0d2f1aa41b07a14f1d710eed3b8cb98679b7e"
+    },
+    "predictive_workbook": {
+      "path": "data/raw/mendeley_sem_gtcb8j5gcb_v1/Predictive network_BPNN training and result.xlsx",
+      "bytes": 291241,
+      "sha256": "24c8c12d66e4e54a792c1dba7215fa2a74ba86f3b293b8c08a9e48dcf068ed2e"
+    },
+    "matlab_labeling_session": {
+      "path": "data/raw/mendeley_sem_gtcb8j5gcb_v1/SEM Labeling Session.mat",
+      "bytes": 96812,
+      "sha256": "e53808d931b8389f5418de5e11c4badceb04a13181b4bdbbc6698b2d01b942c4"
+    },
+    "detection_workbook_inventory": {
+      "path": ".tooling/spreadsheet_p101/sem_p095_detection_inspection.json",
+      "generator": "@oai/artifact-tool 2.8.31",
+      "bytes": 75712,
+      "sha256": "2b31130d7b34e547953cb3385bada97002368a96a2a675085dd4d7238a5845c5"
+    },
+    "predictive_workbook_inventory": {
+      "path": ".tooling/spreadsheet_p101/sem_p095_predictive_inspection.json",
+      "generator": "@oai/artifact-tool 2.8.31",
+      "bytes": 76442,
+      "sha256": "ce61f127a46e15c11d749b14a10140032758b35ef821d0db82c7905bc8055545"
+    }
+  },
+  "frozen_task_contract": {
+    "input": "SEM_defect_crop_scale_and_acquisition_metadata",
+    "target": "defect_class_particle_scratch_void_bridge_pattern_other",
+    "baseline": "HOG_plus_linear_SVM",
+    "metric": "macro_F1_rare_class_recall_and_ECE",
+    "source_gate": "OPEN_Q",
+    "parameter_cap": "params_le_76k_INT8_weights_le_92KiB"
+  },
+  "observed_source": {
+    "landing_page_claimed_sem_images": 78,
+    "public_api_files": 3,
+    "public_api_raster_image_files": 0,
+    "matlab_session_external_tiff_paths": 49,
+    "matlab_session_contains_image_filenames_field": true,
+    "external_paths_resolve_in_downloaded_source": false,
+    "ground_truth_workbook_rows_including_headers": 72,
+    "source_defect_taxonomy": [
+      "dissociation",
+      "spherical_pore",
+      "splatter",
+      "crack",
+      "balling",
+      "voids",
+      "porosity"
+    ],
+    "target_taxonomy": [
+      "particle",
+      "scratch",
+      "void",
+      "bridge",
+      "pattern",
+      "other"
+    ],
+    "authoritative_taxonomy_mapping_supplied": false,
+    "physical_scale_per_crop_supplied": false,
+    "acquisition_metadata_per_crop_supplied": false
+  },
+  "exact_rejection": {
+    "reason_code": "EXACT_INPUT_PAYLOAD_AND_TARGET_TAXONOMY_NOT_SOURCE_BOUND",
+    "facts": [
+      "The official public API exposes only two workbooks and one 96,812-byte MATLAB labeling-session file; it exposes no TIFF, PNG, or JPEG inputs.",
+      "The MATLAB session contains 49 external absolute TIFF paths under the contributor's OneDrive, not embedded SEM raster payloads with immutable content hashes.",
+      "The source's seven defect classes are not the frozen P095 particle/scratch/void/bridge/pattern/other taxonomy, and the source supplies no authoritative mapping.",
+      "Physical scale and acquisition metadata required by the frozen input contract are not bound per downloadable crop.",
+      "Without downloadable input pixels, family identifiers, and the exact target taxonomy, a leakage-safe train/validation/test split cannot be materialized."
+    ],
+    "training_allowed_for_exact_p095": false,
+    "host_promotion_allowed": false
+  },
+  "promotion_boundary": {
+    "authority": 0,
+    "board_accepted": false,
+    "countable_model": false,
+    "training_actions": 0,
+    "sd_or_board_actions": 0
+  }
+}

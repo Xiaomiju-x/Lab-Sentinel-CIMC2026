@@ -1,0 +1,92 @@
+{
+  "authority_nonzero": 0,
+  "board_actions": 0,
+  "catalog_A_sha256": "75e989a7dd87833f01700acb91dc0d0123b0962e4965a403e5b1135c668d29e8",
+  "catalog_B_sha256": "c14b2de1a46aed863eede678b64c50adbf8023a994c249a3150e5ea36394416a",
+  "content_root_sha256": "c32ecb27154c5d3b25fc66b582041b7c6121589ebe5bcc12aacb35f01ff7c64b",
+  "countable_models": 0,
+  "created_at_utc": "2026-08-03T16:59:03.715971+00:00",
+  "engine_counts": {
+    "1": 139,
+    "2": 1,
+    "5": 30
+  },
+  "exact_count": 78,
+  "fault_injections": [
+    {
+      "active_model_unchanged": true,
+      "fallback": "INITIAL_30_BASELINE_AVAILABLE",
+      "generation_unchanged": true,
+      "mode": "BAD_MAGIC",
+      "reason": "SCHEMA"
+    },
+    {
+      "active_model_unchanged": true,
+      "fallback": "INITIAL_30_BASELINE_AVAILABLE",
+      "generation_unchanged": true,
+      "mode": "PAYLOAD_CORRUPTION",
+      "reason": "PAYLOAD_SHA"
+    },
+    {
+      "active_model_unchanged": true,
+      "fallback": "INITIAL_30_BASELINE_AVAILABLE",
+      "generation_unchanged": true,
+      "mode": "UNKNOWN_ENGINE",
+      "reason": "ENGINE_OPSET"
+    },
+    {
+      "active_model_unchanged": true,
+      "fallback": "INITIAL_30_BASELINE_AVAILABLE",
+      "generation_unchanged": true,
+      "mode": "TRUNCATED",
+      "reason": "TRUNCATED"
+    },
+    {
+      "active_model_unchanged": true,
+      "fallback": "INITIAL_30_BASELINE_AVAILABLE",
+      "generation_unchanged": true,
+      "mode": "CATALOG_HASH_MISMATCH",
+      "reason": "CATALOG_SHA"
+    },
+    {
+      "active_model_unchanged": true,
+      "fallback": "INITIAL_30_BASELINE_AVAILABLE",
+      "generation_unchanged": true,
+      "mode": "POWER_LOSS_PRECOMMIT",
+      "reason": "PRECOMMIT_POWER_LOSS"
+    }
+  ],
+  "invariants": {
+    "1000_successful_swaps": true,
+    "all_faults_caught": true,
+    "all_models_validated_once": true,
+    "authority_zero": true,
+    "each_model_loaded_at_least_4": true,
+    "sd_and_max31856_cs_never_asserted_together": true,
+    "single_active_model": true,
+    "spi_mode_restored_after_each_transaction": true,
+    "two_catalogs_equal_model_set": true
+  },
+  "load_count_max": 6,
+  "load_count_min": 5,
+  "model_count": 170,
+  "modelbank": "releases/forge200-host-modelbank-v7-20260803",
+  "new_models_board_accepted": 0,
+  "schema": "cimc.forge200.modelbank-host-dry-run.v7",
+  "scope": "HOST_SIMULATION_ONLY_NOT_BOARD_PERFORMANCE",
+  "shared_spi": {
+    "MAX31856_CS": "PG3",
+    "MISO": "PC2",
+    "MOSI": "PC1",
+    "SCK": "PB10",
+    "SD_CS": "PC5",
+    "board_measurement_required": true,
+    "logical_chunk_bytes": 8192,
+    "max_simulated_lock_chunk_bytes": 8192,
+    "throughput_or_latency_claim": false
+  },
+  "sim_only_extension_count": 92,
+  "status": "PASS",
+  "successful_swaps": 1000,
+  "validated_package_bytes": 34078039
+}

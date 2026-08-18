@@ -1,0 +1,101 @@
+{
+  "schema": "cimc.forge200.nist-p099-source-contract-audit.v1",
+  "created_at_utc": "2026-08-03T10:25:45.336495+00:00",
+  "candidate_id": "CAND-P-099",
+  "status": "PREFLIGHT_PASS_REQUIRED_RAW_IMAGE_DOWNLOAD_PENDING",
+  "contract_binding": {
+    "path": "contracts/nist_p099_contract_binding.v1.json",
+    "sha256": "11a6378fdbdcfddfb1fec54e402963fbb1ca1fb81b1523aa830323770b8db5fc"
+  },
+  "upstream_code": {
+    "path": "data/sources/nist_sem_detection_limits_v1/upstream_code",
+    "commit": "17974f5085ff1d05d1e6d8b4791d5b124cb1b100"
+  },
+  "official_tables": [
+    {
+      "observer": "AI3",
+      "path": "data/sources/nist_sem_detection_limits_v1/upstream_code/web/Images/merged_ai3_data_quality.csv",
+      "bytes": 311914,
+      "sha256": "172b30f34a8795e321466af4e2c2628ee5381c3114015cde505eb5f26b07ddfb",
+      "records": 567
+    },
+    {
+      "observer": "AI5",
+      "path": "data/sources/nist_sem_detection_limits_v1/upstream_code/web/Images/merged_ai5_data_quality.csv",
+      "bytes": 312100,
+      "sha256": "29e32cbfcaf43536779d16236d017400af97eedb2facbed62a3e32f1695a2778",
+      "records": 567
+    },
+    {
+      "observer": "AI7",
+      "path": "data/sources/nist_sem_detection_limits_v1/upstream_code/web/Images/merged_ai7_data_quality.csv",
+      "bytes": 311917,
+      "sha256": "e85e1d6af3820128685690291eb0df934883fee01c8d704024bf0910c9dc0480",
+      "records": 567
+    }
+  ],
+  "source_grid": {
+    "records": 567,
+    "noise_groups": 27,
+    "contrast_levels": 21,
+    "complete_cartesian_grid": true,
+    "observer_image_set_overlap": 567,
+    "shared_input_field_mismatches": 0
+  },
+  "split_manifest": {
+    "path": "data/splits/nist_p099_noise_group_split.v1.json",
+    "content_root_sha256": "7a3338e51f0842052249a4023d32c36656574be28aa60c07891f661160cacb32",
+    "test_labels_evaluated": false
+  },
+  "downloads": [
+    {
+      "name": "README.txt",
+      "url": "https://data.nist.gov/od/ds/mds2-3838/README.txt",
+      "expected_sha256": "d696d68841090b87b6e565c5f6415321ef9e45b0803360640e31cd30530d7b6f",
+      "required_for_training": false,
+      "present": false,
+      "bytes": 0,
+      "actual_sha256": null,
+      "hash_match": false
+    },
+    {
+      "name": "metrics_sets.zip",
+      "url": "https://data.nist.gov/od/ds/mds2-3838/metrics_sets.zip",
+      "expected_sha256": "a2b89522c6d8d3fae6afefa97dd99932b564d6455beb96ae0c69083622cffa36",
+      "required_for_training": false,
+      "present": false,
+      "bytes": 0,
+      "actual_sha256": null,
+      "hash_match": false
+    },
+    {
+      "name": "intensity_sets.zip",
+      "url": "https://data.nist.gov/od/ds/mds2-3838/intensity_sets.zip",
+      "expected_sha256": "5cd9f4caff80e9afab83515032347a17e9974554ea148f01280090504807e078",
+      "required_for_training": true,
+      "present": false,
+      "bytes": 0,
+      "actual_sha256": null,
+      "hash_match": false
+    },
+    {
+      "name": "mask_sets.zip",
+      "url": "https://data.nist.gov/od/ds/mds2-3838/mask_sets.zip",
+      "expected_sha256": "5925dc95478e2cfc3c9ec54bfef888c7596db35fdf41bb929d6b96b8562ab562",
+      "required_for_training": true,
+      "present": false,
+      "bytes": 0,
+      "actual_sha256": null,
+      "hash_match": false
+    }
+  ],
+  "required_training_payloads_ready": false,
+  "training_actions": 0,
+  "test_evaluation_actions": 0,
+  "host_promoted": false,
+  "authority": 0,
+  "board_accepted": false,
+  "countable_model": false,
+  "next_action": "Verify intensity_sets.zip and mask_sets.zip hashes, extract no-reference features, select architecture and Fourier threshold on validation only, then evaluate the frozen test once.",
+  "content_root_sha256": "40638e076eed0b151542d69101922f11df186884f4642820694af86935bacd7e"
+}

@@ -1,0 +1,77 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+*.key
+id_rsa*
+id_ed25519*
+known_hosts
+
+# Python / test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv*/
+venv/
+
+# IDE and user-specific Keil state
+.idea/
+.vs/
+.vscode/*.bak
+*.uvguix.*
+*.uvoptx.user
+JLinkLog.txt
+JLinkSettings.ini
+
+# Embedded build products
+**/Build/
+**/Listings/
+**/Objects/
+*.axf
+*.elf
+*.hex
+*.map
+*.o
+*.obj
+*.d
+*.crf
+*.lst
+*.log
+
+# Large model/data artifacts: publish only through reviewed Releases
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.tflite
+*.npy
+*.npz
+*.jsonl
+*.tar
+*.tar.gz
+*.7z
+*.rar
+
+# Office/temp/cache/archives
+~$*
+*.tmp
+*.bak
+tmp/
+output/
+artifacts/
+backups/
+.cache/
+.tools/
+.runtime/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+

@@ -1,0 +1,58 @@
+AI-2 Sintering AE — Anomaly Evaluation Report
+==============================================================
+
+Run                                    mean_score   detected%
+--------------------------------------------------------------
+  [normal_train]                         0.057079       10.0%  (FPR)
+  aluminate_fast_ramp                    0.119482       16.8%
+  aluminate_undertemp                    0.043400        1.5%
+  aluminate_vib_spike                    0.259212        1.4%
+  aluminate_wrong_atm                    0.051938        3.9%
+  borate_fast_ramp                       0.071560       10.9%
+  borate_undertemp                       0.065587       13.6%
+  borate_vib_spike                       0.265047        1.6%
+  borate_wrong_atm                       0.072901       20.9%
+  default_unknown_fast_ramp              0.120947       14.8%
+  default_unknown_undertemp              0.043185        1.1%
+  default_unknown_vib_spike              0.247051        1.7%
+  default_unknown_wrong_atm              0.045574        1.8%
+  fluoride_fast_ramp                     0.137507       62.1%
+  fluoride_undertemp                     0.075514       13.8%
+  fluoride_vib_spike                     0.399094       21.7%
+  fluoride_wrong_atm                     0.111660       30.0%
+  garnet_fast_ramp                       0.125811       17.5%
+  garnet_gallium_fast_ramp               0.126558       23.4%
+  garnet_gallium_undertemp               0.039978        0.7%
+  garnet_gallium_vib_spike               0.248298        1.1%
+  garnet_gallium_wrong_atm               0.039333        1.5%
+  garnet_undertemp                       0.062438       11.9%
+  garnet_vib_spike                       0.255728       15.0%
+  garnet_wrong_atm                       0.053325        6.9%
+  germanate_fast_ramp                    0.110776       17.1%
+  germanate_undertemp                    0.050863        3.3%
+  germanate_vib_spike                    0.301481       20.8%
+  germanate_wrong_atm                    0.057170        5.6%
+  orthosilicate_fast_ramp                0.154584       34.6%
+  orthosilicate_undertemp                0.039682        1.0%
+  orthosilicate_vib_spike                0.261412        1.6%
+  orthosilicate_wrong_atm                0.106965       45.7%
+  oxide_simple_fast_ramp                 0.147377       32.0%
+  oxide_simple_undertemp                 0.048077        1.9%
+  oxide_simple_vib_spike                 0.289482        5.9%
+  oxide_simple_wrong_atm                 0.069574       17.8%
+  perovskite_fast_ramp                   0.125910       16.9%
+  perovskite_undertemp                   0.052980        4.1%
+  perovskite_vib_spike                   0.342388       46.6%
+  perovskite_wrong_atm                   0.061805       12.3%
+  phosphate_fast_ramp                    0.103344       18.3%
+  phosphate_undertemp                    0.053087        6.3%
+  phosphate_vib_spike                    0.239061        9.6%
+  phosphate_wrong_atm                    0.062143       17.2%
+  pyrochlore_fast_ramp                   0.147390       45.5%
+  pyrochlore_undertemp                   0.095950       42.6%
+  pyrochlore_vib_spike                   0.259549       39.1%
+  pyrochlore_wrong_atm                   0.088468       38.8%
+  spinel_fast_ramp                       0.121850       14.7%
+  spinel_undertemp                       0.045014        2.7%
+  spinel_vib_spike                       0.261565        1.9%
+  spinel_wrong_atm                       0.039062        1.1%

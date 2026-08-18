@@ -1,0 +1,1894 @@
+{
+  "fail_closed_count": 38,
+  "gpu_admitted_count": 69,
+  "gpu_blocked_count": 175,
+  "materialized_direct_count": 68,
+  "queue_state_counts": {
+    "ADMITTED": 69,
+    "BLOCKED_PRE_GPU": 175
+  },
+  "record_or_corpus_build_required_count": 105,
+  "records": [
+    {
+      "candidate_id": "CAND-P-001",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-031-EMISSIVITY-CORRECTION",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-002",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-032-THERMAL-RESTORATION",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-003",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-033-THERMAL-UNIFORMITY-SEGMENTATION",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-004",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-034-THERMAL-FIELD-FORECAST",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-005",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-035-PIXEL-DRIFT-MAP",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-006",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-036-THERMAL-FOV-HEALTH",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-007",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-037-INSULATION-LEAK-SEGMENTATION",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-008",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-038-INVERSE-HEAT-FLUX",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-009",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-039-HEATER-COUPLING-MAP",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-010",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-040-HOTSPOT-TRAJECTORY",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-011",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-041-RGBT-REGISTRATION",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-012",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-042-CRUCIBLE-FILL-RATIO",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-013",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-043-POWDER-UNIFORMITY",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-014",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-044-CONTAMINATION-SPOT-SEGMENTATION",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-015",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-045-SURFACE-CRUST-CRACK",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-016",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-046-FUME-PLUME-SEGMENTATION",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-017",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-047-CAMERA-OPTICS-HEALTH",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-018",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-048-CRUCIBLE-RIM-INTEGRITY",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-019",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-049-MACRO-SURFACE-QUALITY",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-020",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-050-THERMAL-TARGET-AUTHENTICITY",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-021",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-051-DOOR-SEAL-LEAK",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-022",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-052-CRUCIBLE-WARP",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-023",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-053-TC-CONTACT-PLACEMENT",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-024",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-054-MAX56-BIAS-COMPENSATION",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-025",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-055-SHT-CONDENSATION-STATE",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-026",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-056-MQ-TH-COMPENSATION",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-027",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-057-MQ-READINESS",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-028",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-058-ADXL-SIGNAL-QUALITY",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-029",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-059-INA-TEMP-DRIFT-COMP",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-030",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-060-POWER-RAIL-EVENT",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-031",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-061-PTC-THERMAL-EFFICIENCY",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-032",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-062-PTC-DEGRADATION",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-033",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-063-RELAY-CONTACT-HEALTH",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-034",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-064-MOSFET-CONDUCTION-HEALTH",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-035",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-065-FAN-EFFICIENCY",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-036",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-066-FAN-BEARING-FAULT",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-037",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-067-FAN-BLOCKAGE",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-038",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-068-TACH-DENOISE",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-039",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-069-MOTOR-MECHANICAL-FAULT",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-040",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-070-MOTOR-LOAD-DRAG",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-041",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-ICM-071-RTC-TEMPERATURE-DRIFT",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-042",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-072-SINTERGRAPH-PSP",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-043",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-073-PRECURSOR-COMPATIBILITY",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-044",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-074-SYNTHESIZABILITY",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-045",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-075-COMPETING-PHASE-RANKING",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-046",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-076-REACTION-PATH-RANKING",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-047",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-077-REACTION-ONSET",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-048",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-078-PHASE-COMPLETION",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-049",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-079-DENSIFICATION",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-050",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-080-SINTERING-SHRINKAGE",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-051",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-081-GRAIN-GROWTH",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-052",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-082-AGGLOMERATION-RISK",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-053",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-083-CR-VALENCE-RETENTION",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-054",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-084-OXYGEN-VACANCY-CONDITION",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-055",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-085-DOPANT-ACTIVATION",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-056",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-086-SITE-OCCUPANCY-RANKING",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-057",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-087-NIR-EXCITATION-PEAK",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-058",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-088-NIR-DECAY-TIME",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-059",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-089-IQE-RANKING",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-060",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-090-CIE-CHROMATICITY",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-061",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-091-NIR-INTENSITY-RANK",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-062",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-092-THERMAL-QUENCH-KINETICS",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-063",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-093-OUTGASSING-PHASE",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-064",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-094-MOISTURE-RELEASE",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-065",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-095-CALCINATION-COMPLETION",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-066",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-096-BATCH-TRANSFER-DRIFT",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-067",
+      "full_data_state": "FAIL_CLOSED_TARGET_SEMANTICS_NOT_MATERIALIZED",
+      "objective_id": "OBJ-ICM-097-EXPERIMENTAL-BANDGAP",
+      "source_family": "jarvis_dft_v11",
+      "truth_class": "OPEN_COMPUTED_DFT"
+    },
+    {
+      "candidate_id": "CAND-P-068",
+      "full_data_state": "FAIL_CLOSED_TARGET_SEMANTICS_NOT_MATERIALIZED",
+      "objective_id": "OBJ-ICM-098-EXPERIMENTAL-METALLICITY",
+      "source_family": "jarvis_dft_v11",
+      "truth_class": "OPEN_COMPUTED_DFT"
+    },
+    {
+      "candidate_id": "CAND-P-069",
+      "full_data_state": "MATERIALIZED",
+      "objective_id": "OBJ-ICM-099-FORMATION-ENERGY",
+      "source_family": "jarvis_dft_v11",
+      "truth_class": "OPEN_COMPUTED_DFT"
+    },
+    {
+      "candidate_id": "CAND-P-070",
+      "full_data_state": "FAIL_CLOSED_TARGET_SEMANTICS_NOT_MATERIALIZED",
+      "objective_id": "OBJ-ICM-100-POINT-DEFECT-FORMATION-ENERGY",
+      "source_family": "jarvis_dft_v11",
+      "truth_class": "OPEN_COMPUTED_DFT"
+    },
+    {
+      "candidate_id": "CAND-P-071",
+      "full_data_state": "MATERIALIZED",
+      "objective_id": "OBJ-ICM-101-TBMBJ-BANDGAP",
+      "source_family": "jarvis_dft_v11",
+      "truth_class": "OPEN_COMPUTED_DFT"
+    },
+    {
+      "candidate_id": "CAND-P-072",
+      "full_data_state": "MATERIALIZED",
+      "objective_id": "OBJ-ICM-102-STATIC-DIELECTRIC",
+      "source_family": "jarvis_dft_v11",
+      "truth_class": "OPEN_COMPUTED_DFT"
+    },
+    {
+      "candidate_id": "CAND-P-073",
+      "full_data_state": "FAIL_CLOSED_TARGET_SEMANTICS_NOT_MATERIALIZED",
+      "objective_id": "OBJ-ICM-103-OPTICAL-ABSORPTION-ONSET",
+      "source_family": "jarvis_dft_v11",
+      "truth_class": "OPEN_COMPUTED_DFT"
+    },
+    {
+      "candidate_id": "CAND-P-074",
+      "full_data_state": "MATERIALIZED",
+      "objective_id": "OBJ-ICM-104-ELECTRON-EFFECTIVE-MASS",
+      "source_family": "jarvis_dft_v11",
+      "truth_class": "OPEN_COMPUTED_DFT"
+    },
+    {
+      "candidate_id": "CAND-P-075",
+      "full_data_state": "MATERIALIZED",
+      "objective_id": "OBJ-ICM-105-HOLE-EFFECTIVE-MASS",
+      "source_family": "jarvis_dft_v11",
+      "truth_class": "OPEN_COMPUTED_DFT"
+    },
+    {
+      "candidate_id": "CAND-P-076",
+      "full_data_state": "MATERIALIZED",
+      "objective_id": "OBJ-ICM-106-BULK-MODULUS",
+      "source_family": "jarvis_dft_v11",
+      "truth_class": "OPEN_COMPUTED_DFT"
+    },
+    {
+      "candidate_id": "CAND-P-077",
+      "full_data_state": "MATERIALIZED",
+      "objective_id": "OBJ-ICM-107-SHEAR-MODULUS",
+      "source_family": "jarvis_dft_v11",
+      "truth_class": "OPEN_COMPUTED_DFT"
+    },
+    {
+      "candidate_id": "CAND-P-078",
+      "full_data_state": "MATERIALIZED",
+      "objective_id": "OBJ-ICM-108-EXFOLIATION-ENERGY",
+      "source_family": "jarvis_dft_v11",
+      "truth_class": "OPEN_COMPUTED_DFT"
+    },
+    {
+      "candidate_id": "CAND-P-079",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-109-CONCENTRATION-QUENCH-KINETICS",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-080",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-110-NIR-QUANTUM-YIELD",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-081",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-111-NIR-PERSISTENCE-AFTERGLOW",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-082",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-112-REACTION-ACTIVATION-ENERGY",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-083",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-113-SURFACE-AREA-EVOLUTION",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-084",
+      "full_data_state": "FAIL_CLOSED_TARGET_SEMANTICS_NOT_MATERIALIZED",
+      "objective_id": "OBJ-ICM-114-INTERFACE-ADHESION",
+      "source_family": "jarvis_dft_v11",
+      "truth_class": "OPEN_COMPUTED_DFT"
+    },
+    {
+      "candidate_id": "CAND-P-085",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-ICM-115-PHASE-FRACTION-UNCERTAINTY",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-086",
+      "full_data_state": "MATERIALIZED",
+      "objective_id": "OBJ-ICM-116-PHONON-DYNAMIC-STABILITY",
+      "source_family": "jarvis_dft_v11",
+      "truth_class": "OPEN_COMPUTED_DFT"
+    },
+    {
+      "candidate_id": "CAND-P-087",
+      "full_data_state": "MATERIALIZED",
+      "objective_id": "OBJ-ICM-117-SECOM-YIELD",
+      "source_family": "uci_secom",
+      "truth_class": "ANON_PRODUCTION"
+    },
+    {
+      "candidate_id": "CAND-P-088",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-118-FAB-SENSOR-IMPUTATION",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-089",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-119-CMP-MRR-VIRTUAL-METROLOGY",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-090",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-120-CMP-ENDPOINT",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-091",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-121-IONMILL-FAULT",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-092",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-122-IONMILL-TTF",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-093",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-123-PVD-FAULT",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-094",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-124-PVD-DRIFT-TRAJECTORY",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-095",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-125-SEM-DEFECT-CLASS",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-096",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-126-SEM-DEFECT-SEGMENTATION",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-097",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-127-SEM-CRITICAL-DIMENSION",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-098",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-128-SEM-OVERLAY",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-099",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-129-SEM-IMAGE-QUALITY",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-100",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-130-EUV-SCATTEROMETRY-INVERSE",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-101",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-131-CURE-KINETICS",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-102",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-132-GELPOINT-RHEOLOGY",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-103",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-133-RESIDUAL-STRESS-TRAJECTORY",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-104",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-134-FTIR-CURE-STATE",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-105",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-135-HYBRID-BOND-AFM-ROUGHNESS",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-106",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-136-SOLDER-JOINT-QUALITY",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-107",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-137-XRAY-VOID-SEGMENTATION",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-108",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-138-DELAMINATION-RISK",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-109",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-139-WARPAGE-TRAJECTORY",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-110",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-140-THERMAL-INTERFACE-RESISTANCE",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-111",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-141-BOND-STRENGTH",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-112",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-ICM-142-PACKAGE-THERMAL-HOTSPOT",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-113",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-113-MODELLOAD-LATENCYNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-114",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-114-THERMOCOUPLE-RESPONSETIMENET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-115",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-115-MLX-NOISEPSDNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-116",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-116-POWDER-LEVELPROFILENET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-117",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-117-FURNACESHELL-DEFORMATIONNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-118",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-118-THINFILM-THICKNESSVMNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-119",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-119-PLASMA-ENDPOINTNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-120",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-120-AFM-DEFECTSEGNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-121",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-121-XCT-LAYERMISREGISTRATIONNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-122",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-122-SOLDERFATIGUE-RULNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-123",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-123-UNDERFILL-FLOWFRONTNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-124",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-124-MOISTURE-DIFFUSIONNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-125",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-125-CTE-MISMATCHRISKNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-126",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-126-FURNACE-DOOROPENEVENTNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-127",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-127-THERMAL-INERTIAIDNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-128",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-128-INSULATION-AGINGNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-129",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-129-CRUCIBLE-MASSLOSSNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-130",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-130-POWDER-BEDHEIGHTNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-131",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-131-FAN-COOLINGGAINNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-132",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-132-PTC-RESISTANCEDRIFTNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-133",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-133-RELAY-SWITCHDELAYNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-134",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-134-MOSFET-LEAKAGETRENDNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-135",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-135-SD-THROUGHPUTANOMALYNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-136",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-136-CLOCK-SYNCQUALITYNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-137",
+      "full_data_state": "RECORD_LEVEL_MANIFEST_REQUIRED",
+      "objective_id": "OBJ-CAND-P-137-SENSOR-CROSSCALIBRATIONNET",
+      "source_family": "cimc_team_hardware_evidence_20260730",
+      "truth_class": "TEAM_MEASURED"
+    },
+    {
+      "candidate_id": "CAND-P-138",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-CAND-P-138-PHOSPHOR-HOSTSTABILITYRANKNET",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-139",
+      "full_data_state": "MATERIALIZED_WITH_RECORD_LEVEL_LABEL_GATE",
+      "objective_id": "OBJ-CAND-P-139-DOPANT-SOLUBILITYRANKNET",
+      "source_family": "ipop_v3+team_l2",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT"
+    },
+    {
+      "candidate_id": "CAND-P-140",
+      "full_data_state": "FAIL_CLOSED_TARGET_SEMANTICS_NOT_MATERIALIZED",
+      "objective_id": "OBJ-CAND-P-140-PIEZOELECTRIC-COEFFICIENTNET",
+      "source_family": "jarvis_dft_v11",
+      "truth_class": "OPEN_COMPUTED_DFT"
+    },
+    {
+      "candidate_id": "CAND-P-141",
+      "full_data_state": "FAIL_CLOSED_TARGET_SEMANTICS_NOT_MATERIALIZED",
+      "objective_id": "OBJ-CAND-P-141-SEEBECK-COEFFICIENTNET",
+      "source_family": "jarvis_dft_v11",
+      "truth_class": "OPEN_COMPUTED_DFT"
+    },
+    {
+      "candidate_id": "CAND-P-142",
+      "full_data_state": "MATERIALIZED",
+      "objective_id": "OBJ-CAND-P-142-SOLAR-SLME-RANKNET",
+      "source_family": "jarvis_dft_v11",
+      "truth_class": "OPEN_COMPUTED_DFT"
+    },
+    {
+      "candidate_id": "CAND-P-143",
+      "full_data_state": "FAIL_CLOSED_TARGET_SEMANTICS_NOT_MATERIALIZED",
+      "objective_id": "OBJ-CAND-P-143-IR-MODEINTENSITYNET",
+      "source_family": "jarvis_dft_v11",
+      "truth_class": "OPEN_COMPUTED_DFT"
+    },
+    {
+      "candidate_id": "CAND-P-144",
+      "full_data_state": "FAIL_CLOSED_TARGET_SEMANTICS_NOT_MATERIALIZED",
+      "objective_id": "OBJ-CAND-P-144-THERMOELECTRIC-POWERFACTORNET",
+      "source_family": "jarvis_dft_v11",
+      "truth_class": "OPEN_COMPUTED_DFT"
+    },
+    {
+      "candidate_id": "CAND-P-145",
+      "full_data_state": "FAIL_CLOSED_TARGET_SEMANTICS_NOT_MATERIALIZED",
+      "objective_id": "OBJ-CAND-P-145-SOC-SPILLAGETOPOLOGICALNET",
+      "source_family": "jarvis_dft_v11",
+      "truth_class": "OPEN_COMPUTED_DFT"
+    },
+    {
+      "candidate_id": "CAND-P-146",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-CAND-P-146-THINFILM-RESISTIVITYVMNET",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-147",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-CAND-P-147-UNDERFILL-VOIDRISKNET",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-P-148",
+      "full_data_state": "FAIL_CLOSED_UNTIL_ARTIFACT_HASH",
+      "objective_id": "OBJ-CAND-P-148-THERMALCYCLE-FATIGUENET",
+      "source_family": "task_specific_open_or_team_source",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-001",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-143-PHOSCORE-GROUNDED-QA",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "5bcabdc12765e9e134117232f29e8cecb9c1d731919589015f0ae0fe31e0b7a0",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-002",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-144-FURNACE-EVIDENCE-QA",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "b4dcf2090d0d05eb2d787411cdc4a95f9e7747b0c5843956756c151dc753c7d1",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-003",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-145-SEMIMAT-GROUNDED-QA",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "28d54c999200626a86b9d735c65121b49d7e1a7be48b47ee84de635a5fc6f3cb",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-004",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-146-METROLOGY-GROUNDED-QA",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "5bd6f9d64f2e75503f3e37f57bf07b35be8d1529b6f086d3811c53c34597785a",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-005",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-147-PACKMAT-GROUNDED-QA",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "e6c03a7d408a2c002e245eba21bd95a3440ce8bec96676d30da1c816b7fe4a1c",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-006",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-148-FABQUALITY-GROUNDED-QA",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "aa071b9ac5987dd36d95bbfbe76d28ef9476b71f34e06b714eb531cd83c5ef87",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-007",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-149-PHASE-EVOLUTION-EXPERT",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "e6e11848cd951072c37420cb172e34ba74646c6b07783542a7802f419e780a1e",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-008",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-150-DOPANT-SITE-EXPERT",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "7d6e122076261352f44086535faff5fc70598060678b86b79bb9e15553601c8f",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-009",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-151-ATMOSPHERE-DEFECT-EXPERT",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "37f060e221605ac7c2b705cc078331399c845c57682dec7ee1f97f84ffe1288c",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-010",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-152-NIR-ENERGY-TRANSFER-EXPERT",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "3fa3d07e21d668d549bbafccb01b988a9b0d77fb81f63930c305e8e3add43953",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-011",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-153-THERMAL-QUENCH-EXPERT",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "ef51bcb2a3d39e1cef73f9d55545faa51f811545da29ea82f383d0a13592f46b",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-012",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-154-SINTERING-KINETICS-EXPERT",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "4769ed5f563f1e55923adb4885b17180205f60de0da1a7dae349821f9b4f43f1",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-013",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-155-PRECURSOR-IMPURITY-EXPERT",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "68f72de07d4481d31f49174b6ba44833505b25b7fdd7cf33abdb0599466ee491",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-014",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-156-HOST-TRANSFER-EXPERT",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "08b55ad6eb0de796fb9778deb5b88dfa9078fa2363ff139a533b44c451e12e9c",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-015",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-157-XRD-EVIDENCE-EXPERT",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "ecb9f6f1e65d9a5d3c2a72d9ec41169d8d1a46a2096a20b29a6baf699ed64157",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-016",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-158-PL-EVIDENCE-EXPERT",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "3c1a65937851b4de8a54803ad1e88ff6ab412474a602eb89ee1ddfc267dc2aff",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-017",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-159-SEMEDS-MICROSTRUCTURE-EXPERT",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "33580002b68abc8706c3a8d1a7643a2e8c7b7a88ebf13a71c235623afa6125c0",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-018",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-160-MULTIMODAL-CONFLICT-EXPERT",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "69bd660e04bbe89e5bd6a567b1f1cf00e853cc124acb3dda9be7c67c95203803",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-019",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-161-DEFECT-DOPING-EXPERT",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "06dd2f9ac400604dc9ec6f33fff936dbb901aa6e7dee2355d84a77a56c4b6c37",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-020",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-162-THINFILM-INTERFACE-EXPERT",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "d36c425e9ce8fc39b45d0d5265ceff15a7a7128f721d47b3ed6b50090e8fad8c",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-021",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-163-DIELECTRIC-THERMAL-EXPERT",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "d69644f2166c7f902c41080080e711570836ff47ecd38f7118f99cc08cbffa9c",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-022",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-164-OPTOELECTRONIC-INTEGRATION-EXPERT",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "998a8ec47d967d90e686bdafb383683deac9a099121eaf95b66af07f470f23bd",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-023",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-165-CURE-RHEOLOGY-EXPERT",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "315d61422300fcf0a60f0cfca602700a75503e36a596260db45999093673df98",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-024",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-166-INTERCONNECT-METALLURGY-EXPERT",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "556eb63e3500dccca825958ff948227434f1681156655e200f3a7f8c5bc098dd",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-025",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-167-WARPAGE-RELIABILITY-EXPERT",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "00e42f676fde2d6cb864545e6b5d65f8905a65acc1e65942823f7e1ae7ddb32f",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-026",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-168-VIRTUAL-METROLOGY-YIELD-EXPERT",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "649944709a3df9e588fa1f9b168a985c8036a786af89ee1ba54974ca7d79d8c3",
+      "truth_class": "LITERATURE_CURATED_EXPERIMENT_SOURCE_BOUND_QA"
+    },
+    {
+      "candidate_id": "CAND-G-027",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-ICM-169-HYPOTHESIS-COMPOSER",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-028",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-ICM-170-COUNTER-HYPOTHESIS",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-029",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-ICM-171-NEXT-EVIDENCE-PLANNER",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-030",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-ICM-172-GROUNDED-SYNTHESIS",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-031",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-CAND-G-031-SAFETYEVIDENCE-LM",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-032",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-CAND-G-032-SENSORCALIBRATION-LM",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-033",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-CAND-G-033-THERMALFIELD-LM",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-034",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-CAND-G-034-DEVICEHEALTH-LM",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-035",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-CAND-G-035-PROCESSWINDOW-LM",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-036",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-CAND-G-036-MATERIALSSCREENING-LM",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-037",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-CAND-G-037-DEFECTCHEMISTRY-LM",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-038",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-CAND-G-038-SPECTROSCOPYCONDITION-LM",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-039",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-CAND-G-039-SEMDEFECT-LM",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-040",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-CAND-G-040-PACKAGINGMOISTURE-LM",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-041",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-CAND-G-041-PACKAGINGTHERMAL-LM",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-042",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-CAND-G-042-FABDRIFT-LM",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-043",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-CAND-G-043-YIELDINVESTIGATION-LM",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-044",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-CAND-G-044-EVIDENCECONFLICT-LM",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-045",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-CAND-G-045-MEASUREMENTPLANNER-LM",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-046",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-CAND-G-046-FAILUREMODE-LM",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-047",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-CAND-G-047-TRACEABILITY-LM",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-G-048",
+      "full_data_state": "CORPUS_BUILD_REQUIRED_TEACHER_NOT_GROUND_TRUTH",
+      "objective_id": "OBJ-CAND-G-048-OPERATORTRAINING-LM",
+      "source_family": "licensed_multidomain_corpus",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-S-001",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-173-EXPERT-SELECTION",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "1719acf1a54634017e275925162cc867ec93186d65b48ecd5af64ba1b95e8783",
+      "truth_class": "STRUCTURE_DERIVED_LICENSED_CORPUS"
+    },
+    {
+      "candidate_id": "CAND-S-002",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-174-EVIDENCE-SUFFICIENCY",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "1c04a812a1f8bae14d6651f032f76c4add0fa429e2ba3d70120e32744e661e3d",
+      "truth_class": "MIXED_LITERATURE_AND_CONTROLLED_STRUCTURE_FIXTURE"
+    },
+    {
+      "candidate_id": "CAND-S-003",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-175-DISAGREEMENT-ARBITRATION",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "b13e0b555ad798b02c13fb847a600476a1acb88d87de8ba1fba673274b2107e4",
+      "truth_class": "MIXED_LITERATURE_AND_CONTROLLED_STRUCTURE_FIXTURE"
+    },
+    {
+      "candidate_id": "CAND-S-004",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-176-REFUSAL-RISK",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "441e9e56be78b957abffdc0cd5f96af5d7702816a3ca22518cc4cd4a8f919a62",
+      "truth_class": "MIXED_LITERATURE_AND_CONTROLLED_STRUCTURE_FIXTURE"
+    },
+    {
+      "candidate_id": "CAND-S-005",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-177-CLAIM-SPAN-TAGGING",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "251781cb23682a627f217501cb5093970b83e200a6e872604b3029d8ba191e1f",
+      "truth_class": "STRUCTURE_DERIVED_EXACT_CLAIM_SPAN"
+    },
+    {
+      "candidate_id": "CAND-S-006",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-178-PROVENANCE-RISK",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "abb2434a60b7145b48fc8eb5bdde1ffd3973ecd89dd1e94df2e246a301bbb059",
+      "truth_class": "MIXED_LITERATURE_AND_CONTROLLED_STRUCTURE_FIXTURE"
+    },
+    {
+      "candidate_id": "CAND-S-007",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-179-ANSWER-QUALITY-ESTIMATION",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "633010f6e621024da26926f298358558e37833784e4300d7118464acc8535503",
+      "truth_class": "MIXED_LITERATURE_AND_CONTROLLED_STRUCTURE_FIXTURE"
+    },
+    {
+      "candidate_id": "CAND-S-008",
+      "full_data_state": "JUDGMENT_BUILD_REQUIRED",
+      "objective_id": "OBJ-ICM-180-EVIDENCE-GAIN-REGRESSION",
+      "source_family": "licensed_multidomain_judgments",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-S-009",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-181-PHOSPHOR-QUERY-ENCODING",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "9fa26aa7fdbfc6465ad3c4da5b4c2d1e519d1454a4a60335510e574b8f76fad1",
+      "truth_class": "STRUCTURE_DERIVED_LICENSED_CORPUS"
+    },
+    {
+      "candidate_id": "CAND-S-010",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-182-FURNACE-QUERY-ENCODING",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "6f9dd177e4bb089bf87a4835cf0088a96a75cf0be19b318c8c1c50525b21f2c6",
+      "truth_class": "STRUCTURE_DERIVED_LICENSED_CORPUS"
+    },
+    {
+      "candidate_id": "CAND-S-011",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-183-SEMIMAT-QUERY-ENCODING",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "f85ea43726c44d99f11ce56bcbfc07f9d08c1489a6193f397be30f1af26035f3",
+      "truth_class": "STRUCTURE_DERIVED_LICENSED_CORPUS"
+    },
+    {
+      "candidate_id": "CAND-S-012",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-184-METROLOGY-QUERY-ENCODING",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "13d24a4ffc87ef68a6921959153fb8fecdf31a708c8dd3c709150378d43b285c",
+      "truth_class": "STRUCTURE_DERIVED_LICENSED_CORPUS"
+    },
+    {
+      "candidate_id": "CAND-S-013",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-185-PACKAGING-QUERY-ENCODING",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "c6b8d21effacc4b9a66a37d8daa9db02121869765e4ad15834398f1784027f33",
+      "truth_class": "STRUCTURE_DERIVED_LICENSED_CORPUS"
+    },
+    {
+      "candidate_id": "CAND-S-014",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-186-FABQUALITY-QUERY-ENCODING",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "3a07b7595b97f4b341baebe934b23417dd07b44f108a0f348d3e72b360c02f6e",
+      "truth_class": "STRUCTURE_DERIVED_LICENSED_CORPUS"
+    },
+    {
+      "candidate_id": "CAND-S-015",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-187-PHOSPHOR-RERANKING",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "6f40b066f594dcf408e187503e07cdc33ff335db18666f8bdaf49efc0fe2c899",
+      "truth_class": "STRUCTURE_DERIVED_LICENSED_CORPUS"
+    },
+    {
+      "candidate_id": "CAND-S-016",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-188-FURNACE-RERANKING",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "bb836cd750e44201742929b4b1aac13a47d72211f95a89c6070d1e4466efe7c0",
+      "truth_class": "STRUCTURE_DERIVED_LICENSED_CORPUS"
+    },
+    {
+      "candidate_id": "CAND-S-017",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-189-SEMIMAT-RERANKING",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "b4a5d5cbe84a73f2e4413d8af11911d8816e40d9c8a43dff06deb3c745ba7e66",
+      "truth_class": "STRUCTURE_DERIVED_LICENSED_CORPUS"
+    },
+    {
+      "candidate_id": "CAND-S-018",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-190-METROLOGY-RERANKING",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "d1efe5b519b52d43a1564b2b70bfe9a2478222cdea1724c08b205fc21e37b5f8",
+      "truth_class": "STRUCTURE_DERIVED_LICENSED_CORPUS"
+    },
+    {
+      "candidate_id": "CAND-S-019",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-191-PACKAGING-RERANKING",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "32916c9cb73b2edd50d2f62d2f3f636b024c214194de6129a3673f0c56ea94d5",
+      "truth_class": "STRUCTURE_DERIVED_LICENSED_CORPUS"
+    },
+    {
+      "candidate_id": "CAND-S-020",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-192-FABQUALITY-RERANKING",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "bd46d5a83c20013a059ef7fe3a947077ecc420a8b5025ca171c687459c2c3810",
+      "truth_class": "STRUCTURE_DERIVED_LICENSED_CORPUS"
+    },
+    {
+      "candidate_id": "CAND-S-021",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-193-PHOSPHOR-CLAIM-NLI",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "080ca6ef05cee9d22509ac3a6cfcd80d32c8979364ba0b9f179e877e8fdd9320",
+      "truth_class": "MIXED_LITERATURE_AND_CONTROLLED_NUMERIC_MUTATION"
+    },
+    {
+      "candidate_id": "CAND-S-022",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-194-FURNACE-CLAIM-NLI",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "fdb771e692a0a98146f098f934e6dc1f51aa4d1314356c7ad8854b6a3917ac51",
+      "truth_class": "MIXED_LITERATURE_AND_CONTROLLED_NUMERIC_MUTATION"
+    },
+    {
+      "candidate_id": "CAND-S-023",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-195-SEMIMAT-CLAIM-NLI",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "24a31b9acdd4a791b96258314372a0dd6dd7237d6eb008101fd4d1c2b2e0d160",
+      "truth_class": "MIXED_LITERATURE_AND_CONTROLLED_NUMERIC_MUTATION"
+    },
+    {
+      "candidate_id": "CAND-S-024",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-196-METROLOGY-CLAIM-NLI",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "dea541a16297ef7c32f2f585aeb4dfc5815dc50f180f6d257f3a79499c2ce00c",
+      "truth_class": "MIXED_LITERATURE_AND_CONTROLLED_NUMERIC_MUTATION"
+    },
+    {
+      "candidate_id": "CAND-S-025",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-197-PACKAGING-CLAIM-NLI",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "3eacca2f78e45b988e8e4c11b4b6044041d9af023fdcedad24823025121af264",
+      "truth_class": "MIXED_LITERATURE_AND_CONTROLLED_NUMERIC_MUTATION"
+    },
+    {
+      "candidate_id": "CAND-S-026",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-198-FABQUALITY-CLAIM-NLI",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "7c6b6d0d7f461ebe65c18847a6d4cc8314890259acdebc9b8ffefb2a48a05270",
+      "truth_class": "MIXED_LITERATURE_AND_CONTROLLED_NUMERIC_MUTATION"
+    },
+    {
+      "candidate_id": "CAND-S-027",
+      "full_data_state": "MATERIALIZED_CORRECTIVE_DISTINCT_ROUTER",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-199-DOMAIN-TASK-ROUTING",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "07b84d94617a216e733d5bef0a4fac5687bff2bd9ed6c2496aca7e62e029e96e",
+      "truth_class": "LICENSED_IN_DOMAIN_PLUS_STRUCTURE_DERIVED_CROSS_DOMAIN_AND_CONTROLLED_OOD_FIXTURE"
+    },
+    {
+      "candidate_id": "CAND-S-028",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-ICM-200-RAG-OOD-DETECTION",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "1b614381b025a63cb154f84c367e1ac1f79d1021d4b3c977e37295fe37ffa921",
+      "truth_class": "LICENSED_IN_DOMAIN_PLUS_CONTROLLED_OOD_FIXTURE"
+    },
+    {
+      "candidate_id": "CAND-S-029",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-CAND-S-029-SHAREDMULTIDOMAIN-QUERYENCODER",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "cb3e173e8ab12f8605a51c8e271855fa3cb1a77542b351a32acc228314832dfb",
+      "truth_class": "STRUCTURE_DERIVED_LICENSED_CORPUS"
+    },
+    {
+      "candidate_id": "CAND-S-030",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-CAND-S-030-SHAREDMULTIDOMAIN-RERANKER",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "0f073e99c2b9aa56a6abcf597093bf037f6348591b6a51eca96163b1037cb47c",
+      "truth_class": "STRUCTURE_DERIVED_LICENSED_CORPUS"
+    },
+    {
+      "candidate_id": "CAND-S-031",
+      "full_data_state": "JUDGMENT_BUILD_REQUIRED",
+      "objective_id": "OBJ-CAND-S-031-SHAREDMULTIDOMAIN-CLAIMNLI",
+      "source_family": "licensed_multidomain_judgments",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-S-032",
+      "full_data_state": "JUDGMENT_BUILD_REQUIRED",
+      "objective_id": "OBJ-CAND-S-032-QUERYREFORMULATOR",
+      "source_family": "licensed_multidomain_judgments",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-S-033",
+      "full_data_state": "JUDGMENT_BUILD_REQUIRED",
+      "objective_id": "OBJ-CAND-S-033-DOMAINCALIBRATIONNET",
+      "source_family": "licensed_multidomain_judgments",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-S-034",
+      "full_data_state": "JUDGMENT_BUILD_REQUIRED",
+      "objective_id": "OBJ-CAND-S-034-CITATIONSPANALIGNER",
+      "source_family": "licensed_multidomain_judgments",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-S-035",
+      "full_data_state": "JUDGMENT_BUILD_REQUIRED",
+      "objective_id": "OBJ-CAND-S-035-NUMERICALCLAIMCLASSIFIER",
+      "source_family": "licensed_multidomain_judgments",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-S-036",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-CAND-S-036-UNITANOMALYCLASSIFIER",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "bd1abf602adfabf41518438a21fe98a33623cbb31a3297dae72af0272705c410",
+      "truth_class": "CURATED_SI_DIMENSIONAL_FIXTURE"
+    },
+    {
+      "candidate_id": "CAND-S-037",
+      "full_data_state": "JUDGMENT_BUILD_REQUIRED",
+      "objective_id": "OBJ-CAND-S-037-TEMPORALEVIDENCERANKER",
+      "source_family": "licensed_multidomain_judgments",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-S-038",
+      "full_data_state": "JUDGMENT_BUILD_REQUIRED",
+      "objective_id": "OBJ-CAND-S-038-SOURCETRUSTCALIBRATOR",
+      "source_family": "licensed_multidomain_judgments",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-S-039",
+      "full_data_state": "JUDGMENT_BUILD_REQUIRED",
+      "objective_id": "OBJ-CAND-S-039-DUPLICATEEVIDENCEDETECTOR",
+      "source_family": "licensed_multidomain_judgments",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-S-040",
+      "full_data_state": "JUDGMENT_BUILD_REQUIRED",
+      "objective_id": "OBJ-CAND-S-040-CONTRADICTIONEDGECLASSIFIER",
+      "source_family": "licensed_multidomain_judgments",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-S-041",
+      "full_data_state": "JUDGMENT_BUILD_REQUIRED",
+      "objective_id": "OBJ-CAND-S-041-MODELCOMPETENCEESTIMATOR",
+      "source_family": "licensed_multidomain_judgments",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-S-042",
+      "full_data_state": "JUDGMENT_BUILD_REQUIRED",
+      "objective_id": "OBJ-CAND-S-042-EVIDENCEFRESHNESSCLASSIFIER",
+      "source_family": "licensed_multidomain_judgments",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-S-043",
+      "full_data_state": "JUDGMENT_BUILD_REQUIRED",
+      "objective_id": "OBJ-CAND-S-043-MATERIALENTITYLINKER",
+      "source_family": "licensed_multidomain_judgments",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-S-044",
+      "full_data_state": "MATERIALIZED",
+      "local_build_status": "PASS",
+      "objective_id": "OBJ-CAND-S-044-PROCESSENTITYLINKER",
+      "source_family": "europe_pmc_ccby_multidomain_v1",
+      "split_sha256": "2bc595fa0794e9831f79fa1a59adda1f69ec52786e2d2039002b1bf3d6139bcc",
+      "staged_dataset_sha256": "45f9f989d085311f0e04027f7dccc19b6e345eeb63e194b9a69e8bc797962ab7",
+      "truth_class": "LICENSED_PROCESS_TEXT_WITH_CONTROLLED_VOCABULARY_LINKS"
+    },
+    {
+      "candidate_id": "CAND-S-045",
+      "full_data_state": "JUDGMENT_BUILD_REQUIRED",
+      "objective_id": "OBJ-CAND-S-045-MATERIALRELATIONEXTRACTOR",
+      "source_family": "licensed_multidomain_judgments",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-S-046",
+      "full_data_state": "JUDGMENT_BUILD_REQUIRED",
+      "objective_id": "OBJ-CAND-S-046-TABLEEVIDENCEMATCHER",
+      "source_family": "licensed_multidomain_judgments",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-S-047",
+      "full_data_state": "JUDGMENT_BUILD_REQUIRED",
+      "objective_id": "OBJ-CAND-S-047-FIGURECAPTIONEVIDENCEMATCHER",
+      "source_family": "licensed_multidomain_judgments",
+      "truth_class": "METADATA_ONLY"
+    },
+    {
+      "candidate_id": "CAND-S-048",
+      "full_data_state": "JUDGMENT_BUILD_REQUIRED",
+      "objective_id": "OBJ-CAND-S-048-MULTITASKCOORDINATIONBASELINE",
+      "source_family": "licensed_multidomain_judgments",
+      "truth_class": "METADATA_ONLY"
+    }
+  ],
+  "schema": "cimc.forge200.task-source-bindings.v1",
+  "status": "PASS_WITH_FAIL_CLOSED_TASKS"
+}

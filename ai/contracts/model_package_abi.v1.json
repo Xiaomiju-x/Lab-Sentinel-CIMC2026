@@ -1,0 +1,56 @@
+{
+  "schema": "cimc.icmat.model-package-abi.v1",
+  "status": "FROZEN_FOR_GPU_TRAINING_BOARD_PENDING",
+  "magic_ascii": "ICMF",
+  "header_bytes": 256,
+  "endianness": "little",
+  "alignment_bytes": 32,
+  "authority": 0,
+  "validation_order": ["SCHEMA", "SHA256", "GENERATION_COUNTER", "GOLDEN"],
+  "failure_action": "ROLLBACK_AND_REFUSE",
+  "generation_counter_advances_only_after": "ALL_VALIDATIONS_PASS",
+  "fields": [
+    {"name": "magic", "offset": 0, "bytes": 4, "type": "char[4]"},
+    {"name": "schema_version", "offset": 4, "bytes": 2, "type": "uint16", "value": 1},
+    {"name": "header_bytes", "offset": 6, "bytes": 2, "type": "uint16", "value": 256},
+    {"name": "engine_id", "offset": 8, "bytes": 2, "type": "uint16"},
+    {"name": "opset", "offset": 10, "bytes": 2, "type": "uint16"},
+    {"name": "authority", "offset": 12, "bytes": 1, "type": "uint8", "value": 0},
+    {"name": "flags", "offset": 13, "bytes": 1, "type": "uint8"},
+    {"name": "tensor_count", "offset": 14, "bytes": 2, "type": "uint16"},
+    {"name": "generation_counter", "offset": 16, "bytes": 8, "type": "uint64"},
+    {"name": "payload_bytes", "offset": 24, "bytes": 8, "type": "uint64"},
+    {"name": "scratch_bytes", "offset": 32, "bytes": 4, "type": "uint32"},
+    {"name": "arena_bytes", "offset": 36, "bytes": 4, "type": "uint32"},
+    {"name": "kv_bytes", "offset": 40, "bytes": 4, "type": "uint32"},
+    {"name": "model_id", "offset": 44, "bytes": 32, "type": "utf8_nul_padded"},
+    {"name": "payload_sha256", "offset": 76, "bytes": 32, "type": "raw_sha256"},
+    {"name": "golden_sha256", "offset": 108, "bytes": 32, "type": "raw_sha256"},
+    {"name": "release_root", "offset": 140, "bytes": 32, "type": "raw_sha256"},
+    {"name": "output_schema_sha256", "offset": 172, "bytes": 32, "type": "raw_sha256"},
+    {"name": "reserved_zero", "offset": 204, "bytes": 52, "type": "zero_bytes"}
+  ],
+  "engines": [
+    {"engine_id": 1, "name": "CMSIS_NN_DENSE_W8A8", "opset": 1, "board_allowed": true},
+    {"engine_id": 2, "name": "CMSIS_NN_CONV_W8A8", "opset": 1, "board_allowed": true},
+    {"engine_id": 3, "name": "ICMAT_SEQUENCE_W8A8", "opset": 1, "board_allowed": true},
+    {"engine_id": 4, "name": "SINTERGRAPH_SPARSE_W8A8", "opset": 1, "board_allowed": true},
+    {"engine_id": 5, "name": "ICMAT_NANOLM_W8", "opset": 1, "board_allowed": true},
+    {"engine_id": 6, "name": "ICMAT_RETRIEVAL_W8A8", "opset": 1, "board_allowed": true},
+    {"engine_id": 240, "name": "HOST_FIXTURE_LINEAR_W8A8", "opset": 1, "board_allowed": false}
+  ],
+  "hard_limits": {
+    "package_bytes": 7340032,
+    "online_nano_lm_package_bytes": 2097152,
+    "arena_plus_kv_bytes": 2621440,
+    "max_executing_models": 1,
+    "max_resident_packages": 2
+  },
+  "cache_contract": {
+    "before_dma_or_accelerator_read": "clean_dcache_for_payload_and_tensor_table",
+    "after_dma_or_accelerator_write": "invalidate_dcache_for_output_and_scratch",
+    "mpu_guard_required": true,
+    "canary_required": true
+  },
+  "unknown_schema_engine_opset_action": "REFUSE_WITHOUT_EXECUTION"
+}

@@ -1,0 +1,29 @@
+{
+  "authority": 0,
+  "board_actions": 0,
+  "created_at_utc": "2026-08-03T05:15:29.294927+00:00",
+  "dispositions": [
+    {
+      "candidate_id": "CAND-P-095",
+      "countable_model": false,
+      "reason": "upstream labels are numeric 1-6 and supply no authoritative particle/scratch/void/bridge/pattern/other mapping or acquisition metadata",
+      "status": "FAIL_CLOSED_TARGET_TAXONOMY_NOT_SOURCE_BOUND",
+      "training_authorized": false
+    },
+    {
+      "candidate_id": "CAND-P-096",
+      "countable_model": false,
+      "reason": "expert-validated pixel masks exactly satisfy the target; absent physical scale is represented by an explicit availability channel and is never fabricated",
+      "status": "ADMITTED_EXACT_PIXEL_MASK_SCALE_UNAVAILABLE_EXPLICIT",
+      "training_authorized": true
+    }
+  ],
+  "schema": "cimc.forge200.carinthia-source-contract-audit.v1",
+  "source": {
+    "archive_sha256": "e7cc8507657611f89db33345d50fc7951e8784045684888dc997ac5298b7a3a2",
+    "dataset": "Carinthia-S",
+    "doi": "10.5281/zenodo.16895427",
+    "license": "CC BY 4.0"
+  },
+  "status": "PASS_WITH_TASK_SPECIFIC_DISPOSITIONS"
+}

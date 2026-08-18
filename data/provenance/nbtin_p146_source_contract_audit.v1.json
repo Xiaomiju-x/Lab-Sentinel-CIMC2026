@@ -1,0 +1,44 @@
+{
+  "schema": "cimc.forge200.nbtin-p146-source-contract-audit.v1",
+  "created_at_utc": "2026-08-03T06:04:00Z",
+  "status": "FAIL_CLOSED_INSUFFICIENT_INDEPENDENT_RUNS",
+  "candidate_id": "CAND-P-146",
+  "source": {
+    "title": "NbTiN film data",
+    "publisher": "Zenodo",
+    "creator_affiliation": "IMEC",
+    "record_id": 10125758,
+    "doi": "10.5281/zenodo.10125758",
+    "url": "https://zenodo.org/records/10125758",
+    "license": "CC BY 4.0",
+    "metadata_path": "data/raw/nbtin_film_zenodo_10125758/zenodo_record_10125758.json",
+    "metadata_bytes": 6597,
+    "metadata_sha256": "bb653349860bc73deb8d87f4eadd6301c04f728f2dbb5550ef92c931b6247536",
+    "data_path": "data/raw/nbtin_film_zenodo_10125758/Data NbTiN.xlsx",
+    "data_bytes": 30525,
+    "data_md5": "af9315060bf605167485add4dc3dc9c5",
+    "data_sha256": "5cf3c425ed7e75b4f49140f3032a8b8e2a8a795e6f632cb304e262d99b8642a0"
+  },
+  "contract_match": {
+    "input_fields_present": [
+      "deposition_temperature_C",
+      "substrate",
+      "Nb_power_W",
+      "Ti_power_W",
+      "Ar_flow_sccm",
+      "N2_flow_sccm",
+      "film_thickness_nm",
+      "Nb_Ti_N_composition"
+    ],
+    "exact_target_present": "resistivity_centre_ohm_cm",
+    "independent_sample_rows": 7,
+    "run_level_split_possible": false,
+    "minimum_train_validation_test_population_gate": false
+  },
+  "reason": "The source is licensed and field-complete for the P146 semantics, but contains only seven independent film samples. A non-overlapping run-level train/validation/test split with meaningful three-seed evaluation cannot be formed.",
+  "training_actions": 0,
+  "teacher_outputs": 0,
+  "authority": 0,
+  "board_accepted": false,
+  "countable_model": false
+}

@@ -1,0 +1,125 @@
+{
+  "artifacts": {
+    "archive": {
+      "bytes": 1712381213,
+      "path": "data/raw/kaggle_led_reliability_archive_v1/archive.zip",
+      "sha256": "3c9b05ea43b2d6f0660dc9b62aefb7e5edf7c87f3e070bcf938ca0c4d2954f3a"
+    },
+    "github_repo": {
+      "bytes": 8480,
+      "path": "data/sources/p107_solder_xray_pmc11126598_v1/github_repo.json",
+      "sha256": "fc85438dda9a597b5b2dfcf8031abaf29f98f57ef7b54c94790e602327b2bf10"
+    },
+    "github_tree": {
+      "bytes": 1153,
+      "path": "data/sources/p107_solder_xray_pmc11126598_v1/github_tree.json",
+      "sha256": "d01928bd03056732bf37c965ccea259d5750085e14cf9c5b30bbeacdbaa78ddc"
+    },
+    "kaggle_inventory": {
+      "bytes": 44366213,
+      "path": "data/sources/p107_solder_xray_pmc11126598_v1/kaggle_file_inventory.v1.json",
+      "sha256": "89dcdd81a2cfa82a076b460b4c8e5c77f6366d021df82b0970f562906c5cddd7"
+    },
+    "kaggle_metadata": {
+      "bytes": 9516,
+      "path": "data/sources/p107_solder_xray_pmc11126598_v1/kaggle_view.json",
+      "sha256": "d9280ae13a0823a079ecae1c323efa8361e735fb2ab1dca86f37bbdd3bd14d22"
+    },
+    "p122_binding": {
+      "bytes": 6507,
+      "path": "contracts/kaggle_p122_solder_fatigue_binding.v1.json",
+      "sha256": "0da31cdf9766b3f4062dd939b73847d0631675f6d610749ff414096bcda66ea8"
+    },
+    "p122_dataset": {
+      "bytes": 72883,
+      "path": "data/staged_kaggle_p122_exact_v1/CAND-P-122.npz",
+      "sha256": "40218c616d0227a925b0f0a3c7fe6da7ca7114b9469ea7df066c8b91e139ab12"
+    },
+    "p122_paper": {
+      "bytes": 2414176,
+      "path": "data/sources/p122_led_solder_reliability_v1/schmid_2023_part2_reliability.pdf",
+      "sha256": "74b8f645d09c96cd78854664e01363ee25e75d1a7c0f556a265288571a4102d4"
+    },
+    "p122_staging": {
+      "bytes": 3801,
+      "path": "evidence/kaggle_p122_exact_staging.v1.json",
+      "sha256": "dc91db7d79d51595e9dc6b395d1ee0b468273a64c6b0cb629f0404f2a605596f"
+    },
+    "pmc_jats": {
+      "bytes": 81456,
+      "path": "data/sources/p107_solder_xray_pmc11126598_v1/PMC11126598.xml",
+      "sha256": "484c80a46ac7e0b1a870c57d291122ed7570a6f773e3fe58254cf7af6c6ec163"
+    }
+  },
+  "authority": 0,
+  "board_accepted": false,
+  "board_actions": 0,
+  "countable_model": false,
+  "created_at_utc": "2026-08-03T15:53:10.257196+00:00",
+  "p107": {
+    "candidate_id": "CAND-P-107",
+    "host_promotions": 0,
+    "kaggle_label_filename_hits": 0,
+    "kaggle_mask_filename_hits": 0,
+    "official_repository_entries": 3,
+    "official_repository_license": null,
+    "official_repository_mask_files": 0,
+    "official_repository_paths": [
+      "README.md",
+      "cut_images.py",
+      "deeplabv3_plus.py"
+    ],
+    "official_repository_raster_images": 0,
+    "physical_pixel_scale_bound": false,
+    "status": "EXACT_REJECTED_MISSING_PIXEL_MASKS_PIXEL_SCALE_AND_REUSABLE_REPO_LICENSE",
+    "training_actions": 0
+  },
+  "p122": {
+    "candidate_id": "CAND-P-122",
+    "cross_split_family_overlap": 0,
+    "cross_split_unit_overlap": 0,
+    "event_definition": {
+      "criterion": "F1",
+      "definition": "first published inspection cycle where steady-state Rth / initial steady-state Rth - 1 >= 0.20",
+      "event_time_unit": "thermal_shock_cycles",
+      "landmark_cycle": 250,
+      "no_event_by_last_available_inspection": "right_censored_at_last_available_inspection",
+      "paper_group_mean_lifetime_as_record_label": false,
+      "post_landmark_history_in_model_input": false,
+      "pre_landmark_failures_excluded": true,
+      "required_pre_landmark_cycles": [
+        0,
+        25,
+        50,
+        100,
+        150,
+        250
+      ],
+      "steady_state_Rth_source": "last Zth value in the processed TTA .dat curve"
+    },
+    "events": 1032,
+    "host_promotions_at_audit_time": 0,
+    "records": 1531,
+    "right_censored": 499,
+    "split_counts": {
+      "test": 388,
+      "train": 945,
+      "validation": 198
+    },
+    "status": "EXACT_ADMITTED_TRAINING_AUTHORIZED",
+    "test_evaluation_actions_at_audit_time": 0,
+    "training_authorized": true,
+    "truth_class": "OPEN_EXPERIMENTAL_L2"
+  },
+  "schema": "cimc.forge200.kaggle-p107-p122-source-contract-audit.v1",
+  "shared_source": {
+    "dataset": "andreaszippelius/hellastudy-of-leds2",
+    "license": "CC BY-NC-SA 4.0",
+    "listed_bytes": 5590741008,
+    "listed_files": 75064,
+    "processed_tta_dat_files": 18163,
+    "xray_images": 1800
+  },
+  "status": "SOURCE_LICENSE_AND_HASH_PASS_P107_EXACT_REJECTED_P122_EXACT_ADMITTED",
+  "teacher_or_fixture_labels": 0
+}

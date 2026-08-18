@@ -1,0 +1,203 @@
+"""
+train_pl_extra.py — AI-15 PL host-ID + AI-16 PL lambda_em regressor (CIMC Lab-Sentinel)
+=======================================================================================
+Two NEW on-chip models, both measure-first gated (see probe_pl_models.py):
+
+  AI-15 PL host-ID classifier  64-pt emission spectrum -> host {NaY2Ga2InGe2O12,
+                               Y3ZnGa3GeO12}.  5-fold CV 97.1% vs 63% majority.
+                               (Two garnet hosts -> different crystal field ->
+                               separable Cr/Ni emission band shape. Real, +34 pts.)
+
+  AI-16 PL lambda_em regressor 64-pt emission spectrum -> emission peak wavelength
+                               (nm).  5-fold MAE 18.9 nm vs 64-bin argmax 59.7 nm.
+                               NON-redundant: (a) recovers the physical peak from the
+                               SAME on-chip 64-pt rep where naive argmax is off 60 nm
+                               (binning+baseline); (b) different from AI-6 (which
+                               predicts lambda from the RECIPE, forward design) — this
+                               reads it from the MEASURED spectrum (QC/verification).
+
+Reuses AI-12's exact 64-pt pipeline (spectrum_numerical/, labels.csv).
+Emits firmware/ai_models_c/ai15_hostid_weights.h, ai16_lambda_weights.h, and
+pl_extra_golden.h (+ host_test copy).
+
+Run:  cd CIMC/model && python pl_extra/train_pl_extra.py
+"""
+import sys
+import csv
+from pathlib import Path
+
+import numpy as np
+import torch
+import torch.nn as nn
+
+HERE = Path(__file__).resolve().parent
+MODEL = HERE.parent
+sys.path.insert(0, str(MODEL / "ai12_plspec"))
+from train_plspec import load_dataset, GRID_LO, GRID_HI, GRID_N  # noqa: E402
+
+ROOT = Path(__file__).resolve().parents[3]
+SN = ROOT / "spectrum_numerical"
+OUT = ROOT / "CIMC" / "firmware" / "ai_models_c"
+HOST = ROOT / "CIMC" / "model" / "host_test"
+HID = 24
+LAM_LO, LAM_SPAN = 600.0, 1050.0          # lambda normalisation (nm)
+HOST_ORDER = ["NaY2Ga2InGe2O12", "Y3ZnGa3GeO12"]   # class 0 / 1
+
+
+def load_aux():
+    X, y, paths = load_dataset()
+    rows = {r["path"].replace("\\", "/"): r
+            for r in csv.DictReader(open(SN / "data" / "labels.csv", encoding="utf-8"))}
+    hosts, lam = [], []
+    for p in paths:
+        pp = p.replace("\\", "/")
+        r = next((v for k, v in rows.items() if pp.endswith(k)), None)
+        hosts.append(HOST_ORDER.index(r["host"]))
+        lam.append(float(r["lambda_max"]))
+    return (np.asarray(X, np.float32), np.asarray(hosts, np.int64),
+            np.asarray(lam, np.float32), paths, np.asarray(y, np.int64))
+
+
+class MLP(nn.Module):
+    def __init__(self, out):
+        super().__init__()
+        self.net = nn.Sequential(nn.Linear(GRID_N, HID), nn.ReLU(),
+                                 nn.Linear(HID, HID), nn.ReLU(), nn.Linear(HID, out))
+
+    def forward(self, x):
+        return self.net(x)
+
+
+def carr(name, arr):
+    flat = np.asarray(arr, np.float32).reshape(-1)
+    return f"static const float {name}[{flat.size}] = {{ {', '.join(f'{v:.8e}f' for v in flat)} }};\n"
+
+
+def dump_mlp(f, pre, m):
+    sd = m.net
+    for li, idx in ((0, 0), (1, 2), (2, 4)):
+        f.write(carr(f"{pre}_w{li}", sd[idx].weight.detach().cpu().numpy()))
+        f.write(carr(f"{pre}_b{li}", sd[idx].bias.detach().cpu().numpy()))
+
+
+def main():
+    torch.manual_seed(0); np.random.seed(0)
+    X, h, lam, paths, dop = load_aux()
+    n = len(X)
+    dev = "cuda" if torch.cuda.is_available() else "cpu"
+    print(f"[data] {n} spectra; host0={int((h==0).sum())} host1={int((h==1).sum())}")
+
+    # ---- AI-15 host-ID (train on all data; CV already reported by probe) ---------
+    m15 = MLP(2).to(dev)
+    opt = torch.optim.Adam(m15.parameters(), lr=3e-3, weight_decay=1e-3)
+    xt, ht = torch.tensor(X, device=dev), torch.tensor(h, device=dev)
+    for _ in range(400):
+        opt.zero_grad(); nn.functional.cross_entropy(m15(xt), ht).backward(); opt.step()
+    m15.eval()
+    with torch.no_grad():
+        acc15 = float((m15(xt).argmax(1).cpu().numpy() == h).mean())
+    print(f"[AI-15] train-fit acc {acc15*100:.1f}% (5-fold CV 97.1% from probe)")
+
+    # ---- AI-16 lambda_em regressor ----------------------------------------------
+    m16 = MLP(1).to(dev)
+    opt = torch.optim.Adam(m16.parameters(), lr=3e-3, weight_decay=1e-4)
+    lam_n = torch.tensor((lam - LAM_LO) / LAM_SPAN, device=dev)[:, None]
+    for _ in range(600):
+        opt.zero_grad(); nn.functional.smooth_l1_loss(m16(xt), lam_n).backward(); opt.step()
+    m16.eval()
+    with torch.no_grad():
+        pred_lam = m16(xt).cpu().numpy().ravel() * LAM_SPAN + LAM_LO
+    mae16 = float(np.mean(np.abs(pred_lam - lam)))
+    print(f"[AI-16] train-fit MAE {mae16:.2f} nm (5-fold CV 18.9 nm from probe)")
+
+    # ---- export weights ----------------------------------------------------------
+    h15 = OUT / "ai15_hostid_weights.h"
+    with open(h15, "w") as f:
+        f.write("/* ai15_hostid_weights.h - AUTO-GENERATED by pl_extra/train_pl_extra.py\n")
+        f.write(" * AI-15 PL host-ID: 64-pt emission spectrum -> host class.\n")
+        f.write(" * class 0 = NaY2Ga2InGe2O12, class 1 = Y3ZnGa3GeO12. 281 real Fluoromax\n")
+        f.write(" * spectra; 5-fold CV 97.1% vs 63% majority. MLP 64->24->24->2. */\n")
+        f.write("#ifndef AI15_HOSTID_WEIGHTS_H\n#define AI15_HOSTID_WEIGHTS_H\n\n")
+        f.write(f"#define AI15_IN {GRID_N}\n#define AI15_H {HID}\n#define AI15_OUT 2\n\n")
+        dump_mlp(f, "ai15", m15)
+        f.write("\n#endif\n")
+    print(f"[export] {h15}")
+
+    h16 = OUT / "ai16_lambda_weights.h"
+    with open(h16, "w") as f:
+        f.write("/* ai16_lambda_weights.h - AUTO-GENERATED by pl_extra/train_pl_extra.py\n")
+        f.write(" * AI-16 PL lambda_em regressor: 64-pt emission spectrum -> peak nm.\n")
+        f.write(" * 281 real Fluoromax spectra; 5-fold MAE 18.9 nm vs 64-bin argmax 59.7 nm.\n")
+        f.write(" * MLP 64->24->24->1; output_nm = net * AI16_SPAN + AI16_LO. */\n")
+        f.write("#ifndef AI16_LAMBDA_WEIGHTS_H\n#define AI16_LAMBDA_WEIGHTS_H\n\n")
+        f.write(f"#define AI16_IN {GRID_N}\n#define AI16_H {HID}\n")
+        f.write(f"#define AI16_LO {LAM_LO:.1f}f\n#define AI16_SPAN {LAM_SPAN:.1f}f\n\n")
+        dump_mlp(f, "ai16", m16)
+        f.write("\n#endif\n")
+    print(f"[export] {h16}")
+
+    # ---- AI-12 16-D embedding (for AI-17 few-shot NCM golden) --------------------
+    sys.path.insert(0, str(MODEL / "ai12_plspec"))
+    from train_plspec import SpecMLP                          # noqa: E402
+    m12 = SpecMLP()
+    ck12 = torch.load(MODEL / "ai12_plspec" / "ai12_plspec.pt",
+                      map_location="cpu", weights_only=True)
+    m12.load_state_dict(ck12["model_state_dict"]); m12.eval()
+    enc = torch.nn.Sequential(*list(m12.net)[:4])             # 64->32->relu->16->relu
+
+    # ---- golden: 4 spectra (1 of each host x near both lambda extremes) ----------
+    pick = [int(np.where(h == 0)[0][0]), int(np.where(h == 0)[0][-1]),
+            int(np.where(h == 1)[0][0]), int(np.where(h == 1)[0][-1])]
+    gx = X[pick]
+    with torch.no_grad():
+        g_hostcls = m15(torch.tensor(gx, device=dev)).argmax(1).cpu().numpy()
+        g_lam = (m16(torch.tensor(gx, device=dev)).cpu().numpy().ravel() * LAM_SPAN + LAM_LO)
+        g_emb = enc(torch.tensor(gx)).numpy()                 # [NG][16] PyTorch ref
+
+    # ---- AI-17 few-shot NCM scenario over DOPANT classes (what the AI-12 embedding
+    #      actually separates; 5-shot ~87% in probe). Seed K per class + Q queries;
+    #      run the SAME incremental-mean NCM in Python -> golden the C must reproduce.
+    KSHOT, QSHOT = 5, 2
+    seed_idx, q_idx = [], []
+    for c in (0, 1, 2):
+        ic = list(np.where(dop == c)[0])
+        seed_idx += ic[:KSHOT]; q_idx += ic[KSHOT:KSHOT + QSHOT]
+    with torch.no_grad():
+        seed_emb = enc(torch.tensor(X[seed_idx])).numpy()
+        q_emb = enc(torch.tensor(X[q_idx])).numpy()
+    seed_cls = dop[seed_idx]; q_true = dop[q_idx]
+    # Python NCM: incremental mean per class, classify by nearest mean (matches C)
+    means = {}; cnt = {}
+    for e, c in zip(seed_emb, seed_cls):
+        c = int(c); cnt[c] = cnt.get(c, 0) + 1
+        means[c] = means.get(c, np.zeros(16, np.float32)) + (e - means.get(c, np.zeros(16, np.float32))) / cnt[c]
+    q_pred = np.array([min(means, key=lambda c: float(((q - means[c]) ** 2).sum()))
+                       for q in q_emb], np.int64)
+    acc17 = float((q_pred == q_true).mean())
+    print(f"[AI-17] {KSHOT}-shot NCM (dopant) golden: {len(q_idx)} queries, "
+          f"acc-vs-true {acc17*100:.0f}% (probe 5-shot 87%)")
+    g = OUT / "pl_extra_golden.h"
+    with open(g, "w") as f:
+        f.write("/* pl_extra_golden.h - AUTO-GENERATED. AI-15/16 host golden vectors. */\n")
+        f.write("#ifndef PL_EXTRA_GOLDEN_H\n#define PL_EXTRA_GOLDEN_H\n\n")
+        f.write(f"#define PLX_NG {len(pick)}\n\n")
+        f.write(carr("plx_g_spec", gx))                       # [NG][64]
+        f.write(f"static const int   plx_g_hostcls[{len(pick)}] = {{ {', '.join(str(int(v)) for v in g_hostcls)} }};\n")
+        f.write(carr("plx_g_lambda", g_lam))                  # [NG] PyTorch reference nm
+        f.write(carr("plx_g_emb16", g_emb))                   # [NG][16] AI-12 embedding ref
+        f.write("\n/* ---- AI-17 few-shot NCM scenario (dopant classes) ---- */\n")
+        f.write(f"#define PLX_NSEED {len(seed_idx)}\n#define PLX_NQ {len(q_idx)}\n\n")
+        f.write(carr("plx_seed_spec", X[seed_idx]))           # [NSEED][64]
+        f.write(f"static const int plx_seed_cls[{len(seed_idx)}] = {{ {', '.join(str(int(v)) for v in seed_cls)} }};\n")
+        f.write(carr("plx_q_spec", X[q_idx]))                 # [NQ][64]
+        f.write(f"static const int plx_q_pred[{len(q_idx)}] = {{ {', '.join(str(int(v)) for v in q_pred)} }};  /* Python NCM */\n")
+        f.write(f"static const int plx_q_true[{len(q_idx)}] = {{ {', '.join(str(int(v)) for v in q_true)} }};\n")
+        f.write("\n#endif\n")
+    import shutil
+    shutil.copy(g, HOST / "pl_extra_golden.h")
+    print(f"[export] {g}  (+ host_test copy)")
+    print("[done] AI-15 + AI-16 exported.")
+
+
+if __name__ == "__main__":
+    main()

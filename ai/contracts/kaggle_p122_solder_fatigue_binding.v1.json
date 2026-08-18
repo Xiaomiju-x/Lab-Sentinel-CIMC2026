@@ -1,0 +1,103 @@
+{
+  "schema": "cimc.forge200.kaggle-p122-solder-fatigue-binding.v1",
+  "candidate_id": "CAND-P-122",
+  "objective_id": "OBJ-CAND-P-122-SOLDERFATIGUE-RULNET",
+  "task_contract": {
+    "input_contract": "thermal_cycle_profile_joint_geometry_resistance_history_and_alloy_family",
+    "target_label": "solder_cycles_to_failure_remaining_and_survival_probability",
+    "source_gate": "LICENSE_REVIEWED_OPEN_FATIGUE_DATA_WITH_PACKAGE_FAMILY_SPLIT",
+    "frozen_baseline": "Coffin_Manson_fit_with_linear_damage_accumulation",
+    "primary_metric": "RUL_MAE_cycles_concordance_index_and_interval_coverage",
+    "parameter_cap": "MAX_96K_PARAMETERS_W8A8",
+    "runtime_domain": "PACKAGING_RELIABILITY_SHADOW",
+    "authority": 0
+  },
+  "source": {
+    "dataset_title": "Reliability of High-Power LEDs and Solder Pastes",
+    "dataset_ref": "andreaszippelius/hellastudy-of-leds2",
+    "dataset_license": "CC BY-NC-SA 4.0",
+    "dataset_bytes_uncompressed": 5590741008,
+    "dataset_files": 75064,
+    "paper_title": "Investigations on High-Power LEDs and Solder Interconnects in Automotive Application: Part II - Reliability",
+    "paper_doi": "10.1109/TDMR.2023.3300355",
+    "paper_license": "CC BY-NC-ND 4.0",
+    "truth_class": "OPEN_EXPERIMENTAL_L2",
+    "scope_limit": "High-power LED solder interconnects under the published thermal-shock protocol; no furnace, underfill, BGA, or general package lifetime claim."
+  },
+  "verified_files": {
+    "archive": {
+      "path": "data/raw/kaggle_led_reliability_archive_v1/archive.zip",
+      "bytes": 1712381213,
+      "sha256": "3c9b05ea43b2d6f0660dc9b62aefb7e5edf7c87f3e070bcf938ca0c4d2954f3a"
+    },
+    "api_inventory": {
+      "path": "data/sources/p107_solder_xray_pmc11126598_v1/kaggle_file_inventory.v1.json",
+      "bytes": 44366213,
+      "sha256": "89dcdd81a2cfa82a076b460b4c8e5c77f6366d021df82b0970f562906c5cddd7"
+    },
+    "api_metadata": {
+      "path": "data/sources/p107_solder_xray_pmc11126598_v1/kaggle_view.json",
+      "bytes": 9516,
+      "sha256": "d9280ae13a0823a079ecae1c323efa8361e735fb2ab1dca86f37bbdd3bd14d22"
+    },
+    "paper_pdf": {
+      "path": "data/sources/p122_led_solder_reliability_v1/schmid_2023_part2_reliability.pdf",
+      "bytes": 2414176,
+      "sha256": "74b8f645d09c96cd78854664e01363ee25e75d1a7c0f556a265288571a4102d4"
+    }
+  },
+  "thermal_shock_profile": {
+    "minimum_temperature_C": -40.0,
+    "maximum_temperature_C": 125.0,
+    "dwell_minutes": 30.0,
+    "transfer_time_minutes_lt": 3.0,
+    "inspection_cycles": [0, 25, 50, 100, 150, 250, 350, 500, 750, 1000, 1250, 1500]
+  },
+  "target_binding": {
+    "criterion": "F1",
+    "definition": "first published inspection cycle where steady-state Rth / initial steady-state Rth - 1 >= 0.20",
+    "steady_state_Rth_source": "last Zth value in the processed TTA .dat curve",
+    "event_time_unit": "thermal_shock_cycles",
+    "landmark_cycle": 250,
+    "required_pre_landmark_cycles": [0, 25, 50, 100, 150, 250],
+    "pre_landmark_failures_excluded": true,
+    "no_event_by_last_available_inspection": "right_censored_at_last_available_inspection",
+    "paper_group_mean_lifetime_as_record_label": false,
+    "post_landmark_history_in_model_input": false
+  },
+  "split": {
+    "unit": "LED_package_family",
+    "hash_rule": "ascending_sha256('p122-split-v1|' + family)",
+    "train_families": ["FC-GB3", "FC-GB2", "VTF1", "FC-SP3", "VTF2"],
+    "validation_families": ["FC-SP4"],
+    "test_families": ["FC-SP2", "FC-SP1"],
+    "family_overlap_allowed": false,
+    "unit_rows_may_cross_splits": false
+  },
+  "geometry": {
+    "FC-SP1": {"submount": "lead_frame", "die_area_mm2": 0.6, "package_x_mm": 1.6, "package_y_mm": 1.2, "pad_count": 2, "pad_area_sum_mm2": 0.81, "pad_gap_mm": 0.28, "pad_ratio": 1.0, "nominal_current_A": 0.35, "datasheet_Rth_JC_K_per_W": 4.75},
+    "FC-SP2": {"submount": "thick_film_AlN", "die_area_mm2": 1.9, "package_x_mm": 1.6, "package_y_mm": 1.6, "pad_count": 2, "pad_area_sum_mm2": 1.80, "pad_gap_mm": 0.30, "pad_ratio": 1.0, "nominal_current_A": 1.0, "datasheet_Rth_JC_K_per_W": 6.0},
+    "FC-SP3": {"submount": "thick_film_AlN", "die_area_mm2": 1.3, "package_x_mm": 2.5, "package_y_mm": 2.0, "pad_count": 3, "pad_area_sum_mm2": 2.79, "pad_gap_mm": 0.45, "pad_ratio": 2.43, "nominal_current_A": 1.0, "datasheet_Rth_JC_K_per_W": 3.0},
+    "FC-SP4": {"submount": "thick_film_AlN", "die_area_mm2": 1.0, "package_x_mm": 1.61, "package_y_mm": 1.88, "pad_count": 3, "pad_area_sum_mm2": 1.86, "pad_gap_mm": 0.25, "pad_ratio": 3.52, "nominal_current_A": 1.0, "datasheet_Rth_JC_K_per_W": 3.5},
+    "FC-GB1": {"submount": "thick_film_AlN", "die_area_mm2": 1.0, "package_x_mm": 2.3, "package_y_mm": 1.9, "pad_count": 3, "pad_area_sum_mm2": 2.75, "pad_gap_mm": 0.25, "pad_ratio": 2.36, "nominal_current_A": 1.0, "datasheet_Rth_JC_K_per_W": 4.2},
+    "FC-GB2": {"submount": "thin_film_AlN", "die_area_mm2": 0.9, "package_x_mm": 1.8, "package_y_mm": 1.45, "pad_count": 3, "pad_area_sum_mm2": 1.45, "pad_gap_mm": 0.30, "pad_ratio": 4.44, "nominal_current_A": 1.0, "datasheet_Rth_JC_K_per_W": 3.3},
+    "FC-GB3": {"submount": "thin_film_AlN", "die_area_mm2": 1.0, "package_x_mm": 1.8, "package_y_mm": 1.45, "pad_count": 2, "pad_area_sum_mm2": 1.49, "pad_gap_mm": 0.30, "pad_ratio": 1.0, "nominal_current_A": 1.0, "datasheet_Rth_JC_K_per_W": 3.0},
+    "VTF1": {"submount": "lead_frame", "die_area_mm2": 1.0, "package_x_mm": 3.75, "package_y_mm": 3.75, "pad_count": 3, "pad_area_sum_mm2": 5.40, "pad_gap_mm": 0.35, "pad_ratio": 2.0, "nominal_current_A": 1.0, "datasheet_Rth_JC_K_per_W": 3.0},
+    "VTF2": {"submount": "thick_film_AlN", "die_area_mm2": 1.0, "package_x_mm": 1.9, "package_y_mm": 1.5, "pad_count": 3, "pad_area_sum_mm2": 1.77, "pad_gap_mm": 0.25, "pad_ratio": 1.67, "nominal_current_A": 1.0, "datasheet_Rth_JC_K_per_W": 3.3}
+  },
+  "alloy_weight_percent": {
+    "SAC105": {"Ag": 1.0, "Cu": 0.5, "Sb": 0.0, "Bi": 0.0, "Ni": 0.0, "In": 0.0},
+    "SAC107-BiIn": {"Ag": 1.0, "Cu": 0.7, "Sb": 0.0, "Bi": 1.6, "Ni": 0.0, "In": 0.2},
+    "SAC305": {"Ag": 3.0, "Cu": 0.5, "Sb": 0.0, "Bi": 0.0, "Ni": 0.0, "In": 0.0},
+    "SAC327-Sb": {"Ag": 3.2, "Cu": 0.7, "Sb": 5.5, "Bi": 0.0, "Ni": 0.0, "In": 0.0},
+    "SAC387-SbBiNi": {"Ag": 3.8, "Cu": 0.7, "Sb": 1.5, "Bi": 3.0, "Ni": 0.15, "In": 0.0}
+  },
+  "promotion_boundary": {
+    "authority": 0,
+    "board_accepted": false,
+    "countable_model": false,
+    "P107_mask_training_authorized": false,
+    "P122_training_authorized_after_staging_pass": true,
+    "deterministic_control_access": false
+  }
+}

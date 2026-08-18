@@ -1,0 +1,236 @@
+{
+  "schema": "cimc.forge200.mendeley-p105-afm-source-contract-audit.v1",
+  "created_at_utc": "2026-08-03T13:32:27.050806+00:00",
+  "status": "SOURCE_LICENSE_AND_HASH_PASS_P105_EXACT_REJECTED_BASELINE_BOUNDARY",
+  "source_id": "MENDELEY-3DVXCVFSV7-V1",
+  "source": {
+    "title": "Data for: Sputtering of polished EUROFER97 steel: surface structure modification and enrichment of tungsten and tantalum",
+    "publisher": "Mendeley Data",
+    "doi": "10.17632/3dvxcvfsv7.1",
+    "url": "https://data.mendeley.com/datasets/3dvxcvfsv7/1",
+    "license": "CC BY 4.0",
+    "description": "AFM data for initial surface roughness on all samples"
+  },
+  "contract_binding": {
+    "path": "contracts/mendeley_p105_afm_contract_binding.v1.json",
+    "sha256": "7ea2801808295bd63fb9e50f146c18733172953541730ca8cc465454402fcd51"
+  },
+  "archive": {
+    "path": "data/raw/mendeley_afm_p105_sources/3dvxcvfsv7_v1.zip",
+    "bytes": 6342995,
+    "sha256": "e721f4ee7ac3acf823a7f74e972e1ef354fd2f62fa0a33069992e02026405a84"
+  },
+  "observed": {
+    "scan_files": 24,
+    "uncompressed_bytes": 10420224,
+    "sample_families": 12,
+    "curve_or_pixel_rows_treated_as_independent_samples": false,
+    "independent_measured_Ra_Rq_peak_density_labels": 0,
+    "input_derived_labels_may_bypass_frozen_baseline": false
+  },
+  "records": [
+    {
+      "filename": "2016-11-24_sample1.000",
+      "sample_family": "sample1",
+      "bytes": 434176,
+      "sha256": "9ad28e23fe2aea4ada495e0e6e111db831a66b46e804fb51bd826336ec42efa9",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample1.001",
+      "sample_family": "sample1",
+      "bytes": 434176,
+      "sha256": "1c6076eb033b27a5591d9c3da1ae91aaa9d1a077542f641f6fdaaec816722abe",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample10.000",
+      "sample_family": "sample10",
+      "bytes": 434176,
+      "sha256": "84c5cbf4c623bfbae17b58a3e21e9a9d312a4670ea655ac97ef55b8bf3a8aaf1",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample10edge.000",
+      "sample_family": "sample10",
+      "bytes": 434176,
+      "sha256": "57bccdba04c2b40b8b41ac49cda4eeca2933df541d5d401a12817576e012cdc2",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample11.000",
+      "sample_family": "sample11",
+      "bytes": 434176,
+      "sha256": "66bbf83ca014c4c88b11d6fc73a35de1c3364b62acdd41edf2e19ed385a79b1e",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample11edge.000",
+      "sample_family": "sample11",
+      "bytes": 434176,
+      "sha256": "986a9bb316f30ba91d1256f7c55981fb4990b109ec0e4ec21fc6e1e872a1e2fe",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample12.000",
+      "sample_family": "sample12",
+      "bytes": 434176,
+      "sha256": "7cf168ce8641a10bd298809d205250f63a5078751eccdf25b2e82d531eed8cf3",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample12edge.000",
+      "sample_family": "sample12",
+      "bytes": 434176,
+      "sha256": "da6897218272295af757a369128ecd3828e830102aff0839ddd6ae27eac1ca25",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample1_edge.000",
+      "sample_family": "sample1",
+      "bytes": 434176,
+      "sha256": "7b37c8c687503d1400c51278957d593464b84d8c25f477088b508dd21ddb05bc",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample2.000",
+      "sample_family": "sample2",
+      "bytes": 434176,
+      "sha256": "1ce40d8d950f1e5b125ccb23717e09979f926218196f12608fe61d1bd95dddec",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample3.000",
+      "sample_family": "sample3",
+      "bytes": 434176,
+      "sha256": "fca60b951b4c320f0e890af26e314f4443a86c1ccfa49d89297ec4621e41025d",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample3edge.000",
+      "sample_family": "sample3",
+      "bytes": 434176,
+      "sha256": "1d1011ae45275d9972ff36729fb67a17f24761162a1416ead4418c4a199f8bb9",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample4.000",
+      "sample_family": "sample4",
+      "bytes": 434176,
+      "sha256": "ded96ae127ef4384275f7ea37cb231b3abc526f2e04480887727b987f8a05265",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample5.000",
+      "sample_family": "sample5",
+      "bytes": 434176,
+      "sha256": "1e978886a57cc47adcaf811823a7a7779e48c2ab2f5066b8a2685b29d6fc6a2a",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample5edge.001",
+      "sample_family": "sample5",
+      "bytes": 434176,
+      "sha256": "9b5fb58d9bd00589f8d6b2b25d8bd2e064edd36dfd07a0070d1df1df100ae7a3",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample6.000",
+      "sample_family": "sample6",
+      "bytes": 434176,
+      "sha256": "773f3f5a440f5e8f4f47ecc1c19ee06b770e1ab3078bf4d876c4cc8aa6579123",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample6edge.000",
+      "sample_family": "sample6",
+      "bytes": 434176,
+      "sha256": "1525a9a32351d5afc83644d0b0d28677bd10dba59b05add73340058ee03328a7",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample7.000",
+      "sample_family": "sample7",
+      "bytes": 434176,
+      "sha256": "50bbc152b3c33e0a2de9f5cbfd35291c03dba7393e3980a930895fd140ef531b",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample7edge.000",
+      "sample_family": "sample7",
+      "bytes": 434176,
+      "sha256": "ea594010745a962287c1010508ac5a3b84342f756addfec9b97bde54545f1c6c",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample8.000",
+      "sample_family": "sample8",
+      "bytes": 434176,
+      "sha256": "7609ca2093fe0f6a8d5b603be23af7444fdde638b788690fc422863e87a232f3",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample8edge.000",
+      "sample_family": "sample8",
+      "bytes": 434176,
+      "sha256": "2c133b05d79d6393bcc574c2a23bedbcf8a3ca1c175e3633b4b04dd3f5cfe9dd",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample9.000",
+      "sample_family": "sample9",
+      "bytes": 434176,
+      "sha256": "f22f497a1498fa9e52f8c5d58f20820cb4264e194cf0a828965f499fb8d90e32",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample9edge.000",
+      "sample_family": "sample9",
+      "bytes": 434176,
+      "sha256": "e0ad6b9fc3c4520c06dbe4c504450b9c1b625eb7358112dec1d4298bce0d445e",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    },
+    {
+      "filename": "2016-11-24_sample9edge.001",
+      "sample_family": "sample9",
+      "bytes": 434176,
+      "sha256": "4df1c1a6ace00f990a47154647a5d2ab9bb3b4c66d19e837518d0b015baccdd2",
+      "samples_per_line": 256,
+      "height_channel_present": true
+    }
+  ],
+  "candidate_disposition": {
+    "candidate_id": "CAND-P-105",
+    "status": "EXACT_REJECTED_TARGET_AND_BASELINE_BOUNDARY",
+    "reason": "The source supplies AFM height maps but no independent measured Ra, Rq, and peak-density target table. Deriving those targets directly from each input height map would reproduce the frozen plane-detrend/RMS baseline rather than provide independent experimental truth that a learned model can beat."
+  },
+  "training_actions": 0,
+  "host_promotions": 0,
+  "authority": 0,
+  "board_accepted": false,
+  "countable_model": false,
+  "content_root_sha256": "eb6f2017c1d8ef4987ba8dda5459cb50fb348e66882e81f5937a60e219f948d1"
+}

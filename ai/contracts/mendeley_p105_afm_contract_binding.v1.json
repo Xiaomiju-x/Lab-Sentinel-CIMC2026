@@ -1,0 +1,37 @@
+{
+  "schema": "cimc.forge200.mendeley-p105-afm-contract-binding.v1",
+  "source_id": "MENDELEY-3DVXCVFSV7-V1",
+  "source": {
+    "title": "Data for: Sputtering of polished EUROFER97 steel: surface structure modification and enrichment of tungsten and tantalum",
+    "publisher": "Mendeley Data",
+    "doi": "10.17632/3dvxcvfsv7.1",
+    "url": "https://data.mendeley.com/datasets/3dvxcvfsv7/1",
+    "license": "CC BY 4.0",
+    "description": "AFM data for initial surface roughness on all samples"
+  },
+  "archive": {
+    "path": "data/raw/mendeley_afm_p105_sources/3dvxcvfsv7_v1.zip",
+    "bytes": 6342995,
+    "sha256": "e721f4ee7ac3acf823a7f74e972e1ef354fd2f62fa0a33069992e02026405a84"
+  },
+  "extracted_directory": "data/raw/p105_afm_eurofer",
+  "expected": {
+    "scan_files": 24,
+    "uncompressed_bytes": 10420224,
+    "sample_families": 12,
+    "samples_per_line": 256,
+    "height_channel": "Height Sensor"
+  },
+  "candidate_disposition": {
+    "candidate_id": "CAND-P-105",
+    "status": "EXACT_REJECTED_TARGET_AND_BASELINE_BOUNDARY",
+    "reason": "The source supplies AFM height maps but no independent measured Ra, Rq, and peak-density target table. Deriving those targets directly from each input height map would reproduce the frozen plane-detrend/RMS baseline rather than provide independent experimental truth that a learned model can beat."
+  },
+  "promotion_boundary": {
+    "training_actions": 0,
+    "host_promotions": 0,
+    "authority": 0,
+    "board_accepted": false,
+    "countable_model": false
+  }
+}

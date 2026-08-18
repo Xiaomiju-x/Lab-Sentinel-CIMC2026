@@ -1,0 +1,25 @@
+{
+  "cross_split_group_overlap_total": 0,
+  "fit_train_only": [
+    "imputer",
+    "scaler",
+    "feature_selector",
+    "pca",
+    "calibrator",
+    "augmentation_parameters"
+  ],
+  "global_entity_namespaces_are_source_scoped": true,
+  "ipop_exact_duplicates_quarantined": 436,
+  "pair_patch_chunk_augmentation_after_split_only": true,
+  "same_run_future_metrology_forbidden": [
+    "XRD",
+    "PL",
+    "SEM",
+    "EDS",
+    "POST_RUN_QUALITY"
+  ],
+  "schema": "cimc.forge200.leakage-audit.v1",
+  "secom_group_id_limit": "GROUP_ID_LIMITED_CHRONOLOGICAL_SPLIT",
+  "status": "PASS",
+  "teacher_may_view_test": false
+}

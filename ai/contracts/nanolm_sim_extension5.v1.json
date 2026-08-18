@@ -1,0 +1,19 @@
+{
+  "schema": "cimc.forge200.nanolm-sim-extension5.v1",
+  "status": "PRETRAIN_FROZEN",
+  "created_at_utc": "2026-08-03T17:30:00Z",
+  "purpose": "Complete the five missing NanoLM asset slots with independent SIM_ONLY structured-evidence models while leaving expert-review contracts fail-closed.",
+  "candidate_ids": ["CAND-G-002", "CAND-G-027", "CAND-G-028", "CAND-G-029", "CAND-G-030"],
+  "truth_class": "STRUCTURED_SIMULATION",
+  "public_claim_scope": "SIM_ONLY",
+  "original_task_contract_status": "UNCHANGED_FAIL_CLOSED_EXPERT_REVIEW_ABSENT",
+  "tokenizer": "contracts/nanolm_tokenizer_exact_v6.json",
+  "records_per_candidate": 896,
+  "split_counts": {"train": 512, "validation": 192, "test": 192},
+  "split_unit": "SIMULATION_SCENARIO_FAMILY_BEFORE_POSITIVE_NEGATIVE_DERIVATION",
+  "training": {"seeds": [20260801, 20260802, 20260803], "supervised_only": true, "grounded_claim_selection": true, "batch_size": 32, "foundation_max_epochs": 24, "collaboration_max_epochs": 18, "minimum_epochs": 10, "early_stop_patience": 4, "qat_epochs": 3, "checkpoint_selection": "validation_only_no_test_access"},
+  "evaluation": {"baseline": "ALWAYS_REFUSE_WITHOUT_TASK_FIELD", "primary_metric": "mean_of_sequence_exact_token_F1_refusal_F1_citation_exact_scope_exact", "promotion": "three_seed_mean_and_selected_W8_exceed_baseline_and_W8_drop_le_0.03", "retest_or_retune_after_test": false},
+  "authority": 0,
+  "board_accepted": false,
+  "countable_model": false
+}

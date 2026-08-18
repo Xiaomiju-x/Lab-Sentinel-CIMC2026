@@ -1,0 +1,48 @@
+[stage=idle risk=good gas=ok tc=ok ramp=ok]
+  teacher: 炉温过低待机阶段，启动升温至1000°C并检查气氛稳定。
+  flagship: 炉温过低无法烧结，需启动升温程序至1400°C并保持气氛稳定。
+[stage=ramp risk=warn gas=ok tc=ok ramp=slow]
+  teacher: 升温速率过慢致能耗偏高，请将升温速率提升至5°C/分钟。
+  flagship: 升温速率过慢致能耗偏高，建议将升温速率提升至3°C/分钟以优化能效。
+[stage=preheat risk=warn gas=moist tc=ok ramp=ok]
+  teacher: 预热段温漂偏大且湿度偏高，建议提高预热排气流量至5L/min并降低升温速率至3°C/min。
+  flagship: 预热升温阶段温漂偏大且湿度偏高，建议检查除湿系统并降低升温速率至2°C/分钟。
+[stage=calcine risk=warn gas=ok tc=ok ramp=ok]
+  teacher: 研磨振动异常可能影响晶格均匀性，建议检查研磨设备减震垫并降低转速至300rpm。
+  flagship: 研磨振动异常致晶格缺陷风险，立即检查研磨机减震垫并降低转速至0.5m/分钟。
+[stage=calcine risk=bad gas=hf tc=ok ramp=ok]
+  teacher: 炉内含氟分解气累积，立即开启排风系统并通入高纯氮气至炉压微正压。
+  flagship: 炉内含氟分解气异常，立即启动排氟程序并检查密封，将炉温至90°C。
+[stage=sinter risk=warn gas=ok tc=ok ramp=ok]
+  teacher: 加热元件老化致能耗偏高，建议降低升温速率至2°C/分钟并检查更换周期。
+  flagship: 加热元件老化致能耗偏高，建议更换加热元件并校准功率至15%。
+[stage=cool risk=warn gas=ok tc=ok ramp=ok]
+  teacher: 加热元件老化致热效率下降能耗偏高，建议降低升温速率至1.5°C/分钟并尽快更换。
+  flagship: 加热元件老化致能耗偏高，建议在下次烧结前更换加热元件并校准功率至额定值。
+[stage=done risk=good gas=ok tc=ok ramp=ok]
+  teacher: 室温待检，确认SYGO:Cr新相产物完整性，建议15分钟内转移至干燥箱密封保存。
+  flagship: 出炉完成炉温已降至室温，建议检查样品颜色泽并准备下一炉次。
+[stage=preheat risk=bad gas=ok tc=ok ramp=fast]
+  teacher: 预热升温速率过快触发曲线AE异常，建议立即降低加热功率使速率控在5°C/分钟以内。
+  flagship: 预热升温速率过快致烧结曲线异常，立即将升温速率降至3°C/分钟以下。
+[stage=sinter risk=bad gas=cr6 tc=ok ramp=ok]
+  teacher: 检测到Cr6+氧化风险，立即通入5%氢气还原气氛并降温至1400°C。
+  flagship: 检测到Cr6+氧化风险，立即降低氧分压至1%以下并通入5%H2/Ar混合气抑制氧化。
+[stage=cool risk=good gas=ok tc=ok ramp=ok]
+  teacher: 冷速中段820°C，降温梯度需维持3°C/分以上，避免晶格应力累积。
+  flagship: 降温速率偏慢，建议将冷却风机功率提升至80%以加速晶格定型。
+[stage=done risk=good gas=ok tc=ok ramp=ok]
+  teacher: 炉温已降至室温，烧结结束，建议立即取出样品并检查Cr³⁺掺杂均匀性。
+  flagship: 出炉完成炉温已降至室温，建议检查样品并准备下一批次装炉。
+[stage=sinter risk=crit gas=ok tc=open ramp=ok]
+  teacher: 热电偶断路致温控失灵，实际炉温远低于设定值，立即停炉更换热电偶并校准至25°C基准。
+  flagship: 热电偶断路致温控失效，炉温仅25°C，立即停机更换热电偶并校准。
+[stage=preheat risk=warn gas=ok tc=ok ramp=slow]
+  teacher: 预热升温速率过慢，将升温速率调至5°C/分钟以降低能耗。
+  flagship: 预热升温过慢导致能耗偏高，建议将升温速率提升至5°C/分钟以优化效率。
+[stage=preheat risk=bad gas=ok tc=ok ramp=fast]
+  teacher: 预热升温过快且烧结曲线AE异常，建议立即降低升温速率至2°C/分钟以下。
+  flagship: 预热升温速率过快致烧结曲线异常，立即将升温速率降至3°C/分钟以下。
+[stage=preheat risk=warn gas=moist tc=ok ramp=ok]
+  teacher: 预热阶段温漂偏大且湿度偏高，立即开启炉膛除湿程序并检查气路干燥过滤器。
+  flagship: 预热升温阶段温漂偏大且湿度偏高，建议检查除湿系统并降低升温速率至2°C/分钟。

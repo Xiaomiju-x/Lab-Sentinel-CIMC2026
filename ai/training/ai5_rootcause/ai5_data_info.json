@@ -1,0 +1,41 @@
+{
+  "n_feat": 27,
+  "n_classes": 9,
+  "class_names": [
+    "NORMAL",
+    "RAMP_TOO_FAST",
+    "UNDER_TEMPERATURE",
+    "OXIDIZE_CR6",
+    "DECOMP_GAS_SURGE",
+    "VOLATILIZATION_LOSS",
+    "MOISTURE_HYDROXYL",
+    "GRIND_INHOMOGENEITY",
+    "SOAK_TEMP_DRIFT"
+  ],
+  "gas_enum": [
+    "none",
+    "NH3",
+    "HF",
+    "NOx",
+    "CO2",
+    "vapor",
+    "Cr6+"
+  ],
+  "feat_layout": {
+    "0:4": "AI-1 softmax [empty,loaded,sintering,done]",
+    "4": "AI-2 anomaly ratio (0-6)",
+    "5": "AI-2 temp residual",
+    "6": "AI-2 vib residual",
+    "7": "AI-2 gas residual",
+    "8:13": "AI-3 softmax [normal,fast_ramp,undertemp,temp_drift,slow_ramp]",
+    "13": "temp_norm T/1600C",
+    "14": "ramp_norm |dT/dt|/20",
+    "15": "gas_sev/3",
+    "16:23": "gas species one-hot [none,NH3,HF,NOx,CO2,vapor,Cr6+]",
+    "23": "humidity RH/100",
+    "24": "mq135 rise (0-1)",
+    "25": "atmosphere oxidizing (0/1)",
+    "26": "progress (0-1)"
+  },
+  "grounding": "gas species + onset from gas_safety_table.h; stages/atmosphere from furnace_sim.h; AI-3 anomaly classes from synth_data_ai3.py; 9-class taxonomy measure-first-gated in taxonomy.json"
+}

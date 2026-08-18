@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cimc://schemas/sintergraph-psp-r1",
+  "title": "SinterGraph-PSP R1 prediction contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "run_id", "as_of_seq", "as_of_monotonic_ms", "recipe", "planned_curve", "evidence_cards", "forbidden_same_run_post_sinter_sources", "authority"],
+  "properties": {
+    "schema": {"const": "cimc.sintergraph-psp.r1"},
+    "run_id": {"type": "string", "minLength": 1, "maxLength": 40},
+    "as_of_seq": {"type": "integer", "minimum": 0},
+    "as_of_monotonic_ms": {"type": "integer", "minimum": 0},
+    "recipe": {"type": "object"},
+    "planned_curve": {"type": "array", "minItems": 2, "items": {"type": "object", "required": ["t_s", "temperature_c"], "properties": {"t_s": {"type": "number", "minimum": 0}, "temperature_c": {"type": "number"}}}},
+    "evidence_cards": {"type": "array", "items": {"$ref": "cimc://schemas/evidence-card-v2"}},
+    "forbidden_same_run_post_sinter_sources": {"const": ["XRD", "PL", "SEM", "EDS", "POST_RUN_QUALITY"]},
+    "authority": {"const": 0}
+  },
+  "x-output-contract": {
+    "required": ["psp_edges", "structure_distribution", "performance_distribution", "uncertainty", "transfer_confidence", "release_root", "authority"],
+    "same_run_post_sinter_evidence_use": "VERIPROCESS_FULFILLMENT_ONLY_NOT_PREDICTOR_INPUT",
+    "public_metric_excludes_post_sinter_fulfillment_features": true
+  }
+}

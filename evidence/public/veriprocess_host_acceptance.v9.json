@@ -1,0 +1,69 @@
+{
+  "public_derivative_notice": "Absolute build paths were replaced by repository-relative placeholders; content_root_sha256 identifies the archived original receipt.",
+  "authority_nonzero": 0,
+  "board_accepted": false,
+  "board_pending": [
+    "FATFS_AB_HEADER_PHYSICAL_SYNC",
+    "POWER_CUT_BETWEEN_WAL_AND_HEADER_FLIP",
+    "DS3231_LIVE_TIME",
+    "CHRONOSPEC_R4_LIVE_EVENT_LATENCY",
+    "24H_TRACELEDGER_CONCURRENCY"
+  ],
+  "compile": {
+    "armclang_cortex_m7_werror": true,
+    "armclang_flags": [
+      "--target=arm-arm-none-eabi",
+      "-mcpu=cortex-m7",
+      "-mthumb",
+      "-std=c11",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-I",
+      "${FORGE200_ROOT}/firmware_integration/veriprocess_v9",
+      "-I",
+      "${PROJECT_ROOT}/firmware/keil_proj/HardWare/Lab_Sentinel",
+      "-c",
+      "${FORGE200_ROOT}/firmware_integration/veriprocess_v9/veriprocess_v9.c",
+      "-o",
+      "${BUILD_ROOT}/veriprocess_v9_acceptance/veriprocess_v9_arm.o"
+    ],
+    "errors": 0,
+    "host_werror": true,
+    "warnings": 0
+  },
+  "content_root_sha256": "cb42a5a63d35796927bfd3f4d4519670c4eb130e1190b60d4a715ff4c9116055",
+  "control_symbol_matches": {},
+  "created_at_utc": "2026-08-03T19:29:49.612484+00:00",
+  "hashes": {
+    "arm_object": "85bb8abd6e585c71975bfe9d1ccf0f4dea9a99b70a5b75fc7a1a9d78e570a3ef",
+    "chronospec_r4_events": "718ba1e0a1e9adec37f7caec8047d59984eb430ed87a5868ffbe5928a55983e9",
+    "evidence_card_v2": "13438dfdb44e788c609dd5a15c1956d0dc0edf669eb0b53d3a1c91476d61c418",
+    "header": "215d32f0314a36d3e228c1a6d46045084573d68b8e90b5f7f4fd64c81e0e7c57",
+    "host_executable": "411bbc81cc1c5bcf95b28c5838bb38463dc758b9bac5f118861ca486e7438281",
+    "host_test": "988f711e09137223455dbf88540c18776e5ebf60cd7c0ebba16e430bfd768704",
+    "sintergraph_psp_r1": "abe41d877f6c8c398f094ae2326047ea726b517fe74dba95697449ed23041409",
+    "source": "02ee185b00fef2ce798791b335b3484a2998ead64e4e358cc9cad195868b99a7"
+  },
+  "host_cases": {
+    "authority": 0,
+    "board_accepted": false,
+    "failed": 0,
+    "passed": 69,
+    "status": "PASS"
+  },
+  "implementation": {
+    "chronospec_r4_order_and_deadline_state_machine": true,
+    "ds3231_and_monotonic_regression_rejection": true,
+    "evidence_card_v2_canonical_sha256": true,
+    "proofpass_r3_payload_binding": true,
+    "root_independent_family_gate": true,
+    "sintergraph_preburn_cutoff_and_same_run_postburn_rejection": true,
+    "traceledger_ab_headers": true,
+    "traceledger_segment_root": true,
+    "traceledger_wal_prepare_sync_recovery": true,
+    "twinguard_three_fulfillment_horizons": true
+  },
+  "schema": "cimc.forge200.veriprocess-host-acceptance.v9",
+  "status": "PASS_HOST_AND_ARMCLANG_BOARD_STORAGE_PENDING"
+}
