@@ -24,6 +24,8 @@ REQUIRED = [
     "MEDIA_LICENSE.md", "SECURITY.md", "CONTRIBUTING.md", "CITATION.cff",
     "PUBLIC_RELEASE_MANIFEST.json", "SBOM.spdx.json",
     "release-manifests/v1.0.1/SHA256SUMS.txt.sha256",
+    "release-manifests/v1.0.2/SHA256SUMS.txt.sha256",
+    "release-manifests/v1.0.2/RELEASE_ASSETS.json",
     "firmware/keil_proj/project/CIMC_GD32_Template.uvprojx",
     "hardware/design/lab-sentinel-hardware.epro2",
     "evidence/public/release_gap_audit.v7.json",

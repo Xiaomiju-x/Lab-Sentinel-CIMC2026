@@ -2,6 +2,25 @@
 
 All notable public-release changes are documented here.
 
+## [1.0.2] — 2026-08-20
+
+### Media archive
+
+- Added a content-complete, continuous 5:06 privacy-clean demonstration while
+  retaining the five independently seekable chapters.
+- Published the team portrait as an archival project record at the maintainer's
+  explicit direction; badge names and barcodes remain redacted.
+- Added exact-set Release checks, SHA-256 anchoring and binary privacy-marker
+  gates for the complete media archive.
+- Kept precise GPS, phone-model, capture-system and EXIF metadata out of the
+  default public derivatives.
+- Added a clearly named `privacy-sensitive` exact-source ZIP at the maintainer's
+  explicit archival direction. It preserves all seven supplied source files,
+  carries an internal warning/manifest, stays out of Git history and receives
+  no default media-license grant.
+- Kept the immutable v1.0.1 technical evidence package unchanged and linked it
+  from the v1.0.2 media archive.
+
 ## [1.0.1] — 2026-08-19
 
 ### Security

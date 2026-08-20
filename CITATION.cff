@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "If you use Lab-Sentinel, please cite this software."
 title: "Lab-Sentinel: Single-Chip Edge AI Process Intelligence for Integrated-Circuit Materials on GD32H759"
 type: software
-version: 1.0.1
-date-released: 2026-08-19
+version: 1.0.2
+date-released: 2026-08-20
 repository-code: "https://github.com/Xiaomiju-x/Lab-Sentinel-CIMC2026"
 license: Apache-2.0
 authors:

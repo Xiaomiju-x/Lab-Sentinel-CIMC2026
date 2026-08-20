@@ -8,6 +8,6 @@
   GitHub Releases.
 
 Do not replace these files with raw phone media. The raw sources contained EXIF
-and/or container location/device metadata. Portrait rights remain with the
-people shown; see `MEDIA_LICENSE.md`.
-
+and/or container location/device metadata. The team portrait is an archival,
+identifier-redacted derivative; portrait rights remain with the people shown.
+See `MEDIA_LICENSE.md`.

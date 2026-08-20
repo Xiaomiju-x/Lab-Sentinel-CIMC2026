@@ -22,7 +22,7 @@ def build() -> dict:
         })
     return {
         "schema": "lab-sentinel.public-release-manifest.v1",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "files": files,
         "file_count": len(files),
         "total_bytes": sum(item["bytes"] for item in files),

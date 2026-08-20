@@ -8,6 +8,10 @@
 
 ![Competition posters](../../assets/competition/booth-posters.webp)
 
+## Team at the national finals
+
+![Lab-Sentinel team at the 2026 CIMC national finals; visible badge identifiers are redacted](../../assets/competition/team-photo.webp)
+
 ## Prototype and HMI
 
 ![Prototype top view](../../assets/hardware/prototype-top-view.webp)
@@ -15,6 +19,7 @@
 ![HMI home page](../../assets/hardware/hmi-home.webp)
 
 Public derivatives are re-encoded without EXIF/GPS metadata. Visible badges,
-barcodes and phone screens are redacted. The identifiable group portrait is
-withheld from the public release until every depicted person has documented
-publication consent; see `MEDIA_LICENSE.md`.
+barcodes and phone screens are redacted. The team portrait is published as an
+archival project record at the maintainer's explicit direction; it does not
+grant downstream advertising, biometric-analysis or model-training rights.
+See `MEDIA_LICENSE.md`.
