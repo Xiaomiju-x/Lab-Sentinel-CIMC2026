@@ -1,0 +1,119 @@
+{
+  "schema": "lab-sentinel.release-assets.v1",
+  "tag": "v1.0.2",
+  "title": "Complete Media Archive",
+  "assets": [
+    {
+      "name": "00-full-demo-privacy-sanitized.mp4",
+      "bytes": 128220854,
+      "sha256": "1c0e2e081fab608ae2b08624b6a875987e43a22d3a5cd0fb7b561941299253f4",
+      "media_type": "video/mp4",
+      "role": "full-demo"
+    },
+    {
+      "name": "01-process-profile-and-ai-state-cover.webp",
+      "bytes": 85846,
+      "sha256": "98d9c37c6f60c0877591c8f7e42dcdcd400ee91ed6f84a8e75657539dfd269e9",
+      "media_type": "image/webp",
+      "role": "chapter-cover"
+    },
+    {
+      "name": "01-process-profile-and-ai-state.mp4",
+      "bytes": 32643380,
+      "sha256": "49845656145a11d4a92c5c373a472cfa9e1fd607fb7f6470d2ac7084a116881e",
+      "media_type": "video/mp4",
+      "role": "chapter-video"
+    },
+    {
+      "name": "02-hardware-sensors-and-safety-cover.webp",
+      "bytes": 97024,
+      "sha256": "6a32cc3481042bd89a31c3a54cadf8b4b855af7cc17f08b1093b9e00b981be71",
+      "media_type": "image/webp",
+      "role": "chapter-cover"
+    },
+    {
+      "name": "02-hardware-sensors-and-safety.mp4",
+      "bytes": 28448463,
+      "sha256": "17fd7f50d96b1ba8e8a4a90e3a1b495173d61352e8d8b8bb9987f77e43239855",
+      "media_type": "video/mp4",
+      "role": "chapter-video"
+    },
+    {
+      "name": "03-camera-and-vision-pipeline-cover.webp",
+      "bytes": 50668,
+      "sha256": "f009ae45e5848e27f71ac1afca66bb3ff5dbf8e4425470878edf4712337ea6fd",
+      "media_type": "image/webp",
+      "role": "chapter-cover"
+    },
+    {
+      "name": "03-camera-and-vision-pipeline.mp4",
+      "bytes": 22942186,
+      "sha256": "148b645d5dbe88657e4601fc12dc2aed17fac5b16497438e91552e1c38d2062a",
+      "media_type": "video/mp4",
+      "role": "chapter-video"
+    },
+    {
+      "name": "04-edge-lm-and-mcu-inference-cover.webp",
+      "bytes": 86764,
+      "sha256": "bfb65f16c6d009ff44d11f4474afb273498dff3b0e71ab7c26b0bdd1330918ae",
+      "media_type": "image/webp",
+      "role": "chapter-cover"
+    },
+    {
+      "name": "04-edge-lm-and-mcu-inference.mp4",
+      "bytes": 27547658,
+      "sha256": "fb49b0a395a0d5c297b499e30092f16776fc1c5906f47bf6e62b63fd9694e774",
+      "media_type": "video/mp4",
+      "role": "chapter-video"
+    },
+    {
+      "name": "05-control-telemetry-and-closeout-cover.webp",
+      "bytes": 71674,
+      "sha256": "7f0a18ebbdd8ee2cfd7380ec7bf38e7a645eb98b20057558c5b6e54c95fb856a",
+      "media_type": "image/webp",
+      "role": "chapter-cover"
+    },
+    {
+      "name": "05-control-telemetry-and-closeout.mp4",
+      "bytes": 16636244,
+      "sha256": "73887ad21c4315f234eac5687ad24643efc730927ecc86b9b193bb3c68c51795",
+      "media_type": "video/mp4",
+      "role": "chapter-video"
+    },
+    {
+      "name": "lab-sentinel-original-media-sources-privacy-sensitive-v1.0.2.zip",
+      "bytes": 810032478,
+      "sha256": "8682f0cdfbf76a3e7fa4dbe7478d7a3534811345b304db3b5670d9268406928f",
+      "media_type": "application/zip",
+      "role": "privacy-sensitive-originals"
+    },
+    {
+      "name": "lab-sentinel-original-media-sources-privacy-sensitive-v1.0.2.zip.sha256",
+      "bytes": 131,
+      "sha256": "c5f7ffc534fda97026302bd5818d97970eab588ac69bdc86c4552ed617e072f8",
+      "media_type": "text/plain",
+      "role": "sidecar"
+    },
+    {
+      "name": "MEDIA_MANIFEST.md",
+      "bytes": 3277,
+      "sha256": "c75c9535247a450e506f6c7502c13796f55eda4c33631148f5d039d9150119b9",
+      "media_type": "text/markdown",
+      "role": "manifest"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 1593,
+      "sha256": "19e08483a0c85f28753170f8a581657c0a98e416dc09177b77745298f9b5c1e4",
+      "media_type": "text/plain",
+      "role": "checksums"
+    },
+    {
+      "name": "team-photo-sanitized.webp",
+      "bytes": 395216,
+      "sha256": "52b68289cae561fd0e2696935acdc3c7c709f5d18a452d2f60f97f7b6bc5b51d",
+      "media_type": "image/webp",
+      "role": "team-portrait"
+    }
+  ]
+}

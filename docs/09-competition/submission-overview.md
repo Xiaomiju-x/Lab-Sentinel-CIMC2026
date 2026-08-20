@@ -10,9 +10,9 @@ The public release instead provides:
 - curated source and original hardware design;
 - compact public evidence receipts and task contracts;
 - reproduction and safety documentation;
-- privacy-clean photos and video chapters;
+- privacy-clean competition photos, the continuous full demonstration and
+  independently seekable video chapters;
 - a reviewed large technical package in GitHub Releases.
 
 The public package is an archival/research release, not the official organizer
 submission and not an organizer-endorsed SDK.
-

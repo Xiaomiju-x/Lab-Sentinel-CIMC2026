@@ -1,31 +1,37 @@
-# v1.0.1 release notes
+# v1.0.2 release notes
 
-Lab-Sentinel v1.0.1 is the clean-history post-competition archival release.
+Lab-Sentinel v1.0.2 completes the public project-media archive without changing
+the frozen technical claims or board/host ledgers.
 
 ## Highlights
 
-- Curated GD32H759 source with all public Keil project references closed,
-  plus explicit camera-disabled and ASCII-font fallbacks for material whose
-  redistribution rights could not be established;
-- 30 BOARD runtime assets / 28 logical models with true-board evidence;
-- 170 HOST research assets with explicit 78 EXACT / 92 SIM_ONLY separation;
-- ICMat-Forge, SinterGraph and VeriProcess contracts, pipelines and receipts;
-- bilingual landing READMEs, English engineering documentation and
-  privacy-clean media;
-- source/data/model/media license separation, SBOM and secret/path gates.
+- One continuous 5:06, 720p H.264/AAC privacy-clean demonstration;
+- the same complete demonstration split into five independently seekable
+  chapters with five cover images;
+- an identifier-redacted, metadata-clean team portrait as a competition record;
+- SHA-256 checksums, a tag-anchored outer manifest and Release exact-set checks;
+- unchanged truth boundaries: 30 BOARD assets / 28 logical models and 170 HOST
+  assets (78 EXACT + 92 SIM_ONLY), all HOST authority=0.
 
 ## Release assets
 
-- `lab-sentinel-cimc2026-technical-evidence-v1.0.1.zip` — reviewed competition
-  technical artifact bundle, too large for ordinary Git;
-- five metadata-clean 720p demonstration chapters and cover images;
+- `00-full-demo-privacy-sanitized.mp4` — continuous complete demonstration;
+- five metadata-clean 720p chapters and their cover images;
+- `team-photo-sanitized.webp` — Release copy of the identifier-redacted team
+  portrait also tracked under `assets/competition/`;
+- `lab-sentinel-original-media-sources-privacy-sensitive-v1.0.2.zip` and its
+  sidecar — exact-byte archive of all seven supplied source media files, with an
+  internal warning and manifest; it may retain precise metadata and identifiers
+  and is not covered by the default media license;
+- `MEDIA_MANIFEST.md` — media provenance, transformation and rights boundary;
 - `SHA256SUMS.txt` — checksums for every attached asset.
 
 The release tag anchors the outer asset manifest at
-`release-manifests/v1.0.1/SHA256SUMS.txt.sha256`. Its SHA-256 is recorded in
+`release-manifests/v1.0.2/SHA256SUMS.txt.sha256`. Its SHA-256 is recorded in
 that tag-anchored file.
-The technical evidence ZIP is independently anchored at
-the SHA-256 printed in its adjacent `.sha256` sidecar and in
+
+The reviewed technical evidence ZIP remains unchanged in the immutable
+[`v1.0.1` Release](https://github.com/Xiaomiju-x/Lab-Sentinel-CIMC2026/releases/tag/v1.0.1), independently anchored by its adjacent `.sha256` sidecar and
 `docs/06-reproduction/host-smoke.md`.
 
 The repository verifies source/reference integrity in CI. A licensed Keil/GD32

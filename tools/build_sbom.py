@@ -15,7 +15,7 @@ from _common import ROOT, iter_public_files, sha256_file
 
 
 OUTPUT = ROOT / "SBOM.spdx.json"
-CREATED = "2026-08-19T00:00:00Z"
+CREATED = "2026-08-20T00:00:00Z"
 
 
 @dataclass(frozen=True)
@@ -115,11 +115,11 @@ RULES = (
         ("firmware/lvgl_ui/lvgl-8.3.11/src/draw/nxp/",),
     ),
     PackageRule("SPDXRef-Package-LVGL", "LVGL", "8.3.11", "MIT", ("firmware/lvgl_ui/lvgl-8.3.11/",)),
-    PackageRule("SPDXRef-Package-Competition-Media", "Lab-Sentinel competition-photo derivatives", "1.0.1", "NOASSERTION", ("assets/competition/",)),
+    PackageRule("SPDXRef-Package-Competition-Media", "Lab-Sentinel competition-photo derivatives", "1.0.2", "NOASSERTION", ("assets/competition/",)),
     PackageRule(
         "SPDXRef-Package-Docs-Media",
         "Lab-Sentinel documentation and licensed media",
-        "1.0.1",
+        "1.0.2",
         "CC-BY-4.0",
         (
             "docs/",
@@ -129,9 +129,9 @@ RULES = (
             "firmware/keil_proj/lwip/PUBLIC_SUBSET.md",
         ),
     ),
-    PackageRule("SPDXRef-Package-Hardware", "Lab-Sentinel original hardware design", "1.0.1", "CERN-OHL-S-2.0", ("hardware/",)),
-    PackageRule("SPDXRef-Package-License-Metadata", "License texts and release-rights metadata", "1.0.1", "NOASSERTION", ("LICENSE", "LICENSES/")),
-    PackageRule("SPDXRef-Package-Software", "Lab-Sentinel original software and release tooling", "1.0.1", "Apache-2.0", ()),
+    PackageRule("SPDXRef-Package-Hardware", "Lab-Sentinel original hardware design", "1.0.2", "CERN-OHL-S-2.0", ("hardware/",)),
+    PackageRule("SPDXRef-Package-License-Metadata", "License texts and release-rights metadata", "1.0.2", "NOASSERTION", ("LICENSE", "LICENSES/")),
+    PackageRule("SPDXRef-Package-Software", "Lab-Sentinel original software and release tooling", "1.0.2", "Apache-2.0", ()),
 )
 
 
@@ -199,8 +199,8 @@ def main() -> int:
         "spdxVersion": "SPDX-2.3",
         "dataLicense": "CC0-1.0",
         "SPDXID": "SPDXRef-DOCUMENT",
-        "name": "Lab-Sentinel-CIMC2026-v1.0.1-file-inventory",
-        "documentNamespace": "https://github.com/Xiaomiju-x/Lab-Sentinel-CIMC2026/sbom/v1.0.1",
+        "name": "Lab-Sentinel-CIMC2026-v1.0.2-file-inventory",
+        "documentNamespace": "https://github.com/Xiaomiju-x/Lab-Sentinel-CIMC2026/sbom/v1.0.2",
         "creationInfo": {
             "created": CREATED,
             "creators": ["Tool: Lab-Sentinel-build_sbom.py"],

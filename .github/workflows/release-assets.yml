@@ -8,7 +8,7 @@ on:
       tag:
         description: Release tag to verify
         required: true
-        default: v1.0.1
+        default: v1.0.2
       release_id:
         description: Optional draft Release ID for pre-publication verification
         required: false
@@ -27,7 +27,7 @@ concurrency:
 jobs:
   checksums:
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 45
     steps:
       - name: Checkout release tag
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
@@ -85,9 +85,20 @@ jobs:
           python3 - <<'PY'
           import pathlib
           import re
+          import os
+          import hashlib
+          import json
+          import zipfile
 
           root = pathlib.Path(".")
           manifest = root / "SHA256SUMS.txt"
+          def sha256_path(path):
+              digest = hashlib.sha256()
+              with path.open("rb") as handle:
+                  for chunk in iter(lambda: handle.read(8 * 1024 * 1024), b""):
+                      digest.update(chunk)
+              return digest.hexdigest()
+
           pattern = re.compile(r"^([0-9a-f]{64})  ([^/\\\x00-\x1f]+)$")
           names = []
           for lineno, line in enumerate(manifest.read_text(encoding="utf-8").splitlines(), 1):
@@ -102,7 +113,7 @@ jobs:
               raise SystemExit("duplicate filename in SHA256SUMS.txt")
           actual = {p.name for p in root.iterdir() if p.is_file() and p.name != "SHA256SUMS.txt"}
           expected = set(names)
-          policy = {
+          chapter_assets = {
               "01-process-profile-and-ai-state.mp4",
               "01-process-profile-and-ai-state-cover.webp",
               "02-hardware-sensors-and-safety.mp4",
@@ -114,10 +125,24 @@ jobs:
               "05-control-telemetry-and-closeout.mp4",
               "05-control-telemetry-and-closeout-cover.webp",
               "MEDIA_MANIFEST.md",
-              "lab-sentinel-cimc2026-technical-evidence-v1.0.1.zip",
-              "lab-sentinel-cimc2026-technical-evidence-v1.0.1.zip.sha256",
           }
-          if len(names) != 13 or expected != policy:
+          policies = {
+              "v1.0.1": chapter_assets | {
+                  "lab-sentinel-cimc2026-technical-evidence-v1.0.1.zip",
+                  "lab-sentinel-cimc2026-technical-evidence-v1.0.1.zip.sha256",
+              },
+              "v1.0.2": chapter_assets | {
+                  "00-full-demo-privacy-sanitized.mp4",
+                  "team-photo-sanitized.webp",
+                  "lab-sentinel-original-media-sources-privacy-sensitive-v1.0.2.zip",
+                  "lab-sentinel-original-media-sources-privacy-sensitive-v1.0.2.zip.sha256",
+              },
+          }
+          release_tag = os.environ.get("RELEASE_TAG", "")
+          if release_tag not in policies:
+              raise SystemExit(f"unsupported release tag: {release_tag}")
+          policy = policies[release_tag]
+          if len(names) != len(policy) or expected != policy:
               raise SystemExit(
                   f"release policy mismatch: count={len(names)} "
                   f"missing={sorted(policy - expected)} extra={sorted(expected - policy)}"
@@ -127,6 +152,103 @@ jobs:
                   f"release asset set mismatch: missing={sorted(expected - actual)} "
                   f"extra={sorted(actual - expected)}"
               )
+
+          privacy_markers = (
+              b"+40.2468",
+              b"116.1426",
+              b"location",
+              b"xiaomi",
+              b"redmi",
+              b"android",
+              b"creation_time",
+          )
+          for name in sorted(expected):
+              suffix = pathlib.Path(name).suffix.lower()
+              if suffix not in {".mp4", ".webp"}:
+                  continue
+              payload = (root / name).read_bytes()
+              lowered = payload.lower()
+              hits = [marker.decode("ascii") for marker in privacy_markers if marker.lower() in lowered]
+              if hits:
+                  raise SystemExit(f"privacy metadata marker in {name}: {hits}")
+              if suffix == ".webp":
+                  upper = payload.upper()
+                  if b"EXIF" in upper or b"XMP " in upper:
+                      raise SystemExit(f"embedded metadata chunk in {name}")
+
+          if release_tag == "v1.0.2":
+              asset_contract = json.loads(
+                  pathlib.Path("../release-manifests/v1.0.2/RELEASE_ASSETS.json").read_text(
+                      encoding="utf-8"
+                  )
+              )
+              contract_assets = asset_contract.get("assets", [])
+              contract_names = [item["name"] for item in contract_assets]
+              all_downloaded = {p.name for p in root.iterdir() if p.is_file()}
+              if asset_contract.get("tag") != release_tag:
+                  raise SystemExit("release asset contract tag mismatch")
+              if len(contract_names) != len(set(contract_names)):
+                  raise SystemExit("duplicate name in release asset contract")
+              if set(contract_names) != all_downloaded:
+                  raise SystemExit(
+                      "release asset contract set mismatch: "
+                      f"missing={sorted(set(contract_names) - all_downloaded)} "
+                      f"extra={sorted(all_downloaded - set(contract_names))}"
+                  )
+              for item in contract_assets:
+                  asset_path = root / item["name"]
+                  if asset_path.stat().st_size != item["bytes"]:
+                      raise SystemExit(f"release asset contract size mismatch: {item['name']}")
+                  if sha256_path(asset_path) != item["sha256"]:
+                      raise SystemExit(f"release asset contract digest mismatch: {item['name']}")
+
+              archive_path = root / "lab-sentinel-original-media-sources-privacy-sensitive-v1.0.2.zip"
+              original_names = {
+                  "1787058624071.jpg",
+                  "1787058624036.jpg",
+                  "1787058655297.jpg",
+                  "VID_20260815_170648.mp4",
+                  "Creation_Image_1786802492467_1.png",
+                  "1786800365415.jpg",
+                  "1786800365428.jpg",
+              }
+              expected_members = {
+                  "README_FIRST.md",
+                  "ORIGINAL_MEDIA_MANIFEST.json",
+                  *(f"originals/{name}" for name in original_names),
+              }
+              with zipfile.ZipFile(archive_path, "r") as archive:
+                  if archive.testzip() is not None:
+                      raise SystemExit("privacy-sensitive archive CRC failure")
+                  actual_members = set(archive.namelist())
+                  if actual_members != expected_members:
+                      raise SystemExit(
+                          "privacy-sensitive archive member mismatch: "
+                          f"missing={sorted(expected_members - actual_members)} "
+                          f"extra={sorted(actual_members - expected_members)}"
+                      )
+                  warning = archive.read("README_FIRST.md").decode("utf-8")
+                  if "privacy-sensitive" not in warning or "precise location" not in warning:
+                      raise SystemExit("privacy-sensitive archive warning is incomplete")
+                  inner_manifest = json.loads(archive.read("ORIGINAL_MEDIA_MANIFEST.json"))
+                  records = inner_manifest.get("files", [])
+                  if len(records) != 7:
+                      raise SystemExit("privacy-sensitive archive manifest count mismatch")
+                  for record in records:
+                      member = record["archive_path"]
+                      info = archive.getinfo(member)
+                      if info.file_size != record["bytes"]:
+                          raise SystemExit(f"privacy-sensitive archive size mismatch: {member}")
+                      digest = hashlib.sha256()
+                      with archive.open(info, "r") as handle:
+                          for chunk in iter(lambda: handle.read(8 * 1024 * 1024), b""):
+                              digest.update(chunk)
+                      if digest.hexdigest() != record["sha256"]:
+                          raise SystemExit(f"privacy-sensitive archive digest mismatch: {member}")
           PY
           sha256sum --check --strict SHA256SUMS.txt
-          sha256sum --check --strict lab-sentinel-cimc2026-technical-evidence-v1.0.1.zip.sha256
+          if [[ "${RELEASE_TAG}" == "v1.0.1" ]]; then
+            sha256sum --check --strict lab-sentinel-cimc2026-technical-evidence-v1.0.1.zip.sha256
+          elif [[ "${RELEASE_TAG}" == "v1.0.2" ]]; then
+            sha256sum --check --strict lab-sentinel-original-media-sources-privacy-sensitive-v1.0.2.zip.sha256
+          fi

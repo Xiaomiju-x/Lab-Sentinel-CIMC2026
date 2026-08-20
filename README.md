@@ -58,9 +58,10 @@ Lab-Sentinel 是一套面向集成电路材料研发的单芯片边缘 AI 工艺
 
 - [五分钟演示的分章、观察点、源码入口和真实性边界](docs/08-demo/video-chapters.md)
 - [原型机 30 秒绕机导览](docs/08-demo/prototype-tour.md)
-- [GitHub Release：经过清理的视频章节与完整技术证据包](https://github.com/Xiaomiju-x/Lab-Sentinel-CIMC2026/releases/tag/v1.0.1)
+- [v1.0.2 完整公开影像：连续完整版、五个分章与团队合影](https://github.com/Xiaomiju-x/Lab-Sentinel-CIMC2026/releases/tag/v1.0.2)
+- [v1.0.1 技术证据包：模型、合同与可复核回执](https://github.com/Xiaomiju-x/Lab-Sentinel-CIMC2026/releases/tag/v1.0.1)
 
-原始手机视频不进入 Git 历史：公开章节已经重新编码并移除 GPS、设备型号和拍摄系统元数据。
+v1.0.2 提供内容完整的 5:06 连续版和五个分章；它们已经重新编码并移除 GPS、设备型号和拍摄系统元数据。团队合影保留人物与比赛现场，同时遮挡胸牌姓名、条码等标识并清除 EXIF/GPS。按项目维护者的明确归档要求，Release 另附醒目标注为 `privacy-sensitive` 的 ZIP，逐字节保存最初列出的 7 个源媒体；该 ZIP 可能保留精确位置、设备信息、可识别人像和胸牌内容，不进入 Git 历史，也不属于默认媒体许可。
 
 ## 为什么做
 
@@ -224,6 +225,10 @@ python tools/verify_evidence.py
 <p align="center">
   <img src="assets/competition/booth-overview.webp" width="47%" alt="Lab-Sentinel CIMC competition booth">
   <img src="assets/competition/booth-posters.webp" width="47%" alt="Lab-Sentinel CIMC poster wall">
+</p>
+
+<p align="center">
+  <img src="assets/competition/team-photo.webp" width="95%" alt="Lab-Sentinel team at the 2026 CIMC national finals; visible badge identifiers are redacted">
 </p>
 
 更多隐私清理后的现场照片见[比赛画廊](docs/09-competition/gallery.md)。

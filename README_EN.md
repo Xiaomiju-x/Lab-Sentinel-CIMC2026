@@ -76,7 +76,7 @@ python tools/verify_evidence.py
 
 For firmware, open `firmware/keil_proj/project/CIMC_GD32_Template.uvprojx` in Keil MDK, select the actual XML target `CIMC_GD32_Template` (R2.1 is the archived release-line name), and follow [`docs/03-firmware/build-keil-r21.md`](docs/03-firmware/build-keil-r21.md). The public target uses an explicit camera-disabled adapter and ASCII font fallback; supply reviewed licensed replacements for live OV5640 capture and CJK glyphs. Vendor tools, installers, competition templates and source code without established redistribution permission are intentionally not mirrored.
 
-Large reviewed model/evidence archives and privacy-clean video chapters are attached to the [v1.0.1 Release](https://github.com/Xiaomiju-x/Lab-Sentinel-CIMC2026/releases/tag/v1.0.1), not stored in Git history.
+The reviewed model/evidence archive remains in the immutable [v1.0.1 Release](https://github.com/Xiaomiju-x/Lab-Sentinel-CIMC2026/releases/tag/v1.0.1). The [v1.0.2 media archive](https://github.com/Xiaomiju-x/Lab-Sentinel-CIMC2026/releases/tag/v1.0.2) adds the complete continuous 5:06 demonstration, the five independently seekable chapters and the privacy-clean team portrait. These default derivatives remove GPS, device and capture-system metadata and redact visible badge identifiers. At the maintainer's explicit archival direction, the Release also carries a clearly named `privacy-sensitive` ZIP containing the exact seven originally supplied media files; that archive may retain location/device metadata, identifiable people and badges, is kept out of Git history, and is not covered by the default media license.
 
 The public HOST commands verify ledgers, contracts and receipts; they are not a claim of full retraining. The 281 historical measured PL spectra are not redistributed under an unrestricted public-data grant. The repository therefore supports evidence-chain verification and the three representative on-board golden spectra, not reproduction of the reported 98.22% metric from public raw spectra alone. Download and checksum instructions are in [`docs/06-reproduction/host-smoke.md`](docs/06-reproduction/host-smoke.md).
 
@@ -96,6 +96,10 @@ The desktop rig is a low-temperature bench. The 1500 °C curve is a deterministi
 <p align="center">
   <img src="assets/competition/booth-overview.webp" width="47%" alt="Lab-Sentinel CIMC booth">
   <img src="assets/competition/booth-posters.webp" width="47%" alt="Lab-Sentinel CIMC poster wall">
+</p>
+
+<p align="center">
+  <img src="assets/competition/team-photo.webp" width="95%" alt="Lab-Sentinel team at the 2026 CIMC national finals; visible badge identifiers are redacted">
 </p>
 
 The awards are part of the project history. The repository's technical promise comes from source, contracts, failure receipts, reproducible checks and explicit boundaries—not from rank alone.
