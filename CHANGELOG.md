@@ -2,6 +2,17 @@
 
 All notable public-release changes are documented here.
 
+## [Unreleased]
+
+### Award verification
+
+- Added the official 2026 CIMC national-preliminary Special Prize and national-
+  finals National Second Prize certificates as public award evidence.
+- Re-encoded both PNG files without ancillary metadata while preserving their
+  visible certificate identifiers and verification QR codes.
+- Added explicit anti-impersonation and license-scope boundaries for the
+  certificate records.
+
 ## [1.0.2] — 2026-08-20
 
 ### Media archive

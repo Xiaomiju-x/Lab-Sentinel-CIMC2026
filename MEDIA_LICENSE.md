@@ -27,3 +27,10 @@ biometric-analysis, model-training or downstream publicity rights. See
 
 Competition organizer and corporate logos are excluded from the project media
 license. See `TRADEMARKS.md`.
+
+The two award-certificate images under `assets/competition/certificate-*.png`
+are published as verification evidence at the certificate holder's explicit
+direction. Their names, institution, certificate identifiers, signatures,
+seals and verification QR codes remain visible by design. They are not covered
+by the repository's general CC-BY media grant and may not be altered, used for
+impersonation or presented as another person's award.
