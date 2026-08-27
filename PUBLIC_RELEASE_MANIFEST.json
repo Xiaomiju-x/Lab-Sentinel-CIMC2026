@@ -59,8 +59,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 3434,
-      "sha256": "198f53d02aadb36b39b24dd91686f407957dfa94c56f5301c2e82f531fe11418"
+      "bytes": 3861,
+      "sha256": "7744f9f09e88eed15178781ff2d4d218fafeefc22e0dbddef7fbad4b64e6016d"
     },
     {
       "path": "CITATION.cff",
@@ -109,8 +109,8 @@
     },
     {
       "path": "MEDIA_LICENSE.md",
-      "bytes": 1772,
-      "sha256": "85975df23c4cbbe28bdbd2f01673f5d551bff068d5fcec3d39bdcf5ee8eb3706"
+      "bytes": 2213,
+      "sha256": "94d40db351a31b6c9a05373001b8cb41eabcd6aa7ded22ad2d87b37c4ec6e3b8"
     },
     {
       "path": "MODEL_LICENSES.md",
@@ -129,13 +129,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 17909,
-      "sha256": "ccd42d4f33c02a7c7b278cea71e3b5afc6c1a3dc4d4ef19d5cdd356b7426cf72"
+      "bytes": 18413,
+      "sha256": "96749aa4e0964cfcffe015348f420b0fd62beeab7c61a004ad3ad8ea91085bc0"
     },
     {
       "path": "README_EN.md",
-      "bytes": 8914,
-      "sha256": "43b737036a3a9edd98aedb6217729b239915e62d37cac0c4667447c791a98b4e"
+      "bytes": 9759,
+      "sha256": "66d972629c614441224cd90a23c175cea796d473bc2cf7510c9d5c14cfa5fcf4"
     },
     {
       "path": "RELEASE_NOTES.md",
@@ -2874,8 +2874,8 @@
     },
     {
       "path": "assets/SHA256SUMS.txt",
-      "bytes": 858,
-      "sha256": "abca791b082bb0190e03dc2f7cd9cd80254755e01397d93b23cc4a1958d622d5"
+      "bytes": 1110,
+      "sha256": "c14aa4673e7bb6c15f4626d7876d7278532a3cf003389fa90cad7259cc5c30b9"
     },
     {
       "path": "assets/competition/booth-overview.webp",
@@ -2886,6 +2886,16 @@
       "path": "assets/competition/booth-posters.webp",
       "bytes": 115894,
       "sha256": "d31b8784995b6ae5faa6be0b2e270b398e295b1230b62e61868ba04dc660854d"
+    },
+    {
+      "path": "assets/competition/certificate-national-finals-second-prize.png",
+      "bytes": 1760987,
+      "sha256": "1540514ba2ade7323d43f923dafd7eb6633214b7386d33473f062037a2ec3c57"
+    },
+    {
+      "path": "assets/competition/certificate-national-preliminary-special-prize.png",
+      "bytes": 1724562,
+      "sha256": "4ab5d0bda38e390172fa99babbef60b5673d48e4aa45560e0ec630fb90c00513"
     },
     {
       "path": "assets/competition/team-photo.webp",
@@ -3224,13 +3234,13 @@
     },
     {
       "path": "docs/09-competition/awards.md",
-      "bytes": 427,
-      "sha256": "bd5dc3747801f4b4ed05571a0791cecae97167fc20152b7eeaee7b92efbf3598"
+      "bytes": 995,
+      "sha256": "37e000e138d694da37cf956f05ee38e15b9ca59e32740c476cfea3505ba0cd6c"
     },
     {
       "path": "docs/09-competition/gallery.md",
-      "bytes": 841,
-      "sha256": "c53a86a1def4aeb7896b88a819b165394dbe92ea207f1972c6847fd520dddd10"
+      "bytes": 1331,
+      "sha256": "9cb31012e916f64ed8103ce328965b196b6dd98f3fd45bd086461a2c5ce98637"
     },
     {
       "path": "docs/09-competition/submission-overview.md",
@@ -7973,6 +7983,6 @@
       "sha256": "1e8caac0ace0c67306d3301f491ed743a84c28ef42cbd25f776a80f46f3b9155"
     }
   ],
-  "file_count": 1594,
-  "total_bytes": 34844086
+  "file_count": 1596,
+  "total_bytes": 38333162
 }

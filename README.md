@@ -220,6 +220,13 @@ python tools/verify_evidence.py
 | 全国初赛 | 2026 CIMC“西门子杯”工业硬件研发方向 · 题目二 | **特等奖** |
 | 全国决赛 | 2026 CIMC“西门子杯”工业硬件研发方向 · 题目二 | **国家二等奖** |
 
+<p align="center">
+  <img src="assets/competition/certificate-national-preliminary-special-prize.png" width="47%" alt="2026 CIMC 西门子杯全国初赛特等奖证书">
+  <img src="assets/competition/certificate-national-finals-second-prize.png" width="47%" alt="2026 CIMC 西门子杯全国总决赛二等奖证书">
+</p>
+
+> 两张证书为奖项的公开核验材料，保留证书编号与核验二维码；仅供项目履历与奖项真实性佐证，禁止冒用、篡改或用于身份仿冒。
+
 奖项是项目历程的一部分，但开源价值不依赖名次：代码、合同、失败回执、复现脚本和安全边界才是本仓库的技术承诺。
 
 <p align="center">

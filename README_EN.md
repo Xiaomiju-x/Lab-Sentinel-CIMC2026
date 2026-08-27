@@ -93,6 +93,18 @@ The desktop rig is a low-temperature bench. The 1500 °C curve is a deterministi
 
 ## Competition and gallery
 
+| Stage | Category | Result |
+|---|---|---|
+| National Preliminary | 2026 CIMC “Siemens Cup”, Industrial Hardware R&D · Problem 2 | **Special Prize** |
+| National Finals | 2026 CIMC “Siemens Cup”, Industrial Hardware R&D · Problem 2 | **National Second Prize** |
+
+<p align="center">
+  <img src="assets/competition/certificate-national-preliminary-special-prize.png" width="47%" alt="2026 CIMC Siemens Cup National Preliminary Special Prize certificate">
+  <img src="assets/competition/certificate-national-finals-second-prize.png" width="47%" alt="2026 CIMC Siemens Cup National Finals National Second Prize certificate">
+</p>
+
+> These certificates are public award-verification records. Their verification QR codes and certificate identifiers are intentionally retained; impersonation, alteration and identity misuse are prohibited.
+
 <p align="center">
   <img src="assets/competition/booth-overview.webp" width="47%" alt="Lab-Sentinel CIMC booth">
   <img src="assets/competition/booth-posters.webp" width="47%" alt="Lab-Sentinel CIMC poster wall">

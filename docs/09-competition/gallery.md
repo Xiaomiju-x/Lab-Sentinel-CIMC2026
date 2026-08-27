@@ -1,5 +1,15 @@
 # Competition gallery
 
+## Award certificates
+
+![2026 CIMC Siemens Cup National Preliminary Special Prize certificate](../../assets/competition/certificate-national-preliminary-special-prize.png)
+
+![2026 CIMC Siemens Cup National Finals National Second Prize certificate](../../assets/competition/certificate-national-finals-second-prize.png)
+
+The certificate identifiers and verification QR codes are intentionally
+retained for public verification. The certificates may not be altered or used
+for impersonation.
+
 ## Booth overview
 
 ![Competition booth](../../assets/competition/booth-overview.webp)
